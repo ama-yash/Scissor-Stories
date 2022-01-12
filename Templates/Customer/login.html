@@ -1,0 +1,93 @@
+{% load static %}
+{% include 'Common/header.html' %}
+<title>scissorstories - Login/Sign Up</title>
+        <table border="0">
+            <td style="border:none;">
+                <div class="spa_contact_field">
+                    <h2 class="sidebar_title">Log In</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form method='POST' id=login name=login onsubmit="return valLogin();" action=/auth/validate>{% csrf_token %}
+                            <div class="spa_select_field input">
+                                <input type="text" name=logusername id=logusername placeholder="Username">
+                                <div class="alert-danger" style="height: 1px;display: none;" id=uex role="alert">*User does not exists.</div>
+                                <div class="alert-danger" style="height: 1px;display: none;" id=unull role="alert">*Username must not be empty.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                        </div>
+                        <div class="col-md-12">
+                            <div class="spa_select_field input" style="width: 48%;">
+                                <input type="password" name=logpassword id=logpassword placeholder="Password">
+                                <div class="alert-danger" style="height: 1px;display: none;" id=perr role="alert">*Incorrect Password.</div>
+                                <div class="alert-danger" style="height: 1px;display: none;" id=pnull role="alert">*Password must not be empty.</div>
+                            </div>
+                            <br>
+                        </div>
+                        <div class="spa_textarea contact" style="position: relative;top:20px;">
+                            <button type="submit" class="them_btn them-bg">Login</a>
+                            <button type='button' class="them_btn them-bg" onclick="window.location.href='/auth/forgot-password'">Forgot Password</a>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </td>
+            <td style="border:none;">
+                <div class="spa_contact_field">
+                    <h2 class="sidebar_title">Register</h2>
+                    <div class="row">
+                        <form method="post" action=# onsubmit="return valUser()" id="register">{% csrf_token %}
+                            <div class="col-md-6">
+                                <div class="spa_select_field input">
+                                    <input name="username" id=username type="text" placeholder="Username">
+                                    <div class="alert-danger" style="height: 1px;display: none;" id=uerror role="alert">*Username must not be empty.</div>
+                                    <div class="alert-danger" style="height: 1px;display: none;" id=uexist role="alert">*Username already exists. Try another one.</div>
+                                    <div class="alert-danger" style="height: 1px;display: none;" id=uerror1 role="alert">*Username should not contain spaces.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="spa_select_field input" style="width: 48%;">
+                                    <input name="email" id=email type="text" placeholder="E-Mail ID">
+                                    <div class="alert-danger" style="height: 1px;display: none;" id=eerror role="alert">*Email must not be empty.</div>
+                                    <div class="alert-danger" style="height: 1px;display: none;" id=eerror1 role="alert">*Please enter a valid email.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="spa_select_field input" style="width: 48%;">
+                                    <input name="pass" id=pass type="password" placeholder="Password">
+                                    <div class="alert-danger" style="height: 1px;display: none;" id=perr role="alert">*Password must not be empty.</div>
+                                    <div class="alert-danger" style="height: 1px;display: none;" id=perr1 role="alert">*Password must be more than 8 characters.</div>
+                                </div>
+                                
+                                <br>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="spa_select_field input" style="width: 48%;">
+                                    <input name="pass2" id=pass2 type="password" placeholder="Re-Enter Password">
+                                    <div class="alert-danger" style="height: 1px;display: none;" id=perr11 role="alert">*Passwords do not match.</div>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="spa_textarea contact" style="position: relative; top:20px;">
+                                <button type="submit" class="them_btn them-bg">Submit</button>
+                                </div>
+                            </form>                    
+                            </div>
+                        </div>
+                </td>
+            </table>
+
+            {% include 'Common/footer.html' %}

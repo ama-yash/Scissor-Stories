@@ -1,0 +1,92 @@
+{% load static %}
+{% include 'Common/header.html' %}
+{% for a in ap_list %}
+<title>scissorstories - Appointment Details</title>
+
+<div class="content">
+    <!--SPA SALON WRAP START -->
+    <div class="spa_salon_wrap">
+        <div class="container">
+            <!--SECTION HEADING START -->
+            <div class="section_heading">
+                <h2>Appointment Details</h2>
+                <span class="boder-top"></span>
+                <span><i class="fa icon-three"></i></span>
+                <span class="boder-bottom"></span>
+            </div>                
+    </div>
+    <table>
+        <tr>
+        <td style="border:none;">
+            <div style="width:100%;text-align: left;">
+                <table style="position:relative;right:-300px;" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                     <td style="width:25%;position:relative;right:-50px;border:none"><h4>Appointment No:</h4></td>
+                     <td style="width:25%;position:relative;left:-100px;border:none;"><h4>{{a.ap_id}}</h4></td>   
+                </tr>
+                <tr>
+                    <td style="width:25%;position:relative;right:-50px;border:none"><h4>Service Provider:</h4></td>
+                    <td style="width:25%;position:relative;left:-100px;border:none;"><h4>{{a.firm_name}}</h4></td>   
+               </tr>
+               <tr>
+                    <td style="width:25%;position:relative;right:-50px;border:none"><h4>Attendant Name:</h4></td>
+                    <td style="width:25%;position:relative;left:-100px;border:none;"><h4>{{a.at_name}}</h4></td>   
+                   </tr>
+                   <tr>
+                    <td style="width:25%;position:relative;right:-50px;border:none"><h4>Service:</h4></td>
+                    <td style="width:25%;position:relative;left:-100px;border:none;"><h4>{{a.ser_name}}</h4></td>   
+                </tr>
+                <tr style="text-align: center;">
+           
+                </tr>
+                </table>
+                </div>
+                
+        </td>
+        <td style="border: none;">
+            <div style="width:100%;text-align: left;">
+                <table style="position:relative;right:-300px;" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="width:25%;position:relative;right:125px;border:none"><h4>Booking Date:</h4></td>
+                        <td style="width:25%;position:relative;left:-320px;border:none;"><h4>{{a.bdate}}</h4></td>   
+                    </tr>
+                    <tr>
+                        <td style="width:25%;position:relative;right:125px;border:none"><h4>Appointment:</h4></td>
+                        <td style="width:25%;position:relative;left:-320px;border:none;"><h4>{{a.adate}}</h4></td>   
+                    </tr> 
+                    <tr>
+                        <td style="width:25%;position:relative;right:125px;border:none"><h4>From:</h4></td>
+                        <td style="width:25%;position:relative;left:-320px;border:none;"><h4>{{a.time_from}}</h4></td>   
+                    </tr>  
+                    <tr>
+                        <td style="width:25%;position:relative;right:125px;border:none"><h4>To:</h4></td>
+                        <td style="width:25%;position:relative;left:-320px;border:none;"><h4>{{a.time_to}}</h4></td>   
+                    </tr>
+                    <tr>
+                        <td style="width:25%;position:relative;right:125px;border:none"><h4>Amount To Be Paid:</h4></td>
+                        <td style="width:25%;position:relative;left:-320px;border:none;"><h4>Rs. {{a.price}}</h4></td>   
+                    </tr> 
+                    <tr>
+                        <td style="width:25%;position:relative;right:125px;border:none"><h4>Status:</h4></td>
+                        <td style="width:25%;position:relative;left:-320px;border:none;"><h4>{% if a.status == 0 %}Completed{% elif a.status == 1 %}Pending{% else %}Not Confirmed{% endif %}</h4></td>   
+                    </tr> 
+                </table>
+            </div>
+        </td>
+    </tr>				
+    </table>
+    
+    <!--SPA SALON WRAP END -->
+    <!--SPA VIDEO FEATURE START -->
+    
+    
+    <!--SPA SERVICE WRAP START -->
+        
+    </div>				<!--SPA SERVICE WRAP END -->					
+    <!--SPA GALLERY WRAP START -->
+    <!--SPA GALLERY WRAP END -->
+    <!--SPA TESTIMONIAL WRAP START -->
+    <!--SPA NEWSLETTER WRAP END-->
+</div>
+{% endfor %}
+{% include 'Common/footer.html' %}

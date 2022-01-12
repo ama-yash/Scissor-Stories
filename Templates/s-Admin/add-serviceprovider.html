@@ -1,0 +1,258 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.urbanui.com/victory/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:15:04 GMT -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{name}} - Admin Panel</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/simple-line-icons/css/simple-line-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'vendors/jquery-bar-rating/fontawesome-stars.css' %}">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'images/top-logo2.png' %}" />
+  <link rel="stylesheet" href="{% static 'css/sweetalert.min.css' %}">
+  <script src="{% static 'js/sweetalert.min.js' %}"></script>
+  <style type="text/css">
+    .but1{
+      background-color:#03a9f3;color:white;width:80px;text-align: center;vertical-align: middle;height:25px;border:none;border-radius: 15px;
+    }
+    
+</style>
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/validatesp.js' %}"></script>
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"><img src="{% static 'images/top-logo2.png' %}" alt="logo"/></a>
+      </div>
+      <h3 style="font-family:calibri;font-size: 40px;color: aliceblue;position:relative; left:-500px;">ADMIN PANEL</h3>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <!-- partial:partials/_settings-panel.html -->
+        
+        <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <div class="nav-link">
+                <div class="profile-image">
+                  <img src="{% static 'images/faces/face9.jpg' %}" alt="image"/>
+                  <span class="online-status online"></span> <!--change class online to offline or busy as needed-->
+                </div>
+                <div class="profile-name">
+                  <h4 class="name">
+                    {{ name }}
+                  </h4>
+                  <h5 class="designation">
+                    Admin
+                  </h5>
+                  <br>
+                  <a href="{% url 'Home:logout' %}" class="btn btn-info">Log Out</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Home:index2' %}">
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'Home:serviceop' %}">
+                <span class="menu-title">Service Providers</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Home:customer' %}">
+                <span class="menu-title">Customers</span>
+              </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Home:bookings' %}">
+              <span class="menu-title">Bookings</span>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'Home:bookings' %}">
+            <span class="menu-title">Others</span>
+          </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/report-builder/">
+          <span class="menu-title">Reports</span>
+        </a>
+    </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        
+        <div class="content-wrapper">
+          <div class="card">
+            <div id=adser class="card-body">
+              <h4 class="card-title">Add Service Provider</h4>
+              <div class="alert alert-success" id=add style="display: none;" role="alert">
+                <i class="mdi mdi-alert-circle"></i>
+                 Service provider added successfully. Refresh the page to see the effect.
+              </div>  
+  
+              <form class="forms-sample" id="myform" method="POST" onsubmit="return valSp()" name="myform" enctype="multipart/form-data">{% csrf_token %}
+                <div class="row">
+                  <div class="col-md-12 h-100">
+                    <div class="bg-secondary p-4">
+                        <div class="form-group">
+                          <label for="exampleInputName1">Username</label>
+                            <input type="text" id=username name="username" class="form-control" placeholder="Username"/>
+                            <div style="position: relative;top:5px;width:350px; display: none;" id=usernull class="alert alert-danger">Please enter username.</div>
+                            <div style="position: relative;top:5px;width:380px; display: none;" id=userlen class="alert alert-danger">Username must contain more than three characters.</div>                                                         
+                            <div style="position: relative;top:5px;width:350px;display: none;" id=userex class="alert alert-danger">Username already exists. Try something else.</div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail3">Email Address</label>
+                          <input type="email" name="email" class="form-control" placeholder="E-mail"/>
+                          <div style="position: relative;top:5px;width:350px; display: none;" id=emailnull class="alert alert-danger">Please enter email address.</div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword4">Password</label>
+                          <input type="password" name="password" class="form-control" placeholder="Password"/>
+                          <div style="position: relative;top:5px;width:370px;display: none;" id=passnull class="alert alert-danger">Please enter password.</div>                              
+                          <div style="position: relative;top:5px;width:370px;display: none;" id=passlen class="alert alert-danger">Password length must be more than 8 characters</div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword4">Confirm Password</label>
+                          <input type="password" class="form-control" name="password1" placeholder="Confirm Password" />
+                          <div style="position: relative;top:5px;width:370px;display: none;" id=pass1 class="alert alert-danger">Password and confirm password must be same.</div>
+                        </div>  
+                        <div class="form-group">
+                          <label for="exampleInputPassword4">Firm Name</label>
+                          <input type="text" name="firm_name" class="form-control" placeholder="Firm Name"/>
+                          <div style="position: relative;top:5px;width:370px;display: none;"id=firmnull class="alert alert-danger">Please enter firm name.</div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword4">Owner/Manager Name</label>
+                          <input type="text" name="owner_name" class="form-control" placeholder="Owner Name"/>
+                          <div style="position: relative;top:5px;width:370px;display: none;" id=ownernull class="alert alert-danger">Please enter owner name</div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleTextarea1">Firm Address</label>
+                          <textarea name="address" placeholder="Address" class="form-control"></textarea>
+                          <div style="position: relative;top:5px;width:370px;display: none;" id=addressnull class="alert alert-danger">Please provide firm address.</div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword4">Contact Number</label>
+                          <input type="text" name="contact" class="form-control" placeholder="Contact" maxlength="10"/>
+                          <div style="position: relative;top:5px;width:370px;display: none;" id=contactnull class="alert alert-danger">Please provide a contact number.</div>
+                          <div style="position: relative;top:5px;width:370px;display: none;" id=contactval class="alert alert-danger">Enter a valid contact number.</div>
+                        </div>
+                        <div class="form-group">
+                            <label>State</label>
+                            
+                            <select onclick="bcity()" id="state" name="state" class="form-control">
+                            <option selected="selected" value="0">--Select State--</option>
+                              {% for state in states %}
+                                <option value={{state.state_id}}>{{ state.state_name }}</option>
+                              {% endfor %}
+                            </select>
+                            <div style="position: relative;top:5px;width:370px;display: none;" id=statenull class="alert alert-danger">Select a state.</div>
+                          </div>
+                        <div class="form-group">
+                          <label>City</label>
+                          <select id="city" name="city" class="form-control">
+                            
+                          </select>
+                          <div style="position: relative;top:5px;width:370px;display: none;" id=citynull class="alert alert-danger">Select a city.</div>
+                        </div>
+                        
+                        <div class="form-group">
+                          <label>Upload Image</label>
+                          <input type="file" id='imagee' class="form-control" name="imagee"/>
+                        </div>
+                        <div class="form-group">
+                        <button type="submit" class="btn btn-success mr-2">Submit</button>
+                        <button class="btn btn-light">Cancel</button>    
+                        </div>
+                                     
+                    </div>
+                  </div>
+                    
+             
+         
+                                
+                    
+                  </form>
+     
+                  
+                    
+                    
+                                
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div class="container-fluid clearfix">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2020 <a href="#">scissorstories</a>. All rights reserved.</span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- row-offcanvas ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="{% static 'vendors/jquery-bar-rating/jquery.barrating.min.js' %}"></script>
+  <script src="{% static 'vendors/chart.js/Chart.min.js' %}"></script>
+  <script src="{% static 'vendors/raphael/raphael.min.js' %}"></script>
+  <script src="{% static 'vendors/morris.js/morris.min.js' %}"></script>
+  <script src="{% static 'vendors/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{% static 'js/off-canvas.js' %}"></script>
+  <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'js/misc.js' %}"></script>
+  <script src="{% static 'js/settings.js' %}"></script>
+  <script src="{% static 'js/todolist.js' %}"></script>
+  <script src="{% static 'vendors/datatables.net/jquery.dataTables.js' %}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{% static 'js/dashboard.js' %}"></script>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/dataTable.bootstrap.min.js' %}"></script>
+
+  <!-- End custom js for this page-->
+</body>
+
+
+<!-- Mirrored from www.urbanui.com/victory/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:16:16 GMT -->
+</html>

@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from www.urbanui.com/victory/pages/samples/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:35:31 GMT -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Login - Service Provider</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/simple-line-icons/css/simple-line-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'images/top-logo2.png' %}" />
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script>
+    $(document).on('submit','#myform',function(e){
+      e.preventDefault();
+      var username = document.forms['myform']['username'].value;
+      var password = document.forms['myform']['password'].value;   
+      if (username == '' || password == ''){
+        var a = document.getElementById('up');
+        a.style.display='block';
+        return false;
+      }  
+      var a = document.getElementById('up');
+      a.style.display='none';
+      $.ajax({
+        type:'POST',
+        url:'{% url "SP:valLog" %}',
+        data:{
+          username:$('#username').val(),
+          password:$('#password').val(),
+          csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+        },
+        success:function(data){
+          if (data.success) {
+            window.location.href = data.url;
+          }
+          else{
+            if(!data.pass){
+              var a= document.getElementById('pn');
+              a.style.display='block';
+            }
+            else{
+              var a= document.getElementById('pn');
+              a.style.display='none';
+            }
+            if(!data.name){
+              var a= document.getElementById('un');
+              a.style.display='block';
+            }
+            else{
+              var a= document.getElementById('un');
+              a.style.display='none';
+            }
+          }
+          }  
+               
+      })
+    });
+  </script>
+  <script type="text/javascript">
+  
+  function validate(){
+    var username = document.forms['myform']['username'].value;
+    var password = document.forms['myform']['password'].value;
+    
+    if (username == '' || password == ''){
+      var a = document.getElementById('up');
+      a.style.display='block';
+      return false;
+    }
+    else{
+      var a = document.getElementById('up');
+      a.style.display='none';
+
+    }
+  }
+  </script>
+  
+  
+</head>
+
+<body>
+  <div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+      <div class="row">
+        <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-full-bg1">
+          <div class="row w-100">
+            <div class="col-lg-4 mx-auto">
+              <div class="auth-form-dark text-center p-5"  style="position: relative; top:100px;">
+                <img width="250" height="120" src="{% static 'images/top-logo-neg.png' %}" >
+                <h2 style="text-align: center;"></h2>
+                <form name='myform' id='myform' method="POST" action="{% url 'Home:validateAdmin' %}" class="pt-5">{% csrf_token %}
+                  <div class="form-group">
+                    <!--<label for="exampleInputEmail1">Username</label>-->
+                    <input type="text" name="username" id="username" class="form-control" id="exampleInputEmail1" placeholder="Username">
+                    <i class="mdi mdi-account"></i>
+                  </div>
+                  <div class="form-group">
+                    <!--<label for="exampleInputPassword1">Password</label>-->
+                    <input type="password" name="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <i class="mdi mdi-eye"></i>
+                  </div>
+                  <div class="mt-5">
+                    
+                     
+                      <div style="position: relative;top:-9px;display: none;" id=un class="alert alert-fill-danger">User not found.</div>
+                   
+                    
+                        <div style="position: relative;top:-9px;display: none;" id=pn class="alert alert-fill-danger">Incorrect password. Please try again.</div>
+
+                      <div id=up style="position: relative;top:-9px;display: none;" class="alert alert-fill-danger">Username or Password cannot be blank.</div>
+                      
+                    
+             
+                    <button onclick="validate()" class="btn btn-block btn-warning btn-lg font-weight-medium" value="Login"">Login</button>
+                  </div>
+                  <div class="mt-3 text-center">
+                    <a href="/service-provider/forgot-password" class="auth-link text-white">Forgot password?</a>
+                  </div>                 
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- row ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="{% static 'js/off-canvas.js' %}"></script>
+  <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'js/misc.js' }"></script>
+  <script src="{% static 'js/settings.js' %}"></script>
+  <script src="{% static 'js/todolist.js' %}"></script>
+  <!-- endinject -->
+</body>
+
+
+<!-- Mirrored from www.urbanui.com/victory/pages/samples/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:35:31 GMT -->
+</html>

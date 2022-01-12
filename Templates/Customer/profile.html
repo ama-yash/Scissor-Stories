@@ -1,0 +1,145 @@
+{% load static %}
+{% include 'Common/header.html' %}
+<title>scissorstories - My Profile</title>
+{% for c in customers %}
+<div class="spa_sab_banner_wrap shop_img overlay" width=100%>
+    <div class="container">
+        <div class="spa_sab_banner_text" style='height:200px;'>
+            <h2 class="sab_banner_title">My Profile</h2>
+        </div>
+    </div>
+</div>
+<br>
+
+<table width=100% border="0">
+    <tr>
+        <br>
+        <br>
+        <form name='mform' action="/myaccount/profile/update" method="POST" enctype="multipart/form-data">{% csrf_token %}
+        <td style="border:none;">
+            <div style="width:50%;height:500px;position: relative;left:250px;">
+                <div class="container" style="position: relative;top:20px;">
+                    <div class="row">
+                        <div class="col-md-4  col-sm-6">
+                            <div class="spa_blog_medium hover_list">
+                                <div class="spa_blog_thumb">
+                                    <figure class="imghvr-strip-shutter-up">
+                                        <div class="hover-theme"></div>
+                                        <img width="100px" height="200px" src="{{c.image.url}}" alt="">
+                                        
+                                    </figure>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="spa_booking_detail">
+                        <div class="spa_booking_list">
+                            <h4>Change Image</h4>
+                            <div class="spa_select_field input">
+                                <input style="width: 300px;" name=image type="file">
+                            </div>
+                        </div>
+                        <div class="spa_booking_list">
+                            <h4>Username</h4>   
+                            <div class="spa_select_field input">
+                                <input style="width: 300px;" name=username id=username value={{c.username}} type="text" readonly placeholder="Username">
+                            </div>
+                        </div>
+
+                        <div class="spa_booking_list">
+                            <h4>Email</h4>
+                            <div class="spa_select_field input">
+                                <input style="width: 300px;" name=email id=email type="email" value={{c.email}} disabled placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="spa_booking_list">
+                            <h4>Phone</h4>
+                            <div class="spa_select_field input">
+                                <input style="width: 300px;" name=contact maxlength="10" id=contact type="text" value={{c.contact}}>
+                            </div>
+                        </div>
+                        <div class="spa_booking_list">
+                            <h4>Gender</h4>
+                            <div class="spa_select_field input">
+                                <select name=gender id=gender style="width: 300px;">
+                                    <option {% if c.gender == 'M' %} selected="selected" {% endif %} value = 'M'>Male</option>
+                                    <option {% if c.gender == 'F' %} selected="selected" {% endif %} value = 'F'>Female</option>
+                                    <option {% if c.gender == 'O' %} selected="selected" {% endif %} value = 'O'>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+        <td style="border:none;">
+            <div style="width:75%;height:500px;position: relative;top:10px;right:250px">
+
+                <div class="spa_booking_detail" style="width:100%">
+                    <div class="spa_booking_list">
+                        <h4>First Name</h4>
+                        <div class="spa_select_field input">
+                            <input style="width: 300px;" name=fname id=fname type="text" value={{c.first_name}}>
+                        </div>
+                    </div>
+
+                    <div class="spa_booking_list">
+                        <h4>Last Name</h4>
+                        <div class="spa_select_field input">
+                            <input style="width: 300px;" type="text" name=lname id=lname value={{c.last_name}}>
+                        </div>
+                    </div>
+                    <div class="spa_booking_list">
+                        <h4>State</h4>
+                        <div class="spa_select_field input">
+                            <select name='state' id=state style="width: 300px;">
+                                <option value=0>--Select States--</option>
+                                {% for state in states %}
+                                <option  value={{state.state_id}} {% if state.state_id == c.state_id %} selected="selected" {% endif %}>{{state.state_name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="spa_booking_list">
+                        <h4>City</h4>
+                        <div class="spa_select_field input">
+        
+                            <select name='city' id=city style="width: 300px;">
+                                <option value=0>--Select City--</option>
+                                
+                                {% for city in cities %}              
+                                <option {% if city.city_id == c.city_id %} selected {% endif %} value={{city.city_id}}>{{city.city_name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="spa_booking_list">
+                        <h4>Address</h4>
+                        <div class="spa_select_field input">
+                            <textarea style="width: 300px;height:100px;" name=address id=address>{{c.address}}</textarea>
+                        </div>
+                    </div>
+                   
+                </div>
+            
+            </div>
+        </td>
+    
+    </tr>
+    <tr style="text-align: center;">
+        <td style="border:none;">
+            <div style="position: relative;left:180px;">
+                <button type="submit" class="them_btn them-bg">Update Profile</button> &nbsp;
+                <button type=button onclick="window.location.href='/myaccount/change-password'" class="them_btn them-bg">Change Password</button>
+                <button class="them_btn them-bg" href="index-2.html">Deactivate Account</button>
+            </div>
+            <br>
+        </form>
+        </td>
+    </tr>
+</table>
+{% endfor %}
+{% include 'Common/footer.html' %}

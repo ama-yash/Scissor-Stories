@@ -1,0 +1,153 @@
+{% load static %}
+{% for s in sobj %}
+{% include 'Common/header.html' %}
+<title>scissorstories - {{s.firm_name}}</title>
+        <div class="spa_sab_banner_wrap shop_img overlay">
+            <div class="container">
+                <div class="spa_sab_banner_text">
+                    <h2 class="sab_banner_title">{{s.firm_name}}</h2>
+                </div>
+            </div>
+        </div>
+        <div style="position: relative;top:25px;" class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="left_sidebar">
+                        <div class="spa_sidebar_item">
+                            <h4 class="sidebar_title">What we do</h4>
+                            <div class="spa_sidebar_filter kode-elc-tab-services">
+                                <ul class="tabs">
+                                    {% for i in ser %}
+                                    <li><a href="#"><i class="fa"></i>{{i.ser_name}}&nbsp;({% if i.gender == 'M' %}Male{% else %}Female{%endif%})</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        <!--SPA SIDEBAR ITEM END -->
+
+                        <!--SPA SIDEBAR ITEM START -->
+
+                        <!--SPA SIDEBAR ITEM END -->
+
+                        <!--SPA SIDEBAR ITEM START -->
+                        <div class="spa_sidebar_item">
+                            <h4 class="sidebar_title">Get in touch</h4>
+                            <div class="spa_newsletter_field">
+                                <table border-color="white">
+                                    <tr>
+                                        <td style="border: none;">
+                                            <h6>Address:</h6></td>
+                                        <td style="border: none;">
+                                            <p>{{s.address}}</p>
+                                            </t style="border: none;" d style="border: none;">
+                                    </tr>
+                                    <tr>
+                                        <td style="border: none;">
+                                            <h6>City:</h6></td>
+                                        <td style="border: none;">
+                                            <p>{{s.city_name}}</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: none;">
+                                            <h6>State:</h6></td>
+                                        <td style="border: none;">
+                                            <p>{{s.state_name}}</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: none;">
+                                            <h6>Owner:</h6></td>
+                                        <td style="border: none;">
+                                            <p>{{s.owner_name}}</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: none;">
+                                            <h6>Contact:</h6></td>
+                                        <td style="border: none;">
+                                            <p>{{s.contact}}</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--SPA SIDEBAR ITEM START -->
+                        
+                        <!--SPA SIDEBAR ITEM END -->
+
+                        <!--SPA SIDEBAR ITEM START -->
+
+                        <!--SPA SIDEBAR ITEM END -->
+
+                        <!--SPA SIDEBAR ITEM START -->
+                        
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="spa_service_detail_row kode-elc-tab-services">
+                        <div id="tab1">
+                            <figure class="imghvr-strip-shutter-up">
+                                <div class="hover-theme"></div>
+                                <img height=500px width="250px" src="{{s.image.url}}" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h4 class="sidebar_title">Our Professionals</h4>
+                {% for a in at_list %}
+                <div class="col-md-3 col-sm-6">
+                    <a href="sp-details.html">
+                        <div class="spa_product_item overlay">
+                            <figure>
+                                <img height="150px" width="100px" src="{{a.image.url}}" alt="">
+                            </figure>
+                            <div class="spa_product_text">
+                                <p>{{a.at_name}}</p>
+                                <span>{{a.contact}}</span>
+
+                            </div>
+                            <div class="spa_product_detail">
+                                <!--SECTION HEADING START -->
+                                <div class="section_heading">
+                                    <span class="boder-top"></span>
+                                    <span><i class="fa icon-three"></i></span>
+                                    <span class="boder-bottom"></span>
+                                </div>
+                                <!--SECTION HEADING END -->
+                                <h6><span>{{a.at_name}}</span>Clients Attended:</h6>
+                                <h4>115</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+                <div class="row">
+                    <h4 class="sidebar_title">Available Timeslots</h4>
+                    <h5 class="sidebar_title">Select Date:</h5>
+                    <form method="POST" action="/service-providers/send">{% csrf_token %}<input class="effect"  onchange="ser()" type="date" id=dtp name=dtp>
+                        
+                        <button id=but name=but value={{s.id}} type="submit"></button>
+                        <br><br>
+                    </form>
+                    <table id='service' style='text-align: center;' class="table table-striped">
+                        <thead style="text-align: center;">
+                          <tr>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                        </tbody>
+                      </table>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        {% endfor %}
+        {% include 'Common/footer.html' %}

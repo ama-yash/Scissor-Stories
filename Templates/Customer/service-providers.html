@@ -1,0 +1,71 @@
+{% load static %}
+{% include 'Common/header.html' %}
+<title>scissorstories - Service Providers</title>
+         <div class="spa_sab_banner_wrap shop_img overlay">
+            <div class="container">
+                <div class="spa_sab_banner_text">
+                    <h2 class="sab_banner_title">Our Service Providers</h2>
+
+                </div>
+            </div>
+        </div>
+        <!--SPA SAB BANNER WRAP OVERLAY END -->
+
+        <!--SPA PAGE LINK START -->
+
+        <!--SPA PAGE LINK END -->
+
+        <!--CONTENT START -->
+        <div class="content">
+            <!--SPA BLOG GRID START -->
+            <div class="spa_shop_wrap">
+                <div class="container">
+                    <div class="spa_shop_menu_row">
+                        
+                        <div class="spa_select_field drop">
+                            <select class="small">
+                                <option data-display="Select your Serivces">Select Service</option>
+                                <option value="1">All</option>
+                                <option value="2">Haircut</option>
+                                <option value="3">Shave</option>
+                                <option value="4">Hair Massage</option>
+                                <option value="5">Body Massage</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        {% for s in sobj %}
+                        <div class="col-md-3 col-sm-6">
+                            <a href="/service-providers/view?id={{s.id}}">
+                                <div class="spa_product_item overlay">
+                                    <figure>
+                                        <img height="150px" width="100px" src="{{s.image.url}}" alt="">
+                                    </figure>
+                                    <div class="spa_product_text">
+                                        <p>{{s.firm_name}}</p>
+                                        <span>{{s.city_name}}</span>
+
+                                    </div>
+                                    <div class="spa_product_detail">
+                                        <!--SECTION HEADING START -->
+                                        <div class="section_heading">
+                                            <span class="boder-top"></span>
+                                            <span><i class="fa icon-three"></i></span>
+                                            <span class="boder-bottom"></span>
+                                        </div>
+                                        <!--SECTION HEADING END -->
+                                        <h6><span>{{s.firm_name}}</span> Average Rating:</h6>
+                                        <h4>3.5/5</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+            </div>
+            <!--SPA BLOG GRID END -->
+
+        </div>
+    {% include 'Common/footer.html' %}

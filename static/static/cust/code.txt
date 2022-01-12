@@ -1,0 +1,59 @@
+<div class="spa_salon_list">
+							<ul>
+								<li>
+									<div class="spa_salon_item">
+										<figure class="overlay">
+											<img src="extra-images/salon-fig.jpg" alt="">
+										</figure>
+										<div class="spa_salon_text">
+											<span>1</span>
+											<h6>Body Treatments</h6>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="spa_salon_item">
+										<figure class="overlay">
+											<img src="extra-images/salon-fig1.jpg" alt="">
+										</figure>
+										<div class="spa_salon_text">
+											<span>2</span>
+											<h6>Body Treatments</h6>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="spa_salon_item">
+										<figure class="overlay">
+											<img src="extra-images/salon-fig2.jpg" alt="">
+										</figure>
+										<div class="spa_salon_text">
+											<span>3</span>
+											<h6>Body Treatments</h6>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="spa_salon_item">
+										<figure class="overlay">
+											<img src="extra-images/salon-fig3.jpg" alt="">
+										</figure>
+										<div class="spa_salon_text">
+											<span>4</span>
+											<h6>Body Treatments</h6>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="spa_salon_item">
+										<figure class="overlay">
+											<img src="extra-images/salon-fig4.jpg" alt="">
+										</figure>
+										<div class="spa_salon_text">
+											<span>5</span>
+											<h6>Body Treatments</h6>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>

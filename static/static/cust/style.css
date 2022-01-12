@@ -1,0 +1,4017 @@
+/*=====================================================================================
+	
+	Project: AvaSalon
+	Version: 1.0
+	Last change: 5/20/2019
+	Author : KodeForest
+	
+	/**
+	* Table of Contents :
+	* 1.0 - SPA TOP WRAP START
+	* 2.0 - SPA TOP NAVIGATION START
+	* 3.0 - SPA BANNER WRAP START
+	* 4.0 - SPA SALON WRAP START
+	* 5.0 - SPA VIDEO FEATURE START
+	* 6.0 - SPA SERVICE WRAP START
+	* 7.0 - SPA RESERVATION WRAP START
+	* 8.0 - SPA GALLERY WRAP START
+	* 9.0 - SPA TESTIMONIAL WRAP START
+	* 10.0 - SPA CLIENT WRAP START
+	* 11.0 - SPA PRICE TABLE START
+	* 12.0 - SPA AWARD WRAP START
+	* 13.0 - SPA PRODUCT WRAP START
+	* 14.0 - SPA NEWSLETTER WRAP START
+	* 15.0 - WIDGET WRAP START
+	* 16.0 - LOGIN FORM START
+	* 17.0 - SPA SHOPING CART START
+	* 18.0 - SEARCH FORM START
+	* 19.0 - HOME PAGE 02 START
+	* 20.0 - ABOUT US PAGE START
+	* 21.0 - SPA SAB BANNER WRAP START
+	* 22.0 - SPA PAGE LINK START
+	* 23.0 - SPA WELLNESS CENTER START
+	* 24.0 - SPA IMPORTANT TEXT START
+	* 25.0 - SPA SALON WRAP SALON START
+	* 26.0 - BLOG 02 PAGE START
+	* 27.0 - SPA BLOG  GRID START
+	* 28.0 - BLOG LIST PAGE START
+	* 29.0 - BLOG DETAIL PAGE START
+	* 30.0 - GALLERY 02 PAGE START
+	* 31.0 - GALLERY 05 PAGE START
+	* 32.0 - SERVICES PAGE START
+	* 33.0 - SPA SERVICES GRID START
+	* 34.0 - SERVICES 02 PAGE START
+	* 35.0 - SPA SERVICES 02 START
+	* 36.0 - SERVICES DETAIL PAGE START
+	* 37.0 - BOOKING PAGE START
+	* 38.0 - 404 PAGE START
+	* 39.0 - CONTACT US PAGE START
+	* 40.0 - SPA MAP LOCATION START
+	* 41.0 - SPA CONTACT FORM START
+	* 42.0 - SPA CONTACT INFO START
+	* 43.0 - SHOP PAGE START
+	* 44.0 - THEAM HOVER START
+
+	[Color codes]
+
+	Background: #ffffff (white)
+	Content: #666666 (light black)
+	Header h1: #111111 (dark black)
+	Footer:  #000000 (dark black)
+
+	a (standard): #999999 (light black)
+	a (visited): #999999 (light black)
+	a (active): #999999 (light black)
+
+	[Typography]
+	  
+	Body copy:  15px/ 'Open Sans', sans-serif;
+	Headers:  'Poppins', sans-serif;
+	Input, textarea: 'Poppins', sans-serif;
+	Sidebar heading: 'Poppins', sans-serif;
+
+
+==============================================================================================	*/
+
+
+
+
+/* DEFULT CSS START*/
+.content,
+.wrapper{
+	float:left;
+	width:100%;
+}
+.wrapper{
+	overflow:hidden;
+}
+.overlay{
+	position:relative;
+}
+.overlay:before{
+	position:absolute;
+	content:"";
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	background-color:#000;
+	opacity:0.4;
+}
+.dl-menuwrapper{
+	display:none;	
+}
+/* DEFULT CSS END */
+/*
+      ============================================
+			SPA TOP WRAP START
+      ============================================
+*/
+.spa_select_dropdwon,
+.spa_login ul,
+.spa_top_row,
+.spa_top_wrap{
+	float:left;
+	width:100%;	
+}
+.spa_top_wrap{
+	padding:11px 0px 10px;
+}
+.spa_top_row p{
+	float:left;
+	width:auto;
+	color:#fff;
+	margin-bottom:0px;
+}
+.spa_login{
+	float:right;
+	width:auto;
+	padding-top: 2px;
+}
+.spa_login ul li{
+	float:left;
+	padding:0px 20px;
+	border-right:1px solid #fff;
+	line-height: 15px;
+}
+.spa_login ul li:last-child{
+	padding-right:0px;
+	border-right:none;
+}
+.spa_select_dropdwon > span{
+	float:left;
+	color:#fff;
+	margin-right:11px;
+}
+.spa_select_dropdwon .nice-select{
+	height:auto;
+	background:none;
+	border:none;
+	color:#fff;
+	padding:0px 16px 0px 0px;
+}
+.spa_select_dropdwon .nice-select:after {
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    height: 6px;
+    margin-top: -4px;
+    right: -1px;
+    width: 6px;
+}
+.spa_select_dropdwon .nice-select .list{
+	width: 90px;
+	top: 26px;
+	border-radius: 0px 0px;
+	border-top: 1px dotted #000;
+	border-bottom: 2px dotted #000;
+}
+.spa_select_dropdwon .nice-select .list li{
+	float:left;
+	width:100%;
+	border:none;
+	padding:10px 20px;
+}
+.spa_select_dropdwon .nice-select .list li:hover{
+	background-color:#000;
+}
+.spa_singup_form{
+	display:inline-block;
+	color:#fff;
+}
+.spa_singup_form i{
+	margin-right:10px;
+}
+.spa_singup_form:hover{
+	color:#fff;
+}
+/*
+      ============================================
+			SPA TOP WRAP END
+      ============================================
+*/
+
+/*
+      ============================================
+			SPA TOP NAVIGATION START
+      ============================================
+*/
+.spa_navi_list,
+.navigation ul,
+.spa_top_navigation{
+	float:left;
+	width:100%;
+}
+.navigation,
+.navigation ul li,
+.top_logo{
+	float:left;
+	width:auto;
+}
+.top_logo {
+    padding: 38px 0px;
+}
+.top_logo h1{
+	margin-bottom:0px;
+}
+.navigation ul li{
+	margin-right:24px;
+	position:relative;
+}
+.navigation ul li:last-child{
+	margin-right:0px;
+}
+.navigation ul li a{
+	display:inline-block;
+	font-size:14px;
+	padding:55px 5px 51px;
+	border-bottom:4px solid transparent;
+	position:relative;
+	text-transform:capitalize;
+}
+.navigation ul li a:before{
+	position:absolute;
+	content:"";
+	top:51%;
+	left:-8px;
+	right:0px;
+	bottom:0px;
+	height:3px;
+	width:3px;
+	background-color:#b4b4b4;
+}
+.navigation ul li a.active:before,
+.navigation ul li a:hover:before{
+	opacity:1;
+}
+/* navigation dropdwon start */
+.navigation ul li ul{
+	position:absolute;
+	top:120%;
+	left: 30px;
+	width:200px;
+	z-index: 4;
+	overflow:hidden;
+	visibility:hidden;
+	opacity:0;
+	border-bottom:3px solid;
+	border-top:3px solid;
+	background-color:#fff;
+}
+.navigation ul li ul:before{
+	position: absolute;
+	content: "";
+	top: -10px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 10px 10px 10px;
+	border-color: transparent transparent #8c3fb2 transparent;
+	text-align: center;
+	margin: 0px auto;
+
+}
+.navigation ul li ul li{
+	width:100%;
+	margin-right:0px;
+}
+.navigation ul li ul li a{
+	display:block;
+	color:#333;
+	padding:10px 20px;
+	border:none;
+	border-bottom:1px solid rgba(0,0,0,0.1);
+	position:relative;
+	z-index:3;
+}
+.navigation ul li ul li a:hover{
+	color:#fff;
+	padding:10px 30px;
+}
+.navigation ul li ul li a:after{
+	position:absolute;
+	content:"";
+	top:0px;
+	left:50px;
+	right:50px;
+	bottom:0px;
+	opacity:0;
+	z-index:-1;
+}
+.navigation ul li ul li a:hover:after{
+	opacity:0.6;
+	left:0px;
+	right:0px;
+}
+.navigation ul li ul li a:before{
+	background:none;
+	height:0px;
+	width:0px;
+}
+.navigation ul li:hover ul{
+	visibility:visible;
+	overflow:visible;
+	opacity:1;
+	top:100%;
+	left:0px;
+}
+.spa_search_info{
+	float:right;
+	width:auto;
+}
+.search_icon{
+	display: inline-block;
+	padding: 0px 20px;
+	position: relative;
+	top: -4px;
+	border-left: 1px solid #b4b4b4;
+	line-height: 17px;
+	font-size: 16px;
+	color:#353535;
+	background: none;
+}
+.cart_icon{
+	display:inline-block;
+	height:130px;
+	width:130px;
+	text-align:center;
+	line-height:130px;
+	color:#fff;
+	font-size:28px;
+	position:relative;
+}
+.cart_icon:hover,
+.cart_icon:focus,
+.cart_icon.active{
+	color:#fff;
+}
+.cart_icon:hover{
+	background-color: #fff;
+	box-shadow: 0px 0px 8px -4px #000;
+}
+.cart_icon:before{
+	position: absolute;
+	content: "";
+	top: auto;
+	left: 0px;
+	right: 0px;
+	bottom: -30px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0px 0px 30px 66px;
+	border-color: transparent transparent transparent #8c3fb2;
+	z-index: 4;
+}
+.cart_icon:hover:before{
+	border-color:transparent #fff transparent;
+}
+.cart_icon:after{
+	position: absolute;
+	content: "";
+	top: auto;
+	left: auto;
+	right: 0px;
+	bottom: -30px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width:0px 66px 30px 0;
+	border-color: transparent #8c3fb2 transparent transparent;
+	z-index: 4;
+}
+.cart_icon:hover:after{
+	border-color: transparent #fff transparent transparent;
+}
+/* sticky header style*/
+.spa_top_navigation.sticky {
+    z-index: 5;
+    position: fixed;
+    background-color: #fff;
+    top: 0px;
+    box-shadow: 0px 0px 20px 1px;
+	z-index:9;
+}
+/*
+      ============================================
+			SPA TOP NAVIGATION END
+      ============================================
+*/
+
+/*
+      ============================================
+			SPA BANNER WRAP START
+      ============================================
+*/
+.spa_banner_btn,
+.spa_banner_wrap{
+	float:left;
+	width:100%;
+}
+.spa_banner_wrap .overlay:before{
+	opacity:0.2;
+}
+.spa_banner_text{
+	position:absolute;
+	top:50%;
+	left:50%;
+	right:0px;
+	width:570px;
+	z-index:3;
+	text-align:center;
+	padding:60px 0px 70px;
+	margin:-179px 0px 0px -572px;
+}
+.spa_banner_text:before{
+	position:absolute;
+	content:"";
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	opacity:0.95;
+	z-index:-1;
+}
+.medium_text{
+	font-size:30px;
+	color:#fff;
+}
+.medium_text.margin{
+	margin-bottom:26px;
+}
+.large_text{
+	color: #fff;
+	font-size: 65px;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 66px;
+}
+.spa_banner_btn .them_btn{
+	margin-right:10px;
+}
+.spa_banner_btn .them_btn:last-child{
+	margin-right:0px;
+}
+.right-text {
+    float:right;
+    margin: -179px 0px 0px 0px;
+}
+.center-text {
+    margin: -179px 0px 0px -280px;
+}
+.spa_banner_wrap .slick-prev, 
+.spa_banner_wrap .slick-next{
+	height:50px;
+	width:50px;
+}
+.spa_banner_wrap .slick-prev:hover, 
+.spa_banner_wrap .slick-next:hover{
+	background-color:#000;
+}
+.spa_banner_wrap .slick-prev{
+	left:10px;
+}
+.spa_banner_wrap .slick-next{
+	right:10px;
+}
+.spa_banner_wrap .slick-prev:before, 
+.spa_banner_wrap .slick-next:before{
+	content:"\f104";
+	color:#fff;
+	font-size:24px;
+	font-family:fontAwesome;
+	line-height:50px;
+}
+.spa_banner_wrap .slick-next:before{
+	content:"\f105";
+}
+.spa_banner_wrap .slick-dots{
+	bottom:30px;
+}
+.spa_banner_wrap .slick-dots li{
+	background-color:#fff;
+	border-radius:100%;
+	margin:0 4px;
+	height:15px;
+	width:15px;
+}
+.spa_banner_wrap .slick-dots li.slick-active{
+	height:20px; 
+	width:20px;
+	top:-2px;
+}
+.spa_banner_wrap .slick-dots li button:before {
+	content:"";
+	position:relative;
+}
+.spa-banner-slider .slick-slide.slick-current.slick-active .medium_text1{
+	-webkit-animation-name: fadeInUp;
+  	animation-name: fadeInUp;
+}
+.spa-banner-slider .slick-slide.slick-current.slick-active .medium_text:last-of-type{
+	-webkit-animation-name: fadeOutDown;
+	animation-name: fadeOutDown;
+}
+.spa-banner-slider .slick-slide.slick-current.slick-active .large_text{
+	-webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+.spa-banner-slider .slick-slide.slick-current.slick-active .them_btn{
+	-webkit-animation-name: slideInLeft;
+	animation-name: slideInLeft;
+}
+.spa-banner-slider .slick-slide.slick-current.slick-active .them_btn:last-child{
+	-webkit-animation-name: slideInRight;
+	animation-name: slideInRight;
+}
+/*
+      ============================================
+			SPA BANNER WRAP END
+      ============================================
+*/
+
+/*
+      ============================================
+			SPA SALON WRAP START
+      ============================================
+*/
+.spa_salon_text,
+.spa_salon_item,
+.spa_salon_list ul,
+.spa_salon_list,
+.spa_salon_wrap{
+	float:left;
+	width:100%;
+}
+.spa_salon_wrap{
+	padding:80px 0px 75px;
+}
+.spa_salon_list ul li{
+	float:left;
+	width:20%;
+	padding: 0px 20px;
+}
+.spa_salon_item figure{
+	border-radius:100%;
+}
+.spa_salon_item:hover figure{
+	transform:scale(1.1) rotate(359deg);
+	-moz-transform:scale(1.1) rotate(359deg);
+	-webkit-transform:scale(1.1) rotate(359deg);
+}
+.spa_salon_item .overlay:before{
+	opacity:0.2;
+	left:8px;
+	right:8px;
+	bottom:8px;
+	top:8px;
+	border-radius:100%;
+}
+.spa_salon_item:hover .overlay:before{
+	opacity:0.8;
+}
+.spa_salon_text{
+	text-align:center;
+	margin-top:-20px;
+	position:relative;
+	z-index:3;
+}
+.spa_salon_text span{
+	display:inline-block;
+	height:48px;
+	width:48px;
+	text-align:center;
+	border-radius:100%;
+	color:#fff;
+	line-height:48px;
+	font-size:18px;
+	margin-bottom:22px;
+}
+.spa_salon_item:hover .spa_salon_text span{
+	background-color:#fff;
+	box-shadow: 0px 5px 9px -4px;
+}
+.spa_salon_text h6{
+	margin-bottom:0px;
+}
+/*
+      ============================================
+			SPA SALON WRAP END
+      ============================================
+*/
+
+/*
+      ============================================
+			SPA VIDEO FEATURE START
+      ============================================
+*/
+.spa_video_text,
+.spa_video_fig,
+.spa_video_feature{
+	float:left;
+	width:100%;
+}
+.spa_video_feature{
+	background-color:#f4f4f4;
+}
+.spa_video_fig{
+	text-align:center;
+	padding:18px 34px 18px 40px;
+	position:relative;
+}
+.spa_video_fig figure{
+	width: auto;
+	border-radius: 100%;
+	float: none;
+	display: inline-block;
+	overflow: hidden;
+	z-index:4;
+}
+.video_paly{
+	position:absolute;
+	top:50%;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	height:124px;
+	width:124px;
+	text-align:center;
+	line-height:124px;
+	font-size:24px;
+	border-radius:100%;
+	background-color:#fff;
+	margin:-62px auto;
+}
+.video_paly:hover{
+	color:#fff;
+}
+.video_paly:before{
+	position:absolute;
+	content:"";
+	top:-10px;
+	left:-10px;
+	right:-10px;
+	bottom:-10px;
+	border:3px solid #fff;
+	border-radius:100%;
+}
+.video_paly:before, 
+.video_paly:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.video_paly:before {
+    -webkit-animation: scaling 1s linear 0s infinite;
+    -o-animation: scaling 1s linear 0s infinite;
+    animation: scaling 1s linear 0s infinite;
+}
+.video_paly:after {
+    -webkit-animation: scaling 1s linear 0.3s infinite;
+    -o-animation: scaling 1s linear 0.3s infinite;
+    animation: scaling 1s linear 0.3s infinite;
+}
+@keyframes scaling{
+	0%{
+		opacity: 0;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+	}
+	15%{
+		opacity: 0.7;
+		-webkit-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		transform: scale(1.05);
+	}
+	100%{
+		opacity: 0;
+		-webkit-transform: scale(1.5);
+		-ms-transform: scale(1.5);
+		-o-transform: scale(1.5);
+		transform: scale(1.5);
+	}
+}
+.spa_video_fig [class^="imghvr-"] a, 
+.spa_video_fig [class*=" imghvr-"] a{
+	top:50%;
+}
+.bg-color{
+	position:relative;
+	z-index:3;
+}
+.bg-color:after,
+.bg-color:before{
+    content: '';
+	position: absolute;
+	right: 30px;
+	top: 0px;
+	width: 999%;
+	height: 100%;
+	border-top-right-radius: 400px;
+	border-bottom-right-radius: 400px;
+	opacity:0.9;
+	z-index:2;
+}
+.bg-color:after{
+	position:absolute;
+	top:0px;
+	opacity:1;
+	background:none;
+	background-image:url("images/video-bg.png");
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index:-1;
+	width:160%;
+}
+.spa_video_text{
+	padding:92px 0px 95px 50px;
+}
+.custom_size{
+	font-weight:bold;
+	font-size:55px;
+	line-height: 50px;
+	margin-bottom:7px;
+}
+.custom_size span{
+	display:block;
+	margin-bottom:4px;
+}
+.spa_video_text h3{
+	font-size:40px;
+	margin-bottom:6px;
+}
+.spa_video_text p{
+	margin-bottom:42px;
+}
+/*
+      ============================================
+			SPA VIDEO FEATURE END
+      ============================================
+*/
+
+/*
+      ============================================
+			SPA SERVICE WRAP START
+      ============================================
+*/
+.spa_service_item,
+.spa_service_list ul li,
+.spa_service_list ul,
+.spa_service_list,
+.spa_service_wrap{
+	float:left;
+	width:100%;
+}
+.spa_service_wrap{
+	padding:80px 0px 170px;
+	position:relative;
+	z-index:3;
+}
+.spa_service_wrap:before{
+	position: absolute;
+	content: "";
+	top: 0px;
+	left: 40px;
+	right: 0px;
+	bottom: -194px;
+	background-image: url("images/top-logo2.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 37%;
+	z-index:-1;
+}
+.spa_service_list ul li{
+	margin-bottom:48px;
+}
+.spa_service_list ul li:last-child{
+	margin-bottom:0px;
+}
+.service_icon{
+	float:left;
+	font-size:50px;
+	color:#333333;
+	line-height: 50px;
+}
+.spa_service_text{
+	overflow:hidden;
+	padding:0px 0px 0px 30px;
+} 
+.spa_service_text h4{
+	margin-bottom:25px;
+	padding-bottom:10px;
+	position:relative;
+}
+.spa_service_text h4:before{
+	position:absolute;
+	content:"";
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	border-bottom:1px solid #906c5f;
+	width:48px;
+}
+.spa_service_text p{
+	margin-bottom:0px;
+}
+.spa_service_item.right{
+	text-align:right;
+}
+.spa_service_item.right .service_icon{
+	float:right;
+}
+.spa_service_item.right .spa_service_text{
+	padding:0px 30px 0px 0px;
+}	
+.spa_service_item.right .spa_service_text h4:before{
+	left:auto;
+	right:0px;
+}
+/*
+      ============================================
+			SPA SERVICE WRAP END
+      ============================================
+*/	
+
+/*
+      ============================================
+			SPA RESERVATION WRAP START
+      ============================================
+*/	
+.spa_field_btn,
+.spa_reservation_form,
+.spa_form_row,
+.spa_textarea,
+.spa_search_field,
+.spa_select_field,
+.spa_working_text,
+.spa_working_list li,
+.spa_working_list,
+.spa_reservation_wrap{
+	float:left;
+	width:100%;
+}
+.spa_reservation_wrap {
+    position: relative;
+    z-index: 5;
+}
+.spa_working_hour{
+	width:336px;
+	border:9px solid #6a1b9a;
+	background-color:#fff;
+	padding:32px 35px 40px;
+	margin:60px auto;
+	position:relative;
+	z-index:3;
+	text-align:center;
+	display: inline-block;
+	left: 70px;
+}
+.spa_working_hour:before{
+	position:absolute;
+	content:"\f004";
+	top:-24px;
+	left:0px;
+	right:0px;
+	height:40px;
+	width:40px;
+	line-height:40px;
+	border:2px solid #6a1b9a;
+	border-radius:100%;
+	background-color:#fff;
+	margin:auto;
+	text-align:center;
+	font-size: 18px;
+	font-family: fontAwesome;
+	z-index:3;
+}
+.spa_working_hour:after{
+	position:absolute;
+	content:"";
+	top:-69px;
+	left:0px;
+	right:0px;
+	height:45px;
+	width:1px;
+	background-color:#fff;
+	margin:auto;
+	text-align:center;
+}
+.spa_working_hour > a{
+	text-align:center;
+	display:inline-block;
+	font-size:30px;
+	color:#000;
+}
+.spa_working_hour h3{
+	font-weight: 600;
+	margin-bottom: 20px;
+	position: relative;
+	z-index: 3;
+	text-transform: uppercase;
+	padding-bottom: 2px;
+	border-bottom: 3px solid;
+	display: inline-block;
+}
+.spa_working_list{
+	position:relative;
+}
+.spa_working_list:before{
+	position: absolute;
+	content: "\f017";
+	top: auto;
+	left: auto;
+	right: 30px;
+	bottom: 0px;
+	font-size: 200px;
+	font-family: fontAwesome;
+	color: #f5f5f5;
+	z-index:-1;
+}
+.spa_working_list li{
+	padding:14px 0px;
+	border-bottom:1px solid #eaeaea;
+}
+.spa_working_list li:first-child{
+	padding-top:0px;
+}
+.spa_working_list li a{
+	display:block;
+	text-transform:capitalize;
+	text-align:left;
+}
+.spa_working_list li a span{
+	float:right;
+}
+.spa_working_text p{
+	margin-bottom:0px;
+	font-size:14px;
+}
+.spa_reservation_form{
+	padding-left:153px;
+}
+.bg_scale{
+	position:relative;
+}
+.bg_scale:before{
+	position:absolute;
+	content:"";
+	top:0px;
+	height: 100%;
+	opacity:1;
+	background:none;
+	background-color:#74259c;
+	width:153%;
+	left:40px;
+	transform: scaley(1.3);
+	-moz-transform: scaley(1.3);
+	-webkit-transform: scaley(1.3);
+	border-top-left-radius: 60px;
+	border-bottom-left-radius: 60px;
+}
+.section_heading.hdg{
+	position:relative;
+	z-index:3;
+	margin-bottom:4px;
+}
+.section_heading.hdg span,
+.section_heading.hdg h2,
+.section_heading.hdg h5{
+	color:#fff;
+}
+.spa_select_field{
+	margin-bottom:20px;
+	height:45px;
+	background-color:#fff;
+	border:3px solid #e1e1e1;
+}
+.spa_select_field .nice-select{
+	padding:0px 0px;
+	width:100%;
+	background:none;
+	border:none;
+	padding:9px 15px;
+}
+.spa_select_field .nice-select span{
+	font-size:15px;
+	color:#282828;
+}
+.spa_select_field .nice-select .list{
+	background-color:#f4f4f4;
+	width:100%;
+	border-radius:0px 0px;
+	box-shadow:0px 5px 25px -9px #666;
+}
+.spa_select_field .nice-select .list li{
+	padding:8px 15px;
+}
+.spa_select_field .nice-select .list li.option.selected.focus,
+.spa_select_field .nice-select .list li:hover{
+	color:#fff;
+}
+.spa_select_field .nice-select.open .list {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: scale(1.01) translateY(0);
+    -spa-transform: scale(1.01) translateY(0);
+    transform: scale(1.01) translateY(0);
+}
+.spa_select_field .nice-select:after {
+    border-bottom: 1px solid #a9a9a9;
+    border-right: 1px solid #a9a9a9;
+    height: 7px;
+    width: 7px;
+	right: 18px;
+	margin-top: -6px;
+}
+.spa_select_field .datepicker:before,
+.spa_select_field .nice-select:before{
+	position:absolute;
+	content:"";
+	top:0px;
+	left:auto;
+	right:0px;
+	bottom:0px;
+	height:39px;
+	width:44px;
+	border-left:2px solid #dfdfdf;
+}
+.spa_select_field .datepicker:before{
+	content:"\f107";
+	font-family:fontAwesome;
+	text-align:center;
+	line-height:39px;
+	color:#a9a9a9;
+	font-size:16px;
+	cursor:pointer;
+}
+.spa_select_field .datepicker{
+	padding:2px 0px;
+}
+.spa_select_field .datepicker input{
+	border:none;
+	box-shadow:0px 0px;
+}
+.spa_select_field .datepicker .calendar{
+	width:100% !important;
+	-webkit-transform: scale(1.01) translateY(0);
+    -spa-transform: scale(1.01) translateY(0);
+    transform: scale(1.01) translateY(0);
+}
+.spa_select_field .calendar thead tr:nth-child(2) th {
+    color: #555;
+    padding: 3px 0px;
+}
+.spa_select_field table > thead > tr > th{
+	border-bottom:none;
+}
+.spa_select_field table > thead > tr > th,
+.spa_select_field table > tbody > tr > th, 
+.spa_select_field table > tfoot > tr > th,
+.spa_select_field table > thead > tr > td,
+.spa_select_field table > tbody > tr > td, 
+.spa_select_field table > tfoot > tr > td{
+	 padding-left:0px;
+ }
+.spa_select_field .calendar span {
+    padding: 1px 0px;
+}
+.spa_select_field .calendar #today {
+    padding: 5px 6px;
+}
+.spa_search_field{
+	margin-bottom:20px;
+	position:relative;
+}
+.spa_search_field input{
+	border:3px solid #e1e1e1;
+}
+.spa_textarea{
+	position:relative;
+}
+.spa_textarea textarea{
+	height:115px;
+	border:3px solid #e1e1e1;
+	color:transparent;
+}
+.spa_textarea textarea:focus{
+	color:#000 !important;
+}
+.spa_field_btn{
+	margin-top:30px;
+}
+.effec{
+	background-color:#fff;
+}
+.effect ~ .focus-border:before,
+.effect ~ .focus-border:after{
+	content: ""; 
+	position: absolute; 
+	top: -1px; 
+	left: 50%;
+	width: 0; 
+	height: 2px;
+	transition: 0.4s;
+}
+.effect ~ .focus-border:after{
+	top: auto; 
+	bottom: 0;
+}
+.effect ~ .focus-border i:before,
+.effect ~ .focus-border i:after{
+	content: ""; 
+	position: absolute; 
+	top: 50%; 
+	left: 0; 
+	width: 2px; 
+	height: 0; 
+	transition: 0.6s;
+}
+.effect ~ .focus-border i:after{
+	left: auto;
+	right: 0;
+}
+.effect:focus ~ .focus-border:before,
+.effect:focus ~ .focus-border:after,
+.has-content.effect ~ .focus-border:before,
+.has-content.effect ~ .focus-border:after{
+	left: 0; 
+	width: 100%; 
+	transition: 0.4s;
+}
+.effect:focus ~ .focus-border i:before,
+.effect:focus ~ .focus-border i:after,
+.has-content.effect ~ .focus-border i:before,
+.has-content.effect ~ .focus-border i:after{
+	top: -1px; 
+	height: 100%;
+	transition: 0.6s;
+}
+.effect ~ label{
+	position: absolute;
+	left: 16px; 
+	width: auto; 
+	top: 13px; 
+	color: #282828; 
+	transition: 0.3s;
+	margin-bottom:0px;
+}
+.effect:focus ~ label, 
+.has-content.effect ~ label{
+	top: -18px;
+	left: 0; 
+	font-size: 12px; 
+	color: #fff; 
+	transition: 0.3s;
+}
+/*
+      ============================================
+			SPA RESERVATION WRAP END
+      ============================================
+*/
+
+/*
+      ============================================
+			SPA GALLERY WRAP START
+      ============================================
+*/
+.spa_gallery_item,
+.spa_gallery_row,
+.filtr-container,
+.spa_filter_gallery,
+.spa_gallery_wrap{
+	float:left;
+	width:100%;
+}	
+.spa_gallery_wrap{
+	padding:165px 0px 50px;
+}
+.spa_filter_gallery{
+	margin-bottom:40px;
+}
+.spa_filter_gallery .filter{
+	padding:0px 0px;
+}
+.spa_filter_gallery .filter a{
+	display:inline-block;
+	margin-right:6px;
+	background:none;
+	color:#2c2c2c;
+	padding:10px 10px;
+	border-top:1px solid transparent;
+	background:none;
+	border-bottom:1px solid transparent;
+}
+.spa_filter_gallery .filter a:hover{
+	background:none;
+	border-radius:0px 0px;
+}
+.margin-bottom{
+	margin-bottom:20px;
+}
+.spa_gallery_wrap .filtr-item {
+    padding: 0px 15px;
+}
+.gallery a.width{
+	width:50%;
+}
+.filter a {
+	padding: 10px 20px;
+	display: inline-block;
+	color: #003;
+	background: #eee;
+	text-decoration: none;
+	transition: all 0.2s;
+	border-radius: 9px;
+	border-bottom:1px solid transparent;
+	border-top:1px solid transparent;
+}
+.filter a.active{
+	border-radius:0px 0px;
+}
+.filter a:hover { 
+	background: #8ad;
+}
+.filter {
+	padding: 50px;
+	text-align: center
+}
+.gallery a img {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+.gallery a {
+	width:25%;
+	transition: all 0.2s;
+	display: block;
+	float: left;
+	opacity: 1;
+	height: auto;
+	padding:0px 15px;
+}
+.gallery .hide, .gallery .pophide {
+	width: 0%;
+	opacity: 0;
+	transition: all 0.1s;
+}
+.gallery .pop {
+	width: 100%;
+	position: relative;
+	z-index: 2;
+	box-shadow: 0 0 0px 1000px rgba(0,0,0,0.5);
+}
+.pop:after {
+	content: "\00D7";
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #333;
+	background: #fff;
+	padding: 10px 15px;
+	border-radius: 50%;
+	opacity: 0.8;
+}
+.pop:hover:after { opacity: 1 }
+/*
+      ============================================
+			SPA GALLERY WRAP END
+      ============================================
+*/
+
+/*
+      ============================================
+			SPA TESTIMONIAL WRAP START
+      ============================================
+*/
+.spa_rating,
+.spa_testimonial_text,
+.spa_testimonial_list,
+.spa_testimonial_wrap{
+	float:left;
+	width:100%;
+}
+.spa_testimonial_wrap{
+	padding:80px 0px;
+	background-image:url("images/testimonial-bg.png");
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index:3;
+}
+.spa_testimonial_wrap.overlay:before{
+	opacity:0.9;
+	z-index:-1;
+}
+.spa_testimonial_wrap .section_heading{
+	margin-bottom:30px;
+}
+.spa_testimonial_list{
+	background-color:#fff;
+	text-align:center;
+	padding:60px 100px 56px;
+}
+.spa_testimonial_text p{
+	margin-bottom:21px;
+}
+.spa_rating{
+	margin-bottom:12px;
+}
+.spa_rating li{
+	display:inline-block;
+}
+.spa_rating li a{
+	display:inline-block;
+	font-size:14px;
+	color:#f0bb1a;
+}
+.spa_testimonial_text h6{
+	font-size:16px;
+	margin-bottom:0px;
+}
+
+.spa_testimonial_wrap .slick-prev, 
+.spa_testimonial_wrap .slick-next{
+	height:55px;
+	width:55px;
+	text-align:center;
+	border-radius:100%;
+	background-color:#fff;
+	border:3px solid;
+	margin-top:-80px;
+}
+.spa_testimonial_wrap .slick-prev{
+	left:-130px;
+}
+.spa_testimonial_wrap .slick-next{
+	right:-130px;
+}
+.spa_testimonial_wrap .slick-prev:after, 
+.spa_testimonial_wrap .slick-next:before{
+	line-height:50px;
+	content:"\e901";
+	font-family: 'icomoon' !important;
+	color:#fff;
+	font-size:20px;
+	color:transparent;
+}
+.spa_testimonial_wrap .slick-prev:hover:after, 
+.spa_testimonial_wrap .slick-next:hover:before{
+	color:#fff;
+}
+.spa_testimonial_wrap .slick-next:before{
+	content:"\e906";
+}
+.slick-prev:before {
+    content: '';
+}
+/*
+      ============================================
+			SPA TESTIMONIAL WRAP END
+      ============================================
+*/
+
+/*
+      ============================================
+			SPA CLIENT WRAP START
+      ============================================
+*/
+.spa_client_fig,
+.spa_client_wrap{
+	float:left;
+	width:100%;
+}
+.spa_client_wrap{
+	padding:60px 0px;
+	background-color:#f6f1f1;
+}
+.spa_client_fig figure{
+	width:auto;
+}
+.spa_client_wrap .slick-prev,
+.spa_client_wrap .slick-next{
+	display:none !important;
+}
+
+/*
+      ============================================
+			SPA CLIENT WRAP END
+      ============================================
+*/
+
+/*
+      ============================================
+			SPA PRICE TABLE START
+      ============================================
+*/
+.spa_price_list,
+.spa_price_date,
+.spa_price_table_list,
+.spa_price_table{
+	float:left;
+	width:100%;
+}
+.spa_price_table{
+	padding:80px 0px 120px;
+}
+.spa_price_table_list{
+	text-align:center;
+	padding:35px 0px 40px;
+	border:1px solid;
+	position:relative;
+	z-index:3;
+}
+.spa_price_table_list:before{
+	position:absolute;
+	content:"";
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	z-index:-1;
+}
+.section_heading.price{
+	margin-bottom:14px;
+}
+.section_heading.price h4{
+	margin-bottom:3px;
+}
+.spa_price_table_list.active .them_btn.btn_2,
+.spa_price_table_list.active .spa_price_list li a,
+.spa_price_table_list.active .spa_price_date span,
+.spa_price_table_list.active .spa_price_date h2,
+.spa_price_table_list.active .section_heading.price span,
+.spa_price_table_list.active .section_heading.price h4{
+	color:#fff;
+}
+.spa_price_table_list:hover .them_btn.btn_2,
+.spa_price_table_list:hover .spa_price_list li a,
+.spa_price_table_list:hover .spa_price_date span,
+.spa_price_table_list:hover .spa_price_date h2,
+.spa_price_table_list:hover .section_heading.price span,
+.spa_price_table_list:hover .section_heading.price h4{
+	color:#fff;
+}
+.spa_price_table_list:hover .them_btn.btn_2,
+.spa_price_table_list:hover .section_heading.price span:after,
+.spa_price_table_list:hover .section_heading.price span:before{
+	border-color:#fff;
+}
+.spa_price_table_list.active .them_btn.btn_2,
+.spa_price_table_list.active .section_heading.price span:after,
+.spa_price_table_list.active .section_heading.price span:before{
+	border-color:#fff;
+}
+.section_heading.price span{
+	padding:0px 8px;
+}
+.section_heading.price span:after,
+.section_heading.price span:before{
+	width:65px;
+	right: 51px;
+	bottom: 22px;
+}
+.section_heading.price span:after {
+    right: auto;
+    left: 50px;
+}
+.spa_price_date h2{
+	font-size:70px;
+	line-height: 50px;
+	margin-bottom:5px;
+}
+.spa_price_date h2 sup{
+	font-size: 24px;
+	top: -32px;
+	margin-right: 4px;
+}
+.spa_price_date span{
+	display:inline-block;
+	padding-bottom:10px;
+	border-bottom:1px solid #d6d6d6;
+	font-size:12px;
+	font-weight:600;
+}
+.spa_price_list{
+	padding:15px 0px 25px;
+}
+.spa_price_list li{
+	display:block;
+	margin-bottom:10px;
+}
+.spa_price_list li:last-child{
+	margin-bottom:0px;
+}
+.spa_price_list li a{
+	display:block;
+	font-size:15px;
+}
+.spa_price_table_list .them_btn.btn_2{
+	border-width:1px;
+}
+/*
+      ============================================
+			SPA PRICE TABLE END
+      ============================================
+*/
+
+/*
+      ============================================
+			SPA AWARD WRAP START
+      ============================================
+*/
+.spa_award_item,
+.spa_award_list ul,
+.spa_award_list,
+.spa_award_wrap{
+	float:left;
+	width:100%;
+}
+.spa_award_wrap{
+	padding:120px 0px 120px;
+	position:relative;
+	z-index:4;
+}
+.spa_award_wrap:before{
+	position: absolute;
+	content: "";
+	top: -76px;
+	left: 0px;
+	right: 0px;
+	bottom: -20px;
+	background-image: url("images/award.png");
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-size: 42%;
+	z-index:2;
+}
+.spa_award_wrap:after{
+	position:absolute;
+	content:"";
+	top:0px;
+	left:auto;
+	right:0px;
+	bottom:0px;
+	background-color:#fff;
+	width:26%;
+	z-index:-1;
+}
+.spa_award_item {
+    position: relative;
+    z-index: 3;
+}
+.spa_award_list ul li{
+	float:left;
+	padding:0px 40px;
+}
+.spa_award_item span{
+	display:inline-block;
+	font-size:50px;
+	color:#fff;
+	padding-bottom:6px;
+	border-bottom:1px solid #ffffff;
+	margin-bottom:11px;
+}
+.spa_award_item h2{
+	margin-bottom:5px;
+	font-weight:600;
+	color:#fff;
+	font-size:43px;
+}
+.spa_award_item h4{
+	color:#fff;
+	margin-bottom:0px;
+}
+/*
+      ============================================
+			SPA AWARD WRAP END
+      ============================================
+*/
+
+/*
+      ============================================
+			SPA PRODUCT WRAP START
+      ============================================
+*/
+.spa_product_text,
+.spa_product_item,
+.spa_product_list ul,
+.spa_product_list,
+.spa_product_wrap{
+	float:left;
+	width:100%;
+}
+.spa_product_wrap{
+	padding:98px 0px 90px;
+}
+.spa_product_list ul{
+	text-align:center;
+	margin-bottom:40px;
+}
+.spa_product_item{
+	border:1px solid #b7b7b7;
+}	
+.spa_product_text{
+	text-align:center;
+	padding:30px 0px 39px;
+	position:relative;
+	border-top: 1px solid #ccc;
+}
+.spa_product_text p{
+	margin-bottom:4px;
+}
+.spa_product_text span{
+	display:block;
+	font-size:15px;
+}
+.spa_product_text a{
+	height:45px;
+	width:45px;
+	text-align:center;
+	line-height:45px;
+	border-radius:100%;
+	background-color:#d9d9d9;
+	display:inline-block;
+	color:#494949;
+	font-size:20px;
+	position:absolute;
+	bottom:-22px;
+	margin:auto;
+	left: 0px;
+	right: 0px;	
+	z-index: 2;
+}
+.spa_product_item:hover .spa_product_text a{
+	color:#fff;
+}
+.simplefilter li{
+	background:none;
+	color:#2c2c2c;
+	border-bottom:1px solid transparent;
+	border-top:1px solid transparent;
+}
+.spa_product_list ul li.active{
+	background:none;
+}
+/*
+      ============================================
+			SPA PRODUCT WRAP END
+      ============================================
+*/
+
+/*
+      ============================================
+			SPA NEWSLETTER WRAP START
+      ============================================
+*/
+.spa_newsletter_field,
+.spa_newsletter_text,
+.spa_newsletter_wrap{
+	float:left;
+	width:100%;
+}
+.spa_newsletter_wrap{
+	padding:65px 0px 60px;
+}
+.spa_newsletter_text{
+	position:relative;
+	padding-left:70px;
+	z-index:3;
+}
+.spa_newsletter_text:before{
+	position: absolute;
+	content: "\e920";
+	top: -33px;
+	left: 8px;
+	right: 0px;
+	bottom: 0px;
+	font-size: 240px;
+	color: #fff;
+	font-family: 'icomoon' !important;
+	line-height: 140px;
+	opacity: 0.1;
+	z-index: -1;
+}
+.spa_newsletter_text h5{
+	color:#fff;
+	margin-bottom:2px;
+}
+.spa_newsletter_text h2{
+	font-size:45px;
+	color:#fff;
+	margin-bottom:0px;
+}
+.spa_newsletter_field{
+	width:470px;
+	position:relative;
+	margin-top: 18px;
+}
+.spa_newsletter_field input{
+	background:none;
+}
+.spa_newsletter_field button{
+	position:absolute;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	padding:12px 20px;
+	border:1px solid #fff;
+	background:none;
+	color:#fff;
+}
+.spa_newsletter_field button:hover{
+	background-color:#fff;
+}
+.spa_newsletter_field label{
+	color:#fff;
+}
+.spa_newsletter_field .effect ~ .focus-border i:after,
+.spa_newsletter_field .effect ~ .focus-border i:before,
+.spa_newsletter_field .effect ~ .focus-border:after,
+.spa_newsletter_field .effect ~ .focus-border:before{
+	background-color:#fff;
+}	
+
+/*
+      ============================================
+			SPA NEWSLETTER WRAP END
+      ============================================
+*/
+
+/*
+      ============================================
+			WIDGET WRAP START
+      ============================================
+*/
+.copyright,
+.widget_slider,
+.widget_visiting_list li, 
+.widget_visiting_list, 
+.widget_news_fig,
+.widget_news_list ul li,
+.widget_news_list ul,
+.widget_news_list,
+.widget_title,
+.spa_widget_news,
+.widget_logo p,
+.widget_icon,
+.widget_logo,
+.widget_wrap{
+	float:left;
+	width:100%;
+}
+.widget_wrap{
+	background-image:url("images/widget-bg.png");
+	background-repeat:no-repeat;
+	background-size:cover;
+	padding:80px 0px 0px;
+}
+.widget_wrap.overlay:before{
+	opacity:0.9;
+	background-color:#171f2d;
+}
+.widget_logo a{
+	display:inline-block;
+	margin-bottom:25px;
+}
+.widget_logo p{
+	color:#fff;
+	margin-bottom:35px;
+}
+.widget_icon li{
+	float:left;
+	margin-right:8px;
+}
+.widget_icon li:last-child{
+	margin-right:0px;
+}
+.widget_icon li a{
+	display:inline-block;
+	height:40px;
+	width:40px;
+	text-align:center;
+	line-height:40px;
+	border-radius:100%;
+	background-color:#5d5e64;
+	color:#fff;
+}
+/*spa widget news start */
+.widget_title{
+	color:#fff;
+	font-weight:bold;
+	margin-bottom:40px;
+}
+.widget_news_list ul li{
+	margin-bottom:30px;
+}
+.widget_visiting_list li:last-child,
+.widget_news_list ul li:last-child{
+	margin-bottom:0px;
+}
+.widget_news_fig figure{
+	width:auto;
+}
+.widget_news_text {
+    overflow: hidden;
+    padding: 5px 0px 0px 30px;
+}
+.widget_news_text p{
+	color:#fff;
+	margin-bottom:10px;
+	line-height: 26px;
+}
+.widget_news_text span{
+	display:block;
+	font-size:15px;
+}
+/*widget visiting list start*/
+.widget_visiting_list li{
+	margin-bottom:15px;
+}
+.widget_visiting_list li a{
+	display:inline-block;
+	color:#fff;
+}
+.widget_visiting_list li span{
+	color:#cccccc;
+	float:right;
+}
+.spa_widget_news.padding{
+	padding-right:96px;
+}
+
+/* widget slider start*/
+.widget_slider{
+	margin-top:40px;
+}
+.widget_slider .slick-prev,
+.widget_slider .slick-next{
+	display:none !important;
+}
+/*copyright start*/
+.copyright{
+	padding:30px 0px 28px;
+	position:relative;
+	z-index:3;
+}
+.copyright p{
+	float:left;
+	margin-bottom:0px;
+	color:#fff;
+}
+.copyright_links{
+	float:right;
+	width:auto;
+}
+.copyright_links li{
+	float:left;
+	width:auto;
+	margin-right:25px;
+}
+.copyright_links li:last-child{
+	margin-right:0px;
+}
+.copyright_links li a{
+	display:inline-block;
+	color:#fff;
+	font-weight:400;
+}
+/*
+      ============================================
+			WIDGET WRAP END
+      ============================================
+*/
+/*
+	====================================
+			LOGIN FORM START
+	====================================
+*/
+.modal-content{
+	background:transparent;
+}
+.spa-heading2,
+.spa-login-form{
+	float:left;
+	width:100%;
+}
+.spa-login-form{
+	box-shadow:9px 9px 4px -11px rgba(0, 0, 0, 0.6);
+}
+.spa-login-form form{
+	float:left;
+	width:100%;
+}
+.spa_width_off50{
+	float:left;
+	width:50%;
+	background:#dddddd;
+	padding:51px 40px 60px;
+}
+.spa-heading2{
+	margin-bottom:36px;
+}
+.spa-heading2 h3{
+	font-size:24px;
+	font-weight:600;
+	text-transform:uppercase;
+	display:inline-block;
+	position:relative;
+	line-height:normal;
+	padding-bottom:14px;
+	margin-bottom:13px;
+}
+.spa-heading2 h3:before{
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	content:"";
+	border-bottom:2px solid ;
+	width:115px;
+}
+.spa-heading2 p{
+	margin-bottom:0px;
+	color:#737373 ;
+}
+.input-felid{
+	float:left;
+	width:100%;
+	margin-bottom:26px;
+}
+.fpw,
+.ck-title,
+.input-felid label{
+	margin-bottom:12px;
+	font-size:12px;
+	font-weight:600;
+	color:#323e4a;
+	text-transform:capitalize;
+}
+.input-felid input{
+	width:100%;
+	height:45px;
+	border-radius:30px;
+	padding:0px 20px;
+	border:none;
+	background:#fff;
+	color:#666;
+	border:1px solid;
+}
+.spa-login-form input[type="checkbox"]{
+	display:none;
+}
+.spa-login-form span.box{
+	float:left;
+	position:relative;
+	margin:0px 10px 0px 0px;
+}
+.spa-login-form span.box:before{
+	position:absolute;
+	content:"";
+	font-size:10px;
+	font-family:fontawesome;
+	top:50%;
+	font-weight:300;
+	border-radius:4px;
+	left:0px;
+	line-height:14px;
+	text-align:center;
+	right:0px;
+	bottom:0px;
+	margin:1px auto;
+	width:14px;
+	height:14px;
+	background:#fff;
+}
+.spa-login-form input[type="checkbox"]:checked + span.box:before{
+	color:#666;
+	content:"\f00c";
+}
+.spa-login-form .ck-title{
+	margin-left:20px;
+	font-weight:400;
+}
+.btn-submit{
+	float:left;
+	width:100%;
+	margin:25px auto 0px;
+}
+.btn-normal2{
+	padding:9px 30px;
+	line-height:normal;
+	color:#fff;
+	font-weight:600;
+	font-size:16px;
+	text-transform:capitalize;
+	border-radius:30px;
+}
+.ck-title,
+.fpw{
+	font-weight:400;
+	margin-bottom:0px;
+}
+.title-point{
+	font-size:16px;
+	font-weight:600;
+	color:#4c4c4c;
+	text-transform:capitalize;
+	float:left;
+	width:100%;
+	margin-bottom:11px;
+}
+.check-points{
+	float:left;
+	width:100%;
+}
+.check-points li{
+	float:left;
+	width:100%;
+	position:relative;
+	padding:0px 0px 0px 28px;
+	margin-bottom:12px;
+}
+.check-points li:last-child{
+	margin-bottom:0px;
+}
+.check-points li:before{
+	position:absolute;
+	content:"";
+	top:50%;
+	font-family:fontawesome;
+	left:0px;
+	content:"\f00c";
+	font-size:15px;
+	margin-top:-11px;
+	font-weight:300;
+}
+.check-points li p{
+	font-size:14px;
+	font-weight:500;
+	color:#4c4c4c;
+	margin-bottom:0px;
+	text-transform:capitalize;
+}
+.margin-15{
+	margin-bottom:28px;
+	margin-top:0px;
+}
+.spa-login-form form{
+	position:relative;
+	background:#f1f1f1;
+}
+.spa-login-form sup{
+	width:50px;
+	height:50px;
+	text-align:center;
+	line-height:50px;
+	font-size:14px;
+	background:#fff;
+	border:1px solid #ccc;
+	border-radius:100%;
+	position:absolute;
+	margin:-50px auto;
+	top:50%;
+	left:0px;
+	right:0px;
+}
+.bg-trans{
+	background:transparent;
+}
+.modal-backdrop{
+	z-index:999;
+}
+#login-register1 .modal-content{
+	width:830px;
+	display:inline-block;
+	border-bottom:25px solid;
+}
+#login-register1 .modal-dialog{
+	width:830px;
+}
+#login-register1 .close{
+    border-radius: 4px;
+    color: #fff;
+    font-size: 25px;
+    height: auto;
+    line-height: 25px;
+    margin-bottom: 0;
+    opacity: 1;
+    padding: 0 18px 4px;
+}
+.btn-submit .them_btn.btn_2{
+	border-radius:50px;
+	border-width:1px;
+}
+#login-register1 .modal-dialog{
+	margin:50px auto;
+}
+/*
+	====================================
+			LOGIN FORM END
+	====================================
+*/
+
+/*
+	====================================
+		SPA SHOPING CART START
+	====================================
+*/
+.shopping-cart-header,
+.spa_cart_fig,
+.spa_shopping_cart li,
+.spa_shopping_cart{
+	float:left;
+	width:100%;
+}
+.spa_cart_fig figure{
+	width:auto;
+}
+.shopping-cart-header {
+    margin-bottom: 20px;
+}
+.shopping-cart-total {
+    overflow: hidden;
+    float: right;
+}
+.badge {
+    border-radius: 10px;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+	float: left;
+}
+.shopping-cart {
+	margin: 0px 0;
+	width: 320px;
+	position: absolute;
+	border-radius: 3px;
+	padding: 20px;
+	top: 130px;
+	left: auto;
+	right: 0px;
+	bottom: auto;
+	z-index: 9999;
+	background-color:#fff;
+	display: none;
+	border-bottom:3px solid;
+}
+.spa_shopping_cart li{
+	margin-bottom:20px;
+}
+.spa_cart_text{
+	overflow:hidden;
+	padding:10px 0px 10px 15px;
+}
+.item-name {
+	display: block;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.item-price {
+	color: $main-color;
+	margin-right: 8px;
+}
+.item-quantity {
+	color: $light-text;
+}
+.shopping-cart:after {
+	bottom: 100%;
+	left: 89%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-bottom-color: white;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.cart-icon {
+  color: #333;
+  font-size: 24px;
+  margin-right: 7px;
+  float: left;
+}
+.button-cart {
+    padding: 5px 15px;
+    display: inline-block;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12px;
+}
+.button-cart:hover{
+	background-color:#000;
+	color:#fff;
+}
+.services-block-three .inner-box .imghvr-strip-vert-bottom-right {
+    display: block;
+}
+/*
+	====================================
+		SPA SHOPING CART END
+	====================================
+*/
+
+/*
+	====================================
+		SEARCH FORM START
+	====================================
+*/
+.spa_search_info .main-wrap {
+    position: relative;
+	display: inline-block;
+	flex-direction: column;
+	align-items: center;
+	width: auto;
+	height: auto;
+	background-color: #22295f;
+	background-image: url(http://kodeforest.net/html/img/bg.svg);
+	background-repeat: no-repeat;
+	background-position: 50% 10em;
+	background-size: 75% auto;
+	padding: 0px 0px;
+	background: none;
+}
+.search__form {
+    width: 640px;
+}
+.js .search--open .search__input {
+    border: none;
+    border-bottom: 2px solid #fff;
+	padding:0px 20px;
+	font-size:16px;
+	width: 100%;
+	color:#fff;
+	box-shadow: 0px 57px 33px -6px #000;
+}
+input.search__input::placeholder{
+	color:#fff !important;
+}
+.js .search--open input.search__input[type="text"]::-webkit-input-placeholder{
+	color:#fff !important;
+}
+.search.search--open:before{
+	opacity:0.9;
+}
+.search .btn{
+    outline: none;
+    font-size: 22px;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius: 100%;
+	box-shadow: 0px 0px 4px -1px #fff;
+}
+.search .btn:hover{
+	color:#fff;
+}
+/*
+	====================================
+		SEARCH FORM END
+	====================================
+*/
+
+/*
+	=================================================================
+				HOME PAGE 02 START
+	=================================================================
+*/
+.spa_about_detail,
+.spa_about_list,
+.spa_about_row ul li,
+.spa_about_row ul,
+.spa_about_row,
+.spa_about_fig,
+.spa_about_wrap{
+	float:left;
+	width:100%;
+}
+.spa_about_wrap{
+	padding:80px 0px 73px;
+}
+.spa_about_detail{
+	padding:60px 0px;
+}
+.spa_about_fig{
+	position:relative;
+	z-index:4;
+}
+.spa_about_fig:after,
+.spa_about_fig:before{
+	position:absolute;
+	content:"";
+	top:75px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	width:334px;
+	background-color:#daf1f9;
+	z-index:2;
+}
+.spa_about_fig:after{
+    top: 56px;
+    left: 50px;
+    z-index: 1;
+    width: 307px;
+}
+.spa_about_fig figure{
+	width:auto;
+	float:right;
+	position:relative;
+	z-index:5;
+	left:-49px;
+}
+.spa_about_row ul li{
+	margin-bottom:50px;
+}
+.spa_about_row ul li:last-child{
+	margin-bottom:0px;
+}
+.spa_about_list span{
+	display:inline-block;
+	float:left;
+	font-size:60px;
+}
+.spa_about_text{
+	overflow:hidden;
+	padding-left:20px;
+}
+.spa_about_text h4{
+	margin-bottom:10px;
+	text-transform: capitalize;
+}
+
+/*
+	=================================================================
+				HOME PAGE 02 END
+	=================================================================
+*/
+
+/*
+	==================================================================
+				ABOUT US PAGE START
+	==================================================================
+*/
+
+/*
+	====================================
+		SPA SAB BANNER WRAP START
+	====================================
+*/
+.spa_sab_banner_wrap.shop_img,
+.spa_sab_banner_wrap.service_img,
+.spa_sab_banner_wrap.gallery_img,
+.spa_top_navigation.blog_img,
+.spa_sab_banner_text,
+.spa_sab_banner_wrap{
+	float:left;
+	width:100%;
+}
+.spa_sab_banner_wrap.shop_img,
+.spa_sab_banner_wrap.service_img,
+.spa_sab_banner_wrap.blog_img,
+.spa_sab_banner_wrap.gallery_img,
+.spa_sab_banner_wrap{
+	background-image:url("images/sab-banner-bg.png");
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index:3;
+}
+.spa_sab_banner_wrap.blog_img{
+	background-image:url("images/sab-banner-bg1.png");
+}
+.spa_sab_banner_wrap.gallery_img{
+	background-image:url("images/sab-banner-bg2.png");
+}
+.spa_sab_banner_wrap.overlay:before{
+	opacity:0.7;
+	z-index:-1;
+}
+.spa_sab_banner_text{
+	text-align:center;
+	padding:145px 0px 148px;
+}
+.sab_banner_title{
+	color:#fff;
+	margin-bottom:4px;
+	font-size:48px;
+}
+.spa_sab_banner_text p{
+	margin-bottom:0px;
+	color:#fff;
+	line-height:26px;
+}
+.spa_sab_banner_text p span{
+	display:block;
+}
+
+}
+@-webkit-keyframes shafaqat{
+	  0%{background-position:100% 0}
+	  100%{background-position:330px 0%}
+	}
+	@-moz-keyframes shafaqat{
+	  0%{background-position:100% 0}
+	  100%{background-position:330px 0%}
+	}
+	@-ms-keyframes shafaqat{
+	  0%{background-position:100% 0}
+	  100%{background-position:330px 0%}
+	}
+	@keyframes shafaqat{
+	  0%{background-position:100% 0}
+	  100%{background-position:330px 0%}
+}
+	  
+.spa_sab_banner_wrap{
+	animation: 40s linear 0s normal none infinite running shafaqat;
+	background: rgba(0, 0, 0, 0) url("images/sab-banner-bg.png") repeat scroll 0 0;
+}
+.spa_sab_banner_wrap.blog_img{
+	animation: 40s linear 0s normal none infinite running shafaqat;
+	background: rgba(0, 0, 0, 0) url("images/sab-banner-bg1.png") repeat scroll 0 0;
+}
+.spa_sab_banner_wrap.gallery_img{
+	animation: 40s linear 0s normal none infinite running shafaqat;
+	background: rgba(0, 0, 0, 0) url("images/sab-banner-bg2.png") repeat scroll 0 0;
+}
+.spa_sab_banner_wrap.service_img{
+	animation: 40s linear 0s normal none infinite running shafaqat;
+	background: rgba(0, 0, 0, 0) url("images/sab-banner-bg3.png") repeat scroll 0 0;
+}
+.spa_sab_banner_wrap.shop_img{
+	animation: 40s linear 0s normal none infinite running shafaqat;
+	background: rgba(0, 0, 0, 0) url("images/sab-banner-bg4.png") repeat scroll 0 0;
+}
+/*
+	====================================
+		SPA SAB BANNER WRAP END
+	====================================
+*/
+
+
+/*
+	====================================
+		SPA PAGE LINK START
+	====================================
+*/
+.spa_page_text,
+.spa_page_link{
+	float:left;
+	width:100%;
+}
+.spa_page_text{
+	padding:23px 0px;
+}
+.spa_page_text p{
+	color:#fff;
+	margin-bottom:0px;
+	float:left;
+}
+.breadcrumb{
+	float:right;
+	width:auto;
+	background:none;
+	margin-bottom:0px;
+	padding:1px 0px 0px 0px;
+}
+.breadcrumb > .active{
+	color:#fff;
+}
+.breadcrumb > li {
+    display: inline-block;
+}
+.breadcrumb li a{
+	display:inline-block;
+	color:#fff;
+	padding-right: 6px;
+	position:relative;
+	margin-right: 6px;
+}
+.breadcrumb li a:hover{
+	color:#000;
+}
+.breadcrumb li a:before{
+	position:absolute;
+	content:"";
+	top:2px;
+	left:auto;
+	right:-3px;
+	bottom:0px;
+	border-right:2px solid #fff;
+	height:16px;
+	transform: rotate(12deg);
+	-moz-transform: rotate(12deg);
+	-webkit-transform: rotate(12deg);
+}
+/*
+	====================================
+		SPA PAGE LINK END
+	====================================
+*/
+
+/*
+	====================================
+		SPA WELLNESS CENTER START
+	====================================
+*/
+.spa_wellness_list li,
+.spa_wellness_list,
+.spa_wellness_center{
+	float:left;
+	width:100%;
+}
+.spa_wellness_center{
+	padding:80px 0px;
+}
+.spa_wellness_text .section_heading.hdg-2{
+	margin-bottom:20px;
+}
+.section_heading.hdg-2 h2{
+	font-weight:600;
+	margin-bottom:16px;
+}
+.spa_wellness_text .section_heading.hdg-2 h5{
+	margin-bottom: 9px;
+}
+.spa_wellness_list li{
+	margin-bottom:16px;
+}
+.spa_wellness_list li:last-child{
+	margin-bottom:0px;
+}
+.spa_wellness_list li a{
+	display:inline-block;
+	padding-left:30px;
+	position:relative;
+}
+.spa_wellness_list li a:before{
+	position:absolute;
+	content:"";
+	top:6px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	height:8px;
+	width:8px;
+	border-radius:100%;
+}
+/*
+	====================================
+		SPA WELLNESS CENTER END
+	====================================
+*/
+
+/*
+	====================================
+		SPA IMPORTANT TEXT START
+	====================================
+*/
+.spa_caption,
+.spa_important_text{
+	float:left;
+	width:100%;
+}
+.spa_important_text{
+	padding:118px 0px 125px;
+}
+.spa_caption{
+	text-align:center;
+}
+.spa_caption h2{
+	color:#fff;
+	margin-bottom:0px;
+	position:relative;
+	z-index:3;
+	font-style: italic;
+}
+.spa_caption h2 span{
+	display:block;
+	margin-bottom:14px;
+}
+/*
+	====================================
+		SPA IMPORTANT TEXT END
+	====================================
+*/
+
+/*
+	====================================
+		SPA SALON WRAP SALON START
+	====================================
+*/
+.spa_salon_wrap.salon{
+	padding:80px 0px;
+}
+.spa_salon_text.text_2{
+	margin-top:0px;
+	padding:14px 0px 17px;
+	position:relative;
+}
+.spa_salon_text.text_2:before{
+	position:absolute;
+	content:"";
+	top:auto;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	width:30px;
+	height:2px;
+	background-color:#e5e5e5;
+	margin:auto;
+}
+.spa_salon_text.text_2 p{
+	margin-bottom:3px;
+	font-size:12px;
+	color:#3c3c3c;
+}
+/*
+	====================================
+		SPA SALON WRAP SALON END
+	====================================
+*/
+
+
+
+/*
+	==================================================================
+					BLOG 02 PAGE START
+	==================================================================
+*/
+/*
+	====================================
+		SPA BLOG  GRID START 
+	====================================
+*/
+.spa_blog_thumb,
+.spa_blog_text,
+.spa_blog_medium,
+.spa_blog_grid{
+	float:left;
+	width:100%;
+}
+.spa_blog_grid{
+	padding:80px 0px;
+}
+.spa_blog_medium{
+	border-bottom:1px solid #dcdcdc;
+	margin-bottom:40px;
+}
+.spa_blog_medium figure{
+	z-index:3;
+	overflow:visible;
+}
+.spa_blog_thumb{
+	padding:16px 16px 0px 0px;
+	position:relative;
+	z-index: 2;
+}
+.spa_blog_thumb:before{
+	position:absolute;
+	content:"";
+	top:0px;
+	left:20px;
+	right:0px;
+	bottom:0px;
+	border:3px solid;
+	border-bottom:none;
+	z-index:-1;
+}
+.blog_icon{
+	position:absolute;
+	bottom:-35px;
+	right:0px;
+	height:70px;
+	width:70px;
+	line-height:70px;
+	text-align:center;
+	color:#fff;
+	font-size:20px;
+}
+.spa_blog_medium:hover .blog_icon{
+	background-color: #fff;
+	box-shadow: 0px 3px 10px -4px #000;
+}
+.spa_blog_text{
+	padding:18px 2px 20px;
+}
+.spa_blog_text h6{
+	line-height:28px;
+	margin-bottom:15px;
+}
+.spa_blog_text p{
+	line-height:26px;
+	margin-bottom:17px;
+}
+.spa_blog_text span{
+	display:inline-block;
+	font-size:16px;
+	font-style:italic;
+}
+.spa_blog_medium [class^="imghvr-"] a, 
+.spa_blog_medium [class*=" imghvr-"] a{
+	top:auto;
+	left:auto;
+	bottom:-35px;
+	right: -16px;
+}
+.spa_blog_medium  [class^="imghvr-"]{
+	 background:transparent;
+ }
+ .spa_blog_medium .imghvr-strip-shutter-up:before{
+	left:0px;
+	z-index:1;
+ }
+/*
+	====================================
+		SPA BLOG  GRID END 
+	====================================
+*/
+/*
+	==================================================================
+					BLOG LIST PAGE START
+	==================================================================
+*/
+.spa_blog_text h4{
+	padding-right:50px;
+	line-height:30px;
+}
+.spa_blog_tag{
+	float:right;
+}
+.spa_blog_tag i{
+	margin-right:10px;
+}
+div.pp_default .pp_content {
+    padding: 5px 5px 40px 5px;
+    height: 100% !important;
+}
+div.pp_default .pp_close{
+	margin:1px 18px;
+}
+div.pp_default .pp_social {
+    margin-top: -2px;
+}
+.pp_social .twitter{
+	padding:6px 2px;
+}
+/*
+	==================================================================
+					BLOG LIST PAGE END
+	==================================================================
+*/
+
+/*
+	==================================================================
+					BLOG DETAIL PAGE START
+	==================================================================
+*/
+.spa_submit,
+.kode_left_comment_sec,
+.comment_form,
+.spa_comment_form,
+.spa_comment_item,
+.comment li,
+.comment,
+.spa_comments,
+.spa_author,
+.spa_share_meta,
+.spa_blockquote,
+.spa_highlight_text.full-width,
+.spa_highlight_fig.full-width,
+.full-width,
+.spa_blog_detail{
+	float:left;
+	width:100%;
+}
+.spa_blog_detail .spa_blog_medium{
+	border-bottom:none;
+	margin-bottom:22px;
+}
+.spa_blog_detail .spa_blog_text{
+	padding:25px 0px 0px;
+}
+.spa_blog_detail .spa_blog_text:last-child{
+	padding-top:15px;
+}
+.spa_blog_detail .spa_blog_text h4{
+	margin-bottom:13px;
+}
+.spa_blog_detail .spa_blog_text p{
+	margin-bottom:0px;
+}
+.spa_highlight_text.full-width,
+.spa_highlight_fig.full-width{
+	padding:0px 0px;
+}
+.spa_highlight_fig.full-width{
+	margin-bottom:25px;
+}
+.spa_highlight_text.full-width{
+	padding:10px 0px;
+}
+.spa_highlight_text.full-width h5{
+	font-weight:600;
+}
+.spa_highlight_text.full-width p{
+	margin-bottom:28px;
+}
+.spa_highlight_text.full-width .spa_highlight_list li {
+    margin-bottom: 10px;
+}
+.spa_highlight_text.full-width .spa_highlight_list li a{
+	font-size:16px;
+	padding-left:20px;
+}
+.spa_highlight_text.full-width .spa_highlight_list li a:before{
+	top:7px;
+}
+/*spa blockquote start*/
+.spa_blockquote{
+	background-color:#f2f2f2;
+	border-left:none;
+	padding:35px 40px 35px 135px; 
+	margin-top:14px;
+	position:relative;
+}
+.spa_blockquote:before{
+	position:absolute;
+	content:"\e916";
+	top: 38px;
+	left: 40px;
+	right:auto;
+	bottom:0px;
+	color:#525252;
+	font-size:70px;
+	line-height:70px;
+	font-family: 'icomoon' !important;
+}
+.spa_blockquote h5{
+	font-style:italic;
+	color:#525252;
+	font-weight:600;
+}
+.spa_blockquote h6{
+	margin-bottom:0px;
+	font-weight:600;
+}
+.spa_blockquote h6:hover a{
+	color:#000;
+}
+/*spa share meta start*/
+.spa_share_meta{
+	padding:25px 0px;
+	border-top:1px solid #efefef;
+	border-bottom:1px solid #efefef;
+	margin:14px 0px 40px 0px;
+}
+.spa_social_share .widget_icon,
+.spa_social_share p,
+.spa_share_meta span{
+	float:left;
+	width:auto;
+}
+.spa_share_meta span{
+	display:inline-block;
+	padding: 10px 0px 4px;
+	font-size:15px;
+}
+.spa_share_meta span a{
+	margin-left:5px;
+	font-style:italic;
+}
+.spa_social_share{
+	float:right;
+	width:auto;
+}
+.spa_social_share p{
+	margin:0px 12px 0px 0px;
+	padding:10px 0px 5px;
+}
+.spa_social_share .widget_icon li a{
+	font-size:18px;
+	color:#fff;
+}
+/*spa author start*/
+.spa_author{
+	padding:10px 10px;
+	border:1px solid #d7d7d7;
+	margin-bottom:40px;
+}
+.spa_author figure{
+	float:left;
+	width:auto;
+	border:1px solid #d7d7d7;
+}
+.spa_author_text{
+	overflow:hidden;
+	padding:15px 0px 15px 30px;
+}
+.spa_author_text h5{
+	margin-bottom:10px;
+	font-weight:600;
+}
+.spa_author_text p{
+	margin-bottom:0px;
+}
+/* spa comments start*/
+.spa_comments{
+	margin-bottom:40px;
+}
+.comment > li ul{
+	padding-left:114px;
+}
+.spa_comment_item{
+	position:relative;
+	padding:40px 0px 34px;
+	border-bottom:1px solid #e1e1e1;
+}
+.spa_comment_item.padding-top{
+	padding-top:0px;
+}
+.spa_comment_item figure{
+	width:auto;
+	border-radius:100%;
+}
+.spa_comment_text{
+	overflow:hidden;
+	padding:0px 0px 0px 20px;
+	position:relative;
+}
+.spa_comment_text h5{
+	font-weight:bold;
+	margin-bottom:2px;
+}
+.spa_comment_text span{
+	display:inline-block;
+	margin-bottom:12px;
+}
+.spa_comment_text p{
+	margin-bottom:0px;
+}
+.spa_comment_text a{
+	position:absolute;
+	top: 5px;
+    right: 2px;
+}
+.spa_comment_text a i{
+	margin-right:5px;
+}
+/*spa comment form start*/
+.comment_form .spa_select_field.input{
+	float:left;
+	width:48%;
+	margin-right:30px;
+	margin-bottom:20px;
+}
+.comment_form .spa_select_field.input:last-child{
+	margin-right:0px;
+}
+.spa_textarea.area_2{
+	margin-bottom:20px;
+}
+.spa_textarea.area_2 textarea{
+	height:168px;
+	border:1px solid #c7c7c7;
+}
+.spa_submit{
+	margin-bottom:0px;
+}
+.spa_submit input{
+	width:auto;
+	line-height: 18px;
+	border:none;
+}
+.spa_submit .them_btn:hover{
+	background-color:#000;
+	color:#fff;
+}
+.spa_blog_grid.grid_detail{
+	background-color:#f2f2f2;
+	padding:80px 0px 40px;
+}
+/*
+	==================================================================
+					GALLERY 02 PAGE START
+	==================================================================
+*/
+.spa_gallery_item{
+	float:left;
+	width:100%;
+	margin-bottom:30px;
+}
+.spa_gallery_icon{
+	position:absolute;
+	top:50%;
+	left:0px;
+	right:0px;
+	text-align:center;
+	margin-top:-50px;
+	z-index:3;
+	opacity:0;
+}
+.spa_gallery_item:hover .spa_gallery_icon{
+	margin-top:-25px;
+	opacity:1;
+}
+.spa_gallery_icon a{
+	display:inline-block;
+	height:50px;
+	width:50px;
+	text-align:center;
+	line-height:50px;
+	border:1px solid #fff;
+	color:#fff;
+	margin-right:5px;
+	font-size:16px;
+}
+.spa_gallery_icon a:hover{
+	background-color:#fff;
+}
+.spa_gallery_item:hover figure img{
+	transform:scale(1.5);
+	-moz-transform:scale(1.5);
+	-webkit-transform:scale(1.5);
+}
+.spa_gallery_item h6{
+	position:absolute;
+	left:0px;
+	right:0px;
+	bottom:10px;
+	text-align:center;
+	color:#fff;
+	z-index:3;
+	opacity:0;
+}
+.spa_gallery_item:hover h6{
+	opacity:1;
+	bottom:40px;
+}
+.spa_gallery_item.hover_style:hover .spa_gallery_icon {
+    margin-top: -58px;
+    opacity: 1;
+}
+.spa_gallery_item.hover_style:hover h6 {
+    opacity: 1;
+    bottom: 73px;
+}
+/*
+	==================================================================
+					GALLERY 05 PAGE START
+	==================================================================
+*/
+.spa_gallery_text{
+	float:left;
+	width:100%;
+}
+.spa_gallery_item.width_fig{
+	float:left;
+	width:50%;
+	margin-bottom:0px;
+}
+.spa_gallery_text{
+	text-align:center;
+	padding:30px 0px;
+}
+.spa_gallery_text h5{
+	margin-bottom:5px;
+	text-transform:capitalize;
+}
+.spa_gallery_text h4{
+	margin-bottom:0px;
+}
+.spa_gallery_item.gallery_6{
+	float:left;
+	width:25%;
+	margin-bottom:0px;
+}
+/*
+	==================================================================
+					GALLERY 05 PAGE END
+	==================================================================
+*/
+
+
+/*
+	==================================================================
+					SERVICES PAGE START
+	==================================================================
+*/
+/*
+	====================================
+		SPA SERVICES GRID START 
+	====================================
+*/
+.spa_service_grid_text,
+.spa_service_thumb,
+.spa_services_grid{
+	float:left;
+	width:100%;
+}
+.spa_services_grid{
+	padding:80px 0px 50px;
+}
+.spa_service_thumb{
+	border:2px solid #ebebeb;
+	margin-bottom:30px;
+	background-image:url("images/services.png");
+	background-repeat:no-repeat;
+	background-size:cover;
+	position:relative;
+	z-index:3;
+}
+.spa_service_thumb:before{
+	position:absolute;
+	content:"";
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	background-color:#fff;
+	opacity:1;
+	z-index:-1;
+}
+.spa_service_thumb:hover:before{
+	opacity:0.8;
+}
+.spa_service_thumb{
+	padding:25px 30px;
+}
+.spa_service_thumb span{
+	display: inline-block;
+	font-size: 45px;
+	line-height: 40px;
+	margin-bottom:13px;
+}
+.spa_service_thumb:hover > a,
+.spa_service_thumb:hover p,
+.spa_service_thumb:hover h4 a,
+.spa_service_thumb:hover span{
+	color:#fff;
+}
+.spa_service_thumb h4{
+	font-weight:600;
+	margin-bottom:20px;
+}
+.spa_service_thumb p{
+	margin-bottom:18px;
+}
+.spa_service_thumb > a{
+	display:block;
+	font-size:20px;
+	font-weight:600;
+}
+.spa_service_thumb > a:hover,
+.spa_service_thumb h4 a:hover{
+	color:#333;
+}
+.spa_price_table.padding-bottom{
+	padding-bottom:80px;
+}
+/*
+	====================================
+		SPA SERVICES GRID END 
+	====================================
+*/
+
+/*
+	==================================================================
+					SERVICES 02 PAGE START
+	==================================================================
+*/
+/*
+	====================================
+		SPA SERVICES 02 START 
+	====================================
+*/
+.spa_services_02_grid,
+.spa_service_02{
+	float:left;
+	width:100%;
+}
+.spa_services_02_grid{
+	padding:80px 0px;
+}
+.spa_service_02{
+	margin-bottom:30px;
+	position:relative;
+}
+.spa_service_02_fig figure,
+.spa_service_02_fig{
+	float:left;
+	width:auto;
+}
+.spa_service_02_fig.fig_2 {
+    float: right;
+    width: auto;
+}
+.spa_service_02 .spa_service_thumb{
+	width:668px;
+	position:absolute;
+	right:0px;
+	top:50px;
+	padding:39px 40px 35px;
+	background-image:none;
+}
+.spa_service_02:hover .spa_service_thumb:before{
+	opacity:1;
+	background-color:#fff;
+}
+.spa_service_thumb.service-2{
+	right:auto;
+	left:0px;
+	text-align:right;
+}
+.spa_service_02 .spa_service_thumb:hover > a,
+.spa_service_02 .spa_service_thumb:hover p,
+.spa_service_02 .spa_service_thumb:hover h4 a{
+	color:#000;
+}
+/*
+	====================================
+		SPA SERVICES 02 END 
+	====================================
+*/
+
+
+/*
+	==================================================================
+					SERVICES DETAIL PAGE START
+	==================================================================
+*/
+.spa_highlight_detail,
+.spa_service_detail_text,
+.spa_service_detail_row,
+.spa_services_detail{
+	float:left;
+	width:100%;
+}
+.spa_services_detail{
+	padding:80px 0px;
+}
+.spa_service_detail_text{
+	padding:32px 0px;
+}
+.spa_service_detail_text h2{
+	font-weight:600;
+	margin-bottom:17px;
+}
+.spa_service_detail_text p{
+	margin-bottom:30px;
+	line-height:25px;
+}
+.spa_service_detail_text p:last-child{
+	margin-bottom:0px;
+}
+.spa_highlight_text h4{
+	margin-bottom:10px;
+	font-weight:600;
+}
+.spa_highlight_text p{
+	margin:0px 0px 19px 0px;
+}
+.spa_highlight_list li{
+	margin-bottom:11px;
+}
+.spa_highlight_list li:last-child{
+	margin-bottom:0px;
+}
+.spa_highlight_list li a{
+	display:block;
+	position:relative;
+	padding-left:30px;
+}
+.spa_highlight_detail{
+	padding-bottom:40px;
+	border-bottom:1px solid #cfcfcf;
+}
+.spa_highlight_fig,
+.spa_highlight_text{
+	float:left;
+	width:50%;
+}
+.spa_highlight_fig{
+	padding-right:15px;
+}
+.spa_highlight_text {
+    padding-left: 15px;
+}
+.spa_highlight_list li a:before{
+	position:absolute;
+	content:"";
+	top:6px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	height:9px;
+	width:9px;
+	border-radius:100%;
+}
+
+/* spa service offer start*/
+.spa_service_offer_item,
+.spa_service_offer{
+	float:left;
+	width:100%;
+}
+.spa_service_offer{
+	padding:35px 0px 40px;
+	border-bottom:1px solid #cfcfcf;
+}
+.spa_service_offer_item{
+	padding-bottom:34px;
+	border-bottom:1px solid #d3d3d3;
+	margin-bottom:16px;
+}
+.spa_service_offer_item span{
+	display:block;
+	font-size:45px;
+	margin-bottom:6px;
+	color:#333;
+}
+.spa_service_offer_item .sidebar_title{
+	margin-bottom:16px;
+	padding-bottom: 15px;
+}
+.spa_service_offer_item .sidebar_title:before{
+	width:50px;
+	border-width:1px;
+}
+.spa_service_offer_item p{
+	margin-bottom:0px;
+}
+/*
+	==================================================================
+					SERVICES DETAIL PAGE END
+	==================================================================
+*/
+
+/*
+	==================================================================
+					BOOKING PAGE START
+	==================================================================
+*/
+.spa_submit_list,
+.spa_booking_list,
+.spa_booking_detail,
+.spa_booking_wrap{
+	float:left;
+	width:100%;
+}
+.spa_booking_wrap{
+	padding:80px 0px 75px;
+}
+.spa_booking_detail h6{
+	margin-bottom:21px;
+}
+.spa_select_field.booking .datepicker:before{
+	content:"";
+	left:0px;
+	right:auto;
+	height:43px;
+	width:46px;
+	border-right:1px solid #d7d7d7;
+	border-left:none;
+	background-color:#eeeeee;
+}
+.spa_select_field.booking {
+	border:1px solid #c7c7c7;
+	position:relative;
+	margin-bottom:0px;
+}
+.spa_booking_list{
+	margin-bottom:25px;
+}
+.spa_booking_list label{
+	color:#6d6d6d;
+	cursor:pointer;
+}
+.spa_select_field.booking .datepicker{
+	width:100%;
+	padding: 5px  0px;
+}
+.spa_select_field.booking .datepicker input{
+	padding:0px 65px;
+	font-size:14px;
+}
+.spa_select_field.input input::placeholder,
+.spa_select_field.booking .datepicker input::placeholder{
+	color:#6d6d6d;
+}
+.spa_select_field.booking > span{
+	position: absolute;
+	top: 5px;
+	left: 13px;
+	bottom: 0px;
+	margin: auto;
+	text-align: center;
+	font-size: 22px;
+	color:#666666;
+	cursor:pointer;
+}
+.spa_select_field.booking .form-control:focus{
+	box-shadow:0px 0px;
+}
+.spa_select_field.input{
+	border:1px solid #c7c7c7;
+	margin-bottom:0px;
+	height:auto;
+	border-width: 0px;
+}
+.spa_select_field.input input{
+	font-size:14px;
+	border:1px solid #c7c7c7;
+}
+.spa_textarea.contact textarea:focus,
+.spa_select_field.input input:focus{
+	background-color:#f3f3f3;
+}
+.spa_submit_list{
+	text-align:center;
+}
+.spa_submit_list > a{
+	width:540px;
+	font-size:18px;
+	color:#fff;
+	padding:14px 0px;
+	display:inline-block;
+	margin-bottom:15px;
+}
+.spa_submit_list > a:hover{
+	background-color:#000;
+}
+.spa_submit_list h6{
+	margin-bottom:0px;
+	font-style:italic;
+}
+/*
+	==================================================================
+					BOOKING PAGE END
+	==================================================================
+*/
+
+/*
+	==================================================================
+					404 PAGE START
+	==================================================================
+*/
+.spa_404_text,
+.spa_404_wrap{
+	float:left;
+	width:100%;
+}
+.spa_404_wrap{
+	padding:70px 0px 80px; 
+}
+.spa_404_text{
+	text-align:center;
+}
+.spa_404_text h3{
+	font-size:80px;
+	line-height:80px;
+	margin-bottom:40px;
+}
+.spa_404_text h2{
+	margin-bottom:40px;
+}
+.spa_404_text figure{
+	padding-bottom:32px;
+	position:relative;
+	width:auto;
+	float:none;
+	margin:auto;
+	display:inline-block;
+	overflow:hidden;
+	margin-bottom:28px;
+}
+.spa_404_text figure:after,
+.spa_404_text figure:before{
+	position:absolute;
+	content:"";
+	top:auto;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	border-bottom:2px solid;
+	width:80px;
+	margin:auto;
+}
+.spa_404_text figure:after{
+	width:5px;
+	right:-90px;
+}
+
+/*
+	==================================================================
+					404 PAGE END
+	==================================================================
+*/
+
+/*
+	==================================================================
+					CONTACT US PAGE START
+	==================================================================
+*/
+/*
+	====================================
+		SPA MAP LOCATION START
+	====================================
+*/
+.spa_map_location{
+	float:left;
+	width:100%;
+}
+.spa_map_location .map-canvas{
+	width:100%;
+	height:536px;
+}
+
+/*
+	====================================
+		SPA MAP LOCATION END
+	====================================
+*/
+
+/*
+	====================================
+		SPA CONTACT FORM START
+	====================================
+*/
+.spa_contact_field,
+.spa_contact_form{
+	float:left;
+	width:100%;
+}
+.spa_contact_form{
+	padding:80px 0px;
+}
+.spa_contact_field .sidebar_title{
+	line-height:42px;
+	margin-bottom:32px;
+}
+.spa_contact_form .col-md-4,
+.spa_contact_form .col-md-8{
+	padding:0px 0px;
+}
+.spa_contact_field{
+	border:1px solid #e2e2e2;
+	padding:73px 60px 80px;
+}
+.spa_contact_field .spa_select_field.input{
+	margin-bottom:30px;
+}
+.spa_textarea.contact textarea{
+	height:150px;
+	border: 1px solid #c7c7c7;
+	color:#666;
+	margin-bottom:28px;
+}
+.spa_textarea.contact textarea::placeholder{
+	color:#666;
+}
+/*
+	====================================
+		SPA CONTACT FORM END
+	====================================
+*/
+
+/*
+	====================================
+		SPA CONTACT INFO START
+	====================================
+*/
+.spa_contact_follow,
+.spa_info_text,
+.spa_info_list ul li,
+.spa_info_list ul,
+.spa_info_list,
+.spa_contact_info{
+	float:left;
+	width:100%;
+}
+.spa_contact_info{
+	text-align:center;
+	padding:73px 0px 80px;
+}
+.spa_contact_info .sidebar_title{
+	color:#fff;
+	line-height:42px;
+	margin-bottom:0px;
+}
+.spa_contact_info .sidebar_title:before{
+	margin:auto;
+	border-color:#fff;
+}
+.spa_info_list ul{
+	padding:38px 0px;
+}
+.spa_info_list ul li{
+	margin-bottom:40px;
+}
+.spa_info_list ul li:last-child{
+	margin-bottom:0px;
+}
+.spa_info_text h6{
+	color:#fff;
+	font-weight:600;
+	margin-bottom: 12px;
+}
+.spa_info_text p{
+	margin-bottom:0px;
+	color:#fff;
+}
+.spa_info_text p span{
+	display:block;
+}
+.spa_contact_follow h6{
+	color:#fff;
+	font-weight:600;
+	margin-bottom: 14px;
+}
+.spa_contact_follow .widget_icon li{
+	float:none;
+	display:inline-block;
+	margin-right:10px;
+}
+.spa_contact_follow .widget_icon li:last-child{
+	margin-right:0px;
+}
+.spa_contact_follow .widget_icon li a{
+	background-color:#fff;
+	color:#000000;
+	height:60px;
+	width:60px;
+	line-height:60px;
+	font-size:20px;
+}
+.spa_contact_follow .widget_icon li a:hover{
+	background-color:#000;
+	color:#fff;
+}
+/*
+	====================================
+		SPA CONTACT INFO END
+	====================================
+*/
+
+/*
+	==================================================================
+					CONTACT US PAGE END
+	==================================================================
+*/
+
+/*
+	==================================================================
+					SHOP PAGE START
+	==================================================================
+*/
+.product_icon,
+.product_rating,
+.spa_shop_menu_row,
+.spa_shop_wrap{
+	float:left;
+	width:100%;
+}
+.spa_shop_wrap{
+	padding:75px 0px 80px;
+}
+.spa_shop_menu_row{
+	margin-bottom:38px;
+}
+.spa_shop_mune_list{
+	float:left;
+	width:50%;
+	padding:12px 0px;
+}
+.shop_menu_icon,
+.shop_menu_icon li{
+	float:left;
+	width:auto;
+}
+.shop_menu_icon li{
+	margin-right:12px;
+}
+.shop_menu_icon li a{
+	display:inline-block;
+}
+.icon-size {
+    font-size: 11px;
+}
+.spa_select_field.drop{
+	float:right;
+	width:270px;
+	margin-bottom:0px;
+	border:none;
+	background-color:#f4f4f4;
+}
+.spa_select_field.drop .nice-select{
+	padding:11px 15px;
+}
+.spa_select_field.drop .nice-select:before{
+	border:none;
+}
+.spa_select_field.drop .nice-select span{
+	font-size:14px;
+	color:#666666;
+}
+.spa_product_item{
+	position:relative;
+}
+.spa_product_item:hover figure img{
+	transform:scale(1.5);
+	-moz-transform:scale(1.5);
+	-webkit-transform:scale(1.5);
+}
+.spa_product_item.overlay{
+	margin-bottom:30px;
+}
+.spa_product_item.overlay:before{
+	background-color:#fff;
+	opacity:0;
+}
+.spa_product_item:hover.overlay:before{
+	opacity:0.8;
+	z-index:2;
+}
+.spa_product_detail{
+	position:absolute;
+	top:50%;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	text-align:center;
+	z-index:3;
+	margin-top: -150px;
+	opacity:0;
+}
+.spa_product_item:hover .spa_product_detail{
+	margin-top: -110px;
+	opacity:1;
+}
+.spa_product_detail .section_heading{
+	margin-bottom:5px;
+}
+.spa_product_detail h6{
+	font-weight:600;
+	margin-bottom:8px;
+}
+.spa_product_detail h6 span{
+	display:block;
+	margin-bottom:4px;
+}
+.spa_product_detail h4{
+	font-weight:600;
+	margin-bottom:7px;
+}
+.product_rating{
+	margin-bottom:20px;
+}
+.product_icon li,
+.product_rating li{
+	display:inline-block;
+}
+.product_rating li a{
+	display:inline-block;
+}
+.product_icon li{
+	border-right:1px solid #a6a6a6;
+	margin-left: -4px;
+	position:relative;
+}
+.product_icon li:last-child{
+	border:none;
+}
+.product_icon li a{
+	display:inline-block;
+	padding:3px 15px;
+}
+.product_icon li a:hover{
+	color:#fff;
+}
+
+.spa_select_field.drop .nice-select:after {
+	margin-top:-3px;
+}
+/*
+	==================================================================
+					SHOP PAGE END
+	==================================================================
+*/
+
+/*
+	==================================================================
+					THEAM HOVER START
+	==================================================================
+*/
+.spa_wellness_fig:hover figure img,
+.widget_news_fig:hover figure img,
+.widget_thumb:hover figure img{
+	transform:scale(1.4);
+	-moz-transform:scale(1.4);
+	-webkit-transform:scale(1.4);
+}
+/* theme hover start */
+[class^="imghvr-strip-shutter"] .hover-theme:after,
+[class^="imghvr-strip-shutter"] .hover-theme:before,
+[class^="imghvr-strip-shutter"]:after, 
+[class^="imghvr-strip-shutter"]:before, 
+[class*=" imghvr-strip-shutter"] .hover-theme:after,
+[class*=" imghvr-strip-shutter"] .hover-theme:before,
+[class*=" imghvr-strip-shutter"]:after,
+[class*=" imghvr-strip-shutter"]:before{
+	opacity:0.9 !important;
+}
+.spa_blog_medium.hover_list .imghvr-strip-shutter-up:before,
+.spa_gallery_item .imghvr-strip-shutter-up:before, 
+.imghvr-strip-shutter-up:before {
+    top: -2px;
+}
+.imghvr-strip-shutter-down .hover-theme:before,
+.imghvr-strip-shutter-up .hover-theme:before {
+    top: 51%;
+}
+.imghvr-strip-shutter-down .hover-theme:after,
+.imghvr-strip-shutter-up .hover-theme:after {
+    top: 77%;
+}
+.spa_service_detail_row .imghvr-strip-shutter-up:before,
+.imghvr-strip-shutter-down:before{
+    top: -4px;
+}
+.spa_service_detail_row .hover-theme:after,
+.spa_gallery_item .imghvr-strip-shutter-up .hover-theme:after,
+.spa_blog_medium.hover_style .imghvr-strip-shutter-up .hover-theme:after,
+.imghvr-strip-shutter-down .hover-theme:after{
+	top: 76.9%;
+}
+.spa_blog_medium .imghvr-strip-shutter-up:before,
+.spa_gallery_item.gallery_4 .imghvr-strip-shutter-up:before,
+.spa_gallery_item.gallery_6 .imghvr-strip-shutter-up:before,
+.spa_gallery_item.hover_style .imghvr-strip-shutter-up:before,
+.spa_blog_medium.hover_style .imghvr-strip-shutter-up:before,
+.spa_product_item .imghvr-strip-shutter-up:before {
+    top: -3px;
+}
+.widget_thumb .imghvr-strip-shutter-up:before {
+    top: -1px;
+}
+.spa_side_flicker .imghvr-strip-shutter-up:before,
+.widget_news_fig .imghvr-strip-shutter-up:before {
+    top: -1px;
+}
+.spa_shopping_cart .imghvr-strip-shutter-up:before,
+.spa_comment_item .imghvr-strip-shutter-up:before,
+.spa_cart_fig .imghvr-strip-shutter-u:before {
+    top: 0px;
+}
+.spa_video_fig .imghvr-strip-shutter-up:before,
+.spa_service_02 .imghvr-strip-shutter-up:before,
+.spa_wellness_fig .imghvr-strip-shutter-up:before {
+    top: -4px;
+}
+.spa_blog_medium.hover_style .imghvr-strip-shutter-up .hover-theme:before {
+    top: 51%;
+}
+.spa_gallery_item.width_fig .imghvr-strip-shutter-up::before{
+	top:-8px;
+}
+.spa_gallery_item.width_fig .imghvr-strip-shutter-up .hover-theme:before {
+    top: 50.8%;
+}
+.spa_gallery_item.width_fig .imghvr-strip-shutter-up:after {
+    top: 24.9%;
+}
+.spa_blog_detail .spa_blog_medium .imghvr-strip-shutter-up:after {
+    top: 24.7%;
+}
+.spa_blog_detail .spa_blog_medium .imghvr-strip-shutter-up:before{
+	top:-5px;
+}
+.spa_comment_item:hover [class^='imghvr-strip-shutter']:before, 
+.spa_comment_item:hover [class^='imghvr-strip-shutter']:after,
+.spa_comment_item:hover [class^='imghvr-strip-shutter'] .hover-theme:before,
+.spa_comment_item:hover [class^='imghvr-strip-shutter'] .hover-theme:after, 
+.spa_comment_item:hover [class*=' imghvr-strip-shutter']:before, 
+.spa_comment_item:hover [class*=' imghvr-strip-shutter']:after, 
+.spa_comment_item:hover [class*=' imghvr-strip-shutter'] .hover-theme:before,
+.spa_comment_item:hover [class*=' imghvr-strip-shutter'] .hover-theme:after,
+
+
+.spa_author:hover [class^='imghvr-strip-shutter']:before, 
+.spa_author:hover [class^='imghvr-strip-shutter']:after,
+.spa_author:hover [class^='imghvr-strip-shutter'] .hover-theme:before,
+.spa_author:hover [class^='imghvr-strip-shutter'] .hover-theme:after, 
+.spa_author:hover [class*=' imghvr-strip-shutter']:before, 
+.spa_author:hover [class*=' imghvr-strip-shutter']:after, 
+.spa_author:hover [class*=' imghvr-strip-shutter'] .hover-theme:before,
+.spa_author:hover [class*=' imghvr-strip-shutter'] .hover-theme:after,
+
+.spa_highlight_detail:hover [class^='imghvr-strip-shutter']:before, 
+.spa_highlight_detail:hover [class^='imghvr-strip-shutter']:after,
+.spa_highlight_detail:hover [class^='imghvr-strip-shutter'] .hover-theme:before,
+.spa_highlight_detail:hover [class^='imghvr-strip-shutter'] .hover-theme:after, 
+.spa_highlight_detail:hover [class*=' imghvr-strip-shutter']:before, 
+.spa_highlight_detail:hover [class*=' imghvr-strip-shutter']:after, 
+.spa_highlight_detail:hover [class*=' imghvr-strip-shutter'] .hover-theme:before,
+.spa_highlight_detail:hover [class*=' imghvr-strip-shutter'] .hover-theme:after,
+
+
+.spa_service_detail_row:hover [class^='imghvr-strip-shutter']:before, 
+.spa_service_detail_row:hover [class^='imghvr-strip-shutter']:after,
+.spa_service_detail_row:hover [class^='imghvr-strip-shutter'] .hover-theme:before,
+.spa_service_detail_row:hover [class^='imghvr-strip-shutter'] .hover-theme:after, 
+.spa_service_detail_row:hover [class*=' imghvr-strip-shutter']:before, 
+.spa_service_detail_row:hover [class*=' imghvr-strip-shutter']:after, 
+.spa_service_detail_row:hover [class*=' imghvr-strip-shutter'] .hover-theme:before,
+.spa_service_detail_row:hover [class*=' imghvr-strip-shutter'] .hover-theme:after,
+
+
+.spa_service_02:hover [class^='imghvr-strip-shutter']:before, 
+.spa_service_02:hover [class^='imghvr-strip-shutter']:after,
+.spa_service_02:hover [class^='imghvr-strip-shutter'] .hover-theme:before,
+.spa_service_02:hover [class^='imghvr-strip-shutter'] .hover-theme:after, 
+.spa_service_02:hover [class*=' imghvr-strip-shutter']:before, 
+.spa_service_02:hover [class*=' imghvr-strip-shutter']:after, 
+.spa_service_02:hover [class*=' imghvr-strip-shutter'] .hover-theme:before,
+.spa_service_02:hover [class*=' imghvr-strip-shutter'] .hover-theme:after,
+
+
+.spa_gallery_item.gallery_6:hover [class^='imghvr-strip-shutter']:before, 
+.spa_gallery_item.gallery_6:hover [class^='imghvr-strip-shutter']:after,
+.spa_gallery_item.gallery_6:hover [class^='imghvr-strip-shutter'] .hover-theme:before,
+.spa_gallery_item.gallery_6:hover [class^='imghvr-strip-shutter'] .hover-theme:after, 
+.spa_gallery_item.gallery_6:hover [class*=' imghvr-strip-shutter']:before, 
+.spa_gallery_item.gallery_6:hover [class*=' imghvr-strip-shutter']:after, 
+.spa_gallery_item.gallery_6:hover [class*=' imghvr-strip-shutter'] .hover-theme:before,
+.spa_gallery_item.gallery_6:hover [class*=' imghvr-strip-shutter'] .hover-theme:after,
+
+
+.spa_gallery_item.width_fig:hover [class^='imghvr-strip-shutter']:before, 
+.spa_gallery_item.width_fig:hover [class^='imghvr-strip-shutter']:after,
+.spa_gallery_item.width_fig:hover [class^='imghvr-strip-shutter'] .hover-theme:before,
+.spa_gallery_item.width_fig:hover [class^='imghvr-strip-shutter'] .hover-theme:after, 
+.spa_gallery_item.width_fig:hover [class*=' imghvr-strip-shutter']:before, 
+.spa_gallery_item.width_fig:hover [class*=' imghvr-strip-shutter']:after, 
+.spa_gallery_item.width_fig:hover [class*=' imghvr-strip-shutter'] .hover-theme:before,
+.spa_gallery_item.width_fig:hover [class*=' imghvr-strip-shutter'] .hover-theme:after,
+
+.spa_blog_medium:hover [class^='imghvr-strip-shutter']:before, 
+.spa_blog_medium:hover [class^='imghvr-strip-shutter']:after,
+.spa_blog_medium:hover [class^='imghvr-strip-shutter'] .hover-theme:before,
+.spa_blog_medium:hover [class^='imghvr-strip-shutter'] .hover-theme:after, 
+.spa_blog_medium:hover [class*=' imghvr-strip-shutter']:before, 
+.spa_blog_medium:hover [class*=' imghvr-strip-shutter']:after, 
+.spa_blog_medium:hover [class*=' imghvr-strip-shutter'] .hover-theme:before,
+.spa_blog_medium:hover [class*=' imghvr-strip-shutter'] .hover-theme:after,
+
+.spa_cart_fig:hover [class^='imghvr-strip-shutter']:before, 
+.spa_cart_fig:hover [class^='imghvr-strip-shutter']:after,
+.spa_cart_fig:hover [class^='imghvr-strip-shutter'] .hover-theme:before,
+.spa_cart_fig:hover [class^='imghvr-strip-shutter'] .hover-theme:after, 
+.spa_cart_fig:hover [class*=' imghvr-strip-shutter']:before, 
+.spa_cart_fig:hover [class*=' imghvr-strip-shutter']:after, 
+.spa_cart_fig:hover [class*=' imghvr-strip-shutter'] .hover-theme:before,
+.spa_cart_fig:hover [class*=' imghvr-strip-shutter'] .hover-theme:after,
+
+.widget_news_fig:hover [class^='imghvr-strip-shutter']:before, 
+.widget_news_fig:hover [class^='imghvr-strip-shutter']:after,
+.widget_news_fig:hover [class^='imghvr-strip-shutter'] .hover-theme:before,
+.widget_news_fig:hover [class^='imghvr-strip-shutter'] .hover-theme:after, 
+.widget_news_fig:hover [class*=' imghvr-strip-shutter']:before, 
+.widget_news_fig:hover [class*=' imghvr-strip-shutter']:after, 
+.widget_news_fig:hover [class*=' imghvr-strip-shutter'] .hover-theme:before,
+.widget_news_fig:hover [class*=' imghvr-strip-shutter'] .hover-theme:after,
+
+.spa_product_item:hover [class^='imghvr-strip-shutter']:before, 
+.spa_product_item:hover [class^='imghvr-strip-shutter']:after,
+.spa_product_item:hover [class^='imghvr-strip-shutter'] .hover-theme:before,
+.spa_product_item:hover [class^='imghvr-strip-shutter'] .hover-theme:after, 
+.spa_product_item:hover [class*=' imghvr-strip-shutter']:before, 
+.spa_product_item:hover [class*=' imghvr-strip-shutter']:after, 
+.spa_product_item:hover [class*=' imghvr-strip-shutter'] .hover-theme:before,
+.spa_product_item:hover [class*=' imghvr-strip-shutter'] .hover-theme:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+/*
+	==================================================================
+					THEAM HOVER END
+	==================================================================
+*/

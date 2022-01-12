@@ -1,0 +1,302 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from www.urbanui.com/victory/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:15:04 GMT -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{uobj.firm_name}} - Service Provider Panel</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/simple-line-icons/css/simple-line-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'vendors/jquery-bar-rating/fontawesome-stars.css' %}">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src='{% static "js/validateattendant.js" %}'></script>
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'images/top-logo2.png' %}" />
+  <link rel="stylesheet" href="{% static 'css/sweetalert.min.css' %}">
+  <script src="{% static 'js/sweetalert.min.js' %}"></script>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/validatesp.js' %}"></script>
+  <style type="text/css">
+    .but1{
+      background-color:#03a9f3;color:white;width:80px;text-align: center;vertical-align: middle;height:25px;border:none;border-radius: 15px;
+    }   
+</style>
+<script type='text/javascript'>
+  function valPass11(){
+    var a1;
+    pass=document.getElementById('pass').value;
+    pass1=document.getElementById('pass1').value;
+   
+    if(pass != pass1){
+      var a = document.getElementById('perror');
+      a.style.display='block';
+      a1=false;
+    }
+    else{
+      var a = document.getElementById('perror');
+      a.style.display='none';
+      a1=true;
+    }
+    if(a1){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+</script>
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-6 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"><img src="{% static 'images/top-logo2.png' %}" height="100" alt="logo"/></a>
+      </div>
+      <h3 style="font-family:calibri;font-size: 40px;color: aliceblue;position:relative; left:-450px;">SERVICE PROVIDER PANEL</h3>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <!-- partial:partials/_settings-panel.html -->
+        
+        
+        <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <div class="nav-link">
+                <div class="profile-image">
+                  <img src="{{ uobj.image.url }}" alt="image"/>
+                  <span class="online-status online"></span> <!--change class online to offline or busy as needed-->
+                </div>
+                <div class="profile-name">
+                  <h4 class="name">
+                    {{uobj.firm_name}}
+                  </h4>
+                  <h5 class="designation">
+                    Service Provider
+                  </h5>
+                  <br>
+                  <button type="button" onclick="window.location.href='/service-provider/logout'" class="btn btn-info">Log Out</button>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/service-provider/index">
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/service-provider/bookings">
+                <span class="menu-title">Bookings</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/service-provider/attendants">
+                <span class="menu-title">My Attendants</span>
+              </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/service-provider/myservices">
+              <span class="menu-title">My Services</span>
+            </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/service-provider/myprofile">
+                <span class="menu-title">My Profile</span>
+              </a>
+              </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="content-wrapper">     
+            <div class="row user-profile">
+                <div class="col-lg-4 side-left d-flex align-items-stretch">
+                  <div class="row">
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card">
+                        <div class="card-body avatar">
+                          <h4 class="card-title">Info</h4>
+                          <img src="{{uobj.image.url}}" alt="">
+                          <div class="form-group mt-5" style="text-align: center;">
+                            <div class="custom-file">
+                              <form method="POST" enctype="multipart/form-data" action="/service-provider/myprofile/update">{% csrf_token %}
+                              <input type="file" name='image' class="custom-file-input" id="inputGroupFile04">
+                              <label class="custom-file-label" for="inputGroupFile04"></label>
+                            </div>
+                          </div>
+                          <p class="name">{{uobj.firm_name}}</p>
+                          <p class="designation">-  Service Provider  -</p>
+                          <a class="d-block text-center text-dark" href="#">{{uobj.uname}}</a>
+                          <a class="d-block text-center text-dark" href="#">{{uobj.contact}}</a>
+                          <div class="form-group mt-5" style="text-align: center;">
+                            <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-success mr-2">Change Password</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 stretch-card">
+                      <div class="card">
+                        <div class="card-body overview">
+                          
+                          <div class="wrapper about-user">
+                            <h4 class="card-title mt-4 mb-3">Bio</h4>
+                            <p>{{uobj.bio}}</p>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-8 side-right stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="wrapper d-block d-sm-flex align-items-center justify-content-between">
+                        <h4 class="card-title mb-0">Details</h4>
+                        
+                      </div>
+                      <div class="wrapper">
+                        <hr>
+                        <div class="tab-content" id="myTabContent">
+                          <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info">
+                            
+                              <div class="form-group">
+                                <label for="name">Owner Name</label>
+                                <input type="text" class="form-control" name="oname" value="{{uobj.owner_name}}" placeholder="Change Owner name" required>
+                              </div>
+                              <div class="form-group">
+                                <label for="designation">Firm Name</label>
+                                <input type="text" class="form-control" name='fname' value="{{uobj.firm_name}}" placeholder="Change Firmname" required>
+                              </div>
+                              <div class="form-group">
+                                <label for="mobile">Contact</label>
+                                <input type="text" class="form-control" name='contact' value="{{uobj.contact}}" placeholder="Change mobile number" pattern="(6|7|8|9)[0-9]{9}" required>
+                              </div>
+                              <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" readonly="readonly" id="email" value="{{spemail}}" placeholder="Change email address" required>
+                              </div>
+                              <div class="form-group">
+                                <label for="email">Bio</label>
+                                <input required type="text" class="form-control" name='bio' value="{{uobj.bio}}" placeholder="Change email address">
+                              </div>
+                              <div class="form-group">
+                                <label for="address">Address</label>
+                                <textarea name="address" name="address" rows="6" class="form-control" placeholder="Change address" required>{{uobj.address}}</textarea>
+                              </div>
+                          
+                            <div class="form-group">
+                                <label>State</label>
+                                <select class="js-example-basic-single" onclick="bcity()" id="state" name='state' style="width:100%;font-size: 12px;" required>
+                                    <option value=0>--Select State--</option>
+                                    {% for s in states %}
+                                        <option {% if s.state_id == uobj.state_id %} selected="selected" {% endif %} value={{s.state_id}}>{{s.state_name}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>City</label>
+                                <select class="js-example-basic-single" id="city" name='city' style="width:100%;font-size: 12px;" required>
+                                    <option value=0>--Select City--</option>
+                                    {% for c in cobj %}
+                                        <option {% if c.city_id == uobj.city_id %} selected="selected" {% endif %} value={{c.city_id}}>{{c.city_name}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                              <div class="form-group mt-5">
+                                <button type="submit" class="btn btn-success mr-2">Update</button>
+                                <button class="btn btn-danger mr-2">Deactivate Account</button>
+                                <button class="btn btn-outline-danger">Cancel</button>
+                              </div>
+                            </form>
+                          </div><!-- tab content ends -->
+                          
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form method="POST" onsubmit="return valPass11();" action="/service-provider/myprofile/change-password">{% csrf_token %}
+                        <div class="form-group">
+                          <label for="recipient-name" class="col-form-label">New Password</label>
+                          <input type="password" class="form-control" name=password id="pass">
+                        </div>
+                        <div class="form-group">
+                          <label for="recipient-name" class="col-form-label">Re-Enter New Password</label>
+                          <input type="password" class="form-control" name=password1 id="pass1">
+                        </div>
+                        <div style="position: relative;top:5px;width:370px;display: none;" id=perror class="alert alert-danger">Passwords do not match.</div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                  </form>
+                  </div>
+                </div>
+              </div> 
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div class="container-fluid clearfix">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2020 <a href="#">scissorstories</a>. All rights reserved.</span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- row-offcanvas ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="{% static 'vendors/jquery-bar-rating/jquery.barrating.min.js' %}"></script>
+  <script src="{% static 'vendors/chart.js/Chart.min.js' %}"></script>
+  <script src="{% static 'vendors/raphael/raphael.min.js' %}"></script>
+  <script src="{% static 'vendors/morris.js/morris.min.js' %}"></script>
+  <script src="{% static 'vendors/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{% static 'js/off-canvas.js' %}"></script>
+  <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'js/misc.js' %}"></script>
+  <script src="{% static 'js/settings.js' %}"></script>
+  <script src="{% static 'js/todolist.js' %}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{% static 'js/dashboard.js' %}"></script>
+  <!-- End custom js for this page-->
+</body>
+
+
+<!-- Mirrored from www.urbanui.com/victory/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:16:16 GMT -->
+</html>

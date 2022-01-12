@@ -1,0 +1,289 @@
+{% load static %}
+{% include 'Common/header.html' %}
+
+         <!--SPA BANNER WRAP START -->
+         <title>scissorstories - Home</title>
+         <div class="spa_sab_banner_wrap shop_img overlay" width=100%>
+            <div class="container">
+               <div class="spa_sab_banner_text">
+                  <h2 class="sab_banner_title">welcome to scissorstories.com</h2>
+                  <p><span>change the way you pamper yourself by starting your hair-tales with us</span>write your first scissor story today !</p>
+               </div>
+            </div>
+         </div>
+         <div class="container" width=100%>
+            <h2>&nbsp; </h2>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+               <!-- Indicators -->
+               <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+               </ol>
+               <!-- Wrapper for slides -->
+               <div class="carousel-inner" width=100%>
+                  <div class="item active">
+                     <img src="{% static 'cust/extra-images/banner.jpg' %}" alt="Los Angeles" style="width:100%;">
+                  </div>
+                  <div class="item">
+                     <img src="{% static 'cust/extra-images/banner1.jpg' %}" alt="Chicago" style="width:100%;">
+                  </div>
+                  <div class="item">
+                     <img src="{% static 'cust/extra-images/banner2.jpg' %}" alt="New york" style="width:100%;">
+                  </div>
+               </div>
+               <!-- Left and right controls -->
+               <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+               <span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="sr-only">Previous</span>
+               </a>
+               <a class="right carousel-control" href="#myCarousel" data-slide="next">
+               <span class="glyphicon glyphicon-chevron-right"></span>
+               <span class="sr-only">Next</span>
+               </a>
+            </div>
+         </div>
+         <!--SPA BANNER WRAP END -->
+         <!--CONTENT START -->
+         <div class="content">
+            <!--SPA SALON WRAP START -->
+            <div class="spa_salon_wrap">
+               <div class="container">
+                  <!--SECTION HEADING START -->
+                  <div class="section_heading" id=services>
+                     <h5>What We Do</h5>
+                     <h2>See Our Best Services</h2>
+                     <span class="boder-top"></span>
+                     <span><i class="fa icon-three"></i></span>
+                     <span class="boder-bottom"></span>
+                  </div>
+                  <!--SECTION HEADING END -->
+                  <div class="spa_salon_list">
+                     <ul>
+                        
+                        {% for s in ser_list %}
+                        <li>
+                           
+                           <div class="spa_salon_item">
+                              <figure class="overlay">
+                                 <img src="{{s.poster.url}}" height="175" alt="">
+                              </figure>
+                              <div class="spa_salon_text">
+                                 <a href=#><span><i class="fa icon-three"></i></span></a>
+                                 <h6>{{s.ser_name}}&nbsp;({% if s.gender == 'M' %}Male{% else %}Female{%endif%})</h6>
+                              </div>
+                           </div>
+                      </li>
+                        {% endfor %}
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <!--SPA SALON WRAP END -->
+            <!--SPA VIDEO FEATURE START -->
+            <!--SPA SERVICE WRAP START -->
+            <div class="spa_price_table" width=100% style="text-align: center;">
+               <div class="container">
+                  <!--SECTION HEADING START -->
+                  <div class="section_heading">
+                     <h5>welcome to</h5>
+                     <h2>Current Offers</h2>
+                     <span class="boder-top"></span>
+                     <span><i class="fa icon-three"></i></span>
+                     <span class="boder-bottom"></span>
+                  </div>
+                  <!--SECTION HEADING END -->
+                  <div class="row">
+                     {% for offer in offers %}
+                     <div class="col-md-3 col-sm-6">
+                        <div class="spa_price_table_list">
+                           <div class="section_heading price">
+                              <h4>{{offer.offer_id}}</h4>
+                              <span><i class="fa icon-three"></i></span>
+                           </div>
+                           <div class="spa_price_date">
+                              <p>Flat</p>
+                              <h2>{{offer.disc_ratio}}<sup>%</sup></h2>
+                           </div>
+                           <ul class="spa_price_list">
+                              <li>*Once per user</li>
+                              <li>*Maximum Discount Rs. {{offer.maxamount}}</li>
+                              <li>*Upto {{offer.offer_to}}</li>
+                           </ul>
+                           <a class="them_btn btn_2" href="#">Book Now</a>
+                        </div>                       
+                     </div>
+                     {% endfor %}
+                  </div>
+               </div>
+            </div>
+            <!--SPA SERVICE WRAP END -->					
+            <!--SPA GALLERY WRAP START -->
+            <div class="spa_gallery_wrap" style="position:relative;top:-200px;">
+               <div class="container">
+                  <!--SECTION HEADING START -->
+                  <div class="section_heading">
+                     <h5>our Photo</h5>
+                     <h2>See Our Gallery</h2>
+                     <span class="boder-top"></span>
+                     <span><i class="fa icon-three"></i></span>
+                     <span class="boder-bottom" id="gall"></span>
+                  </div>
+                  <!--SECTION HEADING END -->
+                  <div class="spa_gallery_row gallery">
+                     <a  href="#" class="Massage">
+                        <div class="spa_gallery_item">
+                           <figure class="margin-bottom imghvr-strip-shutter-up">
+                              <div class="hover-theme"></div>
+                              <img src="{% static 'cust/extra-images/gallery.png' %}" alt="">
+                           </figure>
+                           <figure class="imghvr-strip-shutter-up">
+                              <div class="hover-theme"></div>
+                              <img src="{% static 'cust/extra-images/gallery1.jpg' %}" alt="">
+                           </figure>
+                        </div>
+                     </a>
+                     <a class="width Skin" href="#">
+                        <div class="spa_gallery_item">
+                           <figure class="imghvr-strip-shutter-down">
+                              <div class="hover-theme"></div>
+                              <img src="{% static 'cust/extra-images/gallery2.jpg' %}" alt="">
+                           </figure>
+                        </div>
+                     </a>
+                     <a href="#" class="Spa">
+                        <div class="spa_gallery_item">
+                           <figure class="margin-bottom imghvr-strip-shutter-up">
+                              <div class="hover-theme"></div>
+                              <img src="{% static 'cust/extra-images/gallery3.jpg' %}" alt="">
+                           </figure>
+                           <figure class="imghvr-strip-shutter-up">
+                              <div class="hover-theme"></div>
+                              <img src="{% static 'cust/extra-images/gallery4.jpg' %}" alt="">
+                           </figure>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <!--SPA GALLERY WRAP END -->
+            <div class="container" style="position:relative;top:-200px;">
+               <div class="row">
+                  <div class="section_heading">
+                     <h5>Meet the team</h5>
+                     <h2>Our Professionals</h2>
+                     <span class="boder-top"></span>
+                     <span><i class="fa icon-three"></i></span>
+                     <span class="boder-bottom" id="gall"></span>
+                  </div>
+                  {% for a in at_list %}
+                  <div class="col-md-3 col-sm-6">
+                     <a href="sp-details.html">
+                        <div class="spa_product_item overlay">
+                           <figure>
+                              <img height="150px" width="100px" src="{{a.image.url}}" alt="">
+                           </figure>
+                           <div class="spa_product_text">
+                              <p>{{a.at_name}}</p>
+                              <span>{{a.firm_name}}</span>
+                           </div>
+                           <div class="spa_product_detail">
+                              <!--SECTION HEADING START -->
+                              <div class="section_heading">
+                                 <span class="boder-top"></span>
+                                 <span><i class="fa icon-three"></i></span>
+                                 <span class="boder-bottom"></span>
+                              </div>
+                              <!--SECTION HEADING END -->
+                              <h6><span>{{a.at_name}}</span>Clients Attended:</h6>
+                              <h4>115</h4>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  {% endfor %}
+               </div>
+            </div>
+            <!--SPA TESTIMONIAL WRAP START -->
+            <div class="spa_testimonial_wrap overlay">
+               <div class="container">
+                  <div class="spa_testimonial_list">
+                     <!--SECTION HEADING START -->
+                     <div class="section_heading">
+                        <h5>Testimoinals</h5>
+                        <h2>Poeple Love Us</h2>
+                        <span class="boder-top"></span>
+                        <span><i class="fa icon-three"></i></span>
+                        <span class="boder-bottom"></span>
+                     </div>
+                     <!--SECTION HEADING END -->
+                     <div class="spa-testimonial-slider">
+                        <div>
+                           <div class="spa_testimonial_text">
+                              <p>Very good service and easy procedure to book an appointmnet. Pocket friendly and various offers are also available. </p>
+                              <ul class="spa_rating">
+                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
+                              </ul>
+                              <h6>Rakesh Joshi</h6>
+                              <br>
+                           </div>
+                        </div>
+                        <div>
+                           <div class="spa_testimonial_text">
+                              <p>It's very easy to find a salon and get an appointment. Easy to use just loved it.</p>
+                              <ul class="spa_rating">
+                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
+                              </ul>
+                              <h6>Mahesh Verma</h6>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--SPA TESTIMONIAL WRAP END -->
+            <!--spa CLIENT WRAP START-->
+            <!--spa CLIENT WRAP END-->
+            <!--SPA AWARD WRAP START-->
+            <div class="container">
+               <div class="spa_award_list">
+                  <ul>
+                     <li>
+                        <div class="spa_award_item">
+                           <span><i class="fa icon-smiley"></i></span>
+                           <h2 class="counter">3000</h2>
+                           <h4>Happy Client</h4>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="spa_award_item">
+                           <span><i class="fa icon-three-1"></i></span>
+                           <h2 class="counter">1500</h2>
+                           <h4>Happy Client</h4>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="spa_award_item">
+                           <span><i class="fa icon-cup"></i></span>
+                           <h2 class="counter">1300</h2>
+                           <h4>Happy Client</h4>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <!--SPA AWARD WRAP END-->
+            <!--SPA PRODUCT WRAP START-->
+            <!--SPA NEWSLETTER WRAP END-->
+         </div>
+         <!--CONTENT END -->
+         <!--FOOTER START-->
+ {% include 'Common/footer.html' %}        

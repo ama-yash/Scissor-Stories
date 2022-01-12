@@ -1,0 +1,259 @@
+{% load static %}
+{% for sobj in sobjs %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.urbanui.com/victory/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:15:04 GMT -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{name}} - Admin Panel</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/simple-line-icons/css/simple-line-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'vendors/jquery-bar-rating/fontawesome-stars.css' %}">
+  <link rel="stylesheet" href="http://www.urbanui.com/victory/vendors/dropify/dropify.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'images/top-logo2.png' %}" />
+  
+  <script src="{% static 'js/validateoffer.js' %}"></script>
+
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"><img src="{% static 'images/top-logo2.png' %}" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{% static 'images/logo-mini.svg' %}" alt="logo"/></a>
+      </div>
+      <h3 style="font-family:calibri;font-size: 40px;color: aliceblue;position:relative; left:-500px;">ADMIN PANEL</h3>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <!-- partial:partials/_settings-panel.html -->
+        <!-- partial -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <div class="nav-link">
+                <div class="profile-image">
+                  <img src="{% static 'images/faces/face9.jpg' %}" alt="image"/>
+                  <span class="online-status online"></span> <!--change class online to offline or busy as needed-->
+                </div>
+                <div class="profile-name">
+                  <h4 class="name">
+                    {{ name }}
+                  </h4>
+                  <h5 class="designation">
+                    Admin
+                  </h5>
+                  <br>
+                  <a href="{% url 'Home:logout' %}" onclick="window.localStorage.removeItem('flag');" class="btn btn-info">Log Out</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Home:index2' %}">
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'Home:serviceop' %}">
+                <span class="menu-title">Service Providers</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Home:customer' %}">
+                <span class="menu-title">Customers</span>
+              </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Home:bookings' %}">
+              <span class="menu-title">Bookings</span>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'Home:others' %}">
+            <span class="menu-title">Others</span>
+          </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/report-builder/">
+          <span class="menu-title">Reports</span>
+        </a>
+    </li>
+          </ul>
+        </nav>
+        <div class="content-wrapper">
+            <div class="row user-profile">
+                <div class="col-lg-4 side-left d-flex align-items-stretch">
+                  <div class="row">
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card">
+                        <div class="card-body avatar">
+                          <h4 class="card-title">Info</h4>
+                          <img src="{{ sobj.image.url }}" alt="">
+                          <p class="name">{{sobj.firm_name}}</p>
+                          <p class="designation">Owner - {{sobj.owner_name}}</p>
+                          <a class="d-block text-center text-dark" href="#">{{uobj.email}}</a>
+                          <a class="d-block text-center text-dark" href="#">{{sobj.contact}}</a>
+                          <br>
+                          <a class="d-block text-center text-dark" href="#">{{sobj.address}},</a>
+                          <a class="d-block text-center text-dark" href="#">{{sobj.city_name}},&nbsp;{{ sobj.state_name }}</a>
+                          <br>
+                          <a class="d-block text-center text-dark" href="#">Joined:&nbsp;{{ uobj.date_joined }}</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 stretch-card">
+                      <div class="card">
+                        <div class="card-body overview">
+                          <ul class="achivements">
+                            <li><p>{% for a in attc %}{{a.apcount}}{% endfor %}</p><p>Attendants</p></li>
+                            <li><p>{% for a in ap %}{{a.apcount}}{% endfor %}</p><p>Appointments</p></li>
+                            <li><p>{% for a in scount %}{{a.sercount}}{% endfor %}</p><p>Services</p></li>
+                          </ul>
+                          <div class="wrapper about-user">
+                            <h4 class="card-title mt-4 mb-3">Bio</h4>
+                            <p>{{sobj.bio}}</p>
+                          </div>
+                          <div class="info-links">
+                            <a class="website" href="http://urbanui.com/">
+                              <i class="mdi mdi-earth text-gray"></i>
+                              <span>http://www.scissorstories.com/</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-8 side-right stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title mb-0">Attendant Details</h4>
+  
+                      <div class="wrapper">
+                        <hr>
+      
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th>Attendant</th>
+                                      <th>ID</th>
+                                      <th>Name</th>
+                                      <th>Gender</th>
+                                      <th>Contact</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                      {% for a in att %}
+                                    <tr>
+                                      <td class="py-1">
+                                        <img src="{{a.image.url}}" alt="image"/>
+                                      </td>
+                                      <td>{{a.at_id}}</td>
+                                      <td>{{a.at_name}}</td>
+                                      <td>{% if a.gender == 'M' %}Male{% elif a.gender == 'F' %}Female{% else %}Other{%endif%}</td>
+                                      <td>{{a.contact}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                  </tbody>
+                                </table>
+                              </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+
+                        <h4 class="card-title mb-0">Services</h4>
+  
+                      <div class="wrapper">
+                        <hr>
+      
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th>Service</th>
+                                      <th>Attendant</th>
+                                      <th>Contact</th>
+                                      <th>From</th>
+                                      <th>To</th>
+                                      <th>Price</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                      {% for s in sp %}
+                                    <tr>
+                                      <td>{{s.ser_name}} &nbsp;({% if s.gender == 'M' %}Male{% elif s.gender == 'F' %}Female{% else %}Other{%endif%})</td>
+                                      <td>{{s.at_name}}</td>
+                                      <td>{{s.contact}}</td>
+                                      <td>{{s.time_from}}</td>
+                                      <td>{{s.time_to}}</td>
+                                      <td>{{s.price}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                  </tbody>
+                                </table>
+                              </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div class="container-fluid clearfix">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2020 <a href="#">scissorstories</a>. All rights reserved.</span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- row-offcanvas ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="{% static 'vendors/jquery-bar-rating/jquery.barrating.min.js' %}"></script>
+  <script src="{% static 'vendors/chart.js/Chart.min.js' %}"></script>
+  <script src="{% static 'vendors/raphael/raphael.min.js' %}"></script>
+  <script src="{% static 'vendors/morris.js/morris.min.js' %}"></script>
+  <script src="{% static 'vendors/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{% static 'js/off-canvas.js' %}"></script>
+  <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'js/misc.js' %}"></script>
+  <script src="{% static 'js/settings.js' %}"></script>
+  <script src="{% static 'js/todolist.js' %}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{% static 'js/dashboard.js' %}"></script>
+  <!-- End custom js for this page-->
+</body>
+
+
+<!-- Mirrored from www.urbanui.com/victory/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:16:16 GMT -->
+</html>
+{% endfor %}

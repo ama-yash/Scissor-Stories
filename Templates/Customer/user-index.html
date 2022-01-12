@@ -1,0 +1,170 @@
+{% load static %}
+{% include 'Common/header.html' %}
+<title>scissorstories - Home</title>
+<div class="spa_sab_banner_wrap shop_img overlay" width=100%>
+    <div class="container">
+        <div class="spa_sab_banner_text">
+            <h2 class="sab_banner_title">welcome back,&nbsp;{% if request.user.first_name == '' %}{{request.user.username}}{% else %} {{request.user.first_name}} {% endif %} !</h2>
+            
+        </div>
+    </div>
+</div>
+
+
+<!--CONTENT START -->
+<div class="content">
+    <!--SPA SALON WRAP START -->
+    <div class="spa_salon_wrap">
+        <div class="container">
+            <!--SECTION HEADING START -->
+            <div class="section_heading">
+                <h2>Upcoming Appointments</h2>
+                <span class="boder-top"></span>
+                <span><i class="fa icon-three"></i></span>
+                <span class="boder-bottom"></span>
+            </div>
+            <table class='table table-sm'>
+                <thead>
+                    <th scope="col"><p>Appointment No</p></td>
+                    <th scope="col"><p>Service</p></th>
+                    <th scope="col"><p>Service Provider</p></th>
+                    <th scope="col"><p>Date</p></th>
+                    <th scope="col"><p>From</p></th>
+                    <th scope="col"><p>To</p></th> 
+                    <th scope="col"></th>                              
+                </thead>
+                <tbody>
+                {% for a in ap_list %}
+                {% if a.status == 1 %}
+                <tr>
+                    <th scope="row">{{ a.ap_id }}</th>
+                    <td>{{ a.ser_name }}</td>
+                    <td>{{a.firm_name}}</td>
+                    <td>{{a.adate}}</td>
+                    <td>{{a.time_from}}</td>
+                    <td>{{a.time_to}}</td>
+                    <td><a href='/appointment/view?id={{a.ap_id}}'>View Details</a></td>                           
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+            </table>
+
+    </div>
+    <!--SPA SALON WRAP END -->
+    
+    <!--SPA VIDEO FEATURE START -->
+    <div class="spa_salon_wrap" id=#ser>
+        <div class="container">
+            <!--SECTION HEADING START -->
+            <div class="section_heading">
+                <h5>Book your favourite</h5>
+                <h2>Services</h2>
+                <span class="boder-top"></span>
+                <span><i class="fa icon-three"></i></span>
+                <span class="boder-bottom"></span>
+            </div>
+            <!--SECTION HEADING END -->
+            <div class="spa_salon_list">
+                <ul>
+                        
+                    {% for s in ser_list %}
+                    <li>
+                       
+                       <div class="spa_salon_item">
+                          <figure class="overlay">
+                             <img src="{{s.poster.url}}" height="175" alt="">
+                          </figure>
+                          <div class="spa_salon_text">
+                             <a href=#><span>S</span></a>
+                             <h6>{{s.ser_name}}&nbsp;({% if s.gender == 'M' %}Male{% else %}Female{%endif%})</h6>
+                          </div>
+                       </div>
+                  </li>
+                    {% endfor %}
+                 </ul>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!--SPA SERVICE WRAP START -->
+    <div class="spa_price_table" style="text-align: center;">
+        <div class="container">
+            <!--SECTION HEADING START -->
+            <div class="section_heading">
+                <h5>welcome to</h5>
+                <h2>Current Offers</h2>
+                <span class="boder-top"></span>
+                <span><i class="fa icon-three"></i></span>
+                <span class="boder-bottom"></span>
+            </div>
+            <!--SECTION HEADING END -->
+            <div class="row">
+                {% for offer in offers %}
+                <div class="col-md-3 col-sm-6">
+                   <div class="spa_price_table_list">
+                      <div class="section_heading price">
+                         <h4>{{offer.offer_id}}</h4>
+                         <span><i class="fa icon-three"></i></span>
+                      </div>
+                      <div class="spa_price_date">
+                         <p>Flat</p>
+                         <h2>{{offer.disc_ratio}}<sup>%</sup></h2>
+                      </div>
+                      <ul class="spa_price_list">
+                         <li>*Once per user</li>
+                         <li>*Maximum Discount Rs. {{offer.maxamount}}</li>
+                         <li>*Upto {{offer.offer_to}}</li>
+                      </ul>
+                      <a class="them_btn btn_2" href="#">Book Now</a>
+                   </div>                       
+                </div>
+                {% endfor %}
+             </div>
+        </div>
+    </div>
+    <div class="container" style="position:relative;">
+    <div class="row">
+    <div class="section_heading">
+        <h5>Meet the team</h5>
+        <h2>Our Professionals</h2>
+        <span class="boder-top"></span>
+        <span><i class="fa icon-three"></i></span>
+        <span class="boder-bottom" id="gall"></span>
+     </div>
+     {% for a in at_list %}
+     <div class="col-md-3 col-sm-6">
+        <a href="sp-details.html">
+           <div class="spa_product_item overlay">
+              <figure>
+                 <img height="150px" width="100px" src="{{a.image.url}}" alt="">
+              </figure>
+              <div class="spa_product_text">
+                 <p>{{a.at_name}}</p>
+                 <span>{{a.firm_name}}</span>
+              </div>
+              <div class="spa_product_detail">
+                 <!--SECTION HEADING START -->
+                 <div class="section_heading">
+                    <span class="boder-top"></span>
+                    <span><i class="fa icon-three"></i></span>
+                    <span class="boder-bottom"></span>
+                 </div>
+                 <!--SECTION HEADING END -->
+                 <h6><span>{{a.at_name}}</span>Clients Attended:</h6>
+                 <h4>115</h4>
+              </div>
+           </div>
+        </a>
+     </div>
+     {% endfor %}
+    </div>   
+    </div>
+    </div>				<!--SPA SERVICE WRAP END -->					
+    <!--SPA GALLERY WRAP START -->
+    <!--SPA GALLERY WRAP END -->
+    <!--SPA TESTIMONIAL WRAP START -->
+    <!--SPA NEWSLETTER WRAP END-->
+</div>
+{% include 'Common/footer.html' %}

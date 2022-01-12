@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.codefund.io	TRUE	/	FALSE	1999999999	__cfduid	d425d1d6ca2688cee9c7a002e70d5475a1578937256
+codefund.io	TRUE	/	FALSE	1999999999	SameSite	Lax
+

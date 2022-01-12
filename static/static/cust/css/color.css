@@ -1,0 +1,340 @@
+/*
+	  ============================================================
+		   Font Color
+	  ============================================================
+*/
+.spa_working_list li a:hover,
+.spa_working_hour:before,
+.spa_working_hour > a,
+.spa_blog_medium:hover .blog_icon,
+.cart_icon:hover,
+.them_btn.btn_2:hover,
+.them_btn:hover,
+.spa_comment_text a:hover,
+.spa_comment_text a i,
+.spa_comment_text span,
+.spa_share_meta span a:hover,
+.spa_blockquote h6 a,
+.product_rating li a:hover,
+.shop_menu_icon li a:hover,
+.spa_404_text h2,
+.spa_404_text h3,
+.spa_submit_list h6 a,
+.spa_booking_detail > h6,
+.spa_service_offer_item:hover span,
+.spa_highlight_list li a:hover,
+.spa_download_file ul li a:hover h6,
+.spa_sidebar_filter ul li a:hover,
+.spa_service_02 .spa_service_thumb:hover span,
+.spa_service_thumb span,
+.spa_gallery_icon a:hover,
+.spa_side_categories ul li a:hover,
+.spa_search_field.field_2 a,
+.spa_blog_tag:hover,
+.pagination ul li a.active,
+.pagination ul li a:hover,
+.spa_blog_text span a,
+.spa_wellness_list li a:hover,
+.section_heading.hdg-2 h5,
+.spa_about_text h4,
+.spa_about_list span,
+.spa_salon_item:hover .spa_salon_text span,
+.filter a.active,
+.spa_filter_gallery .filter a:hover,
+.spa_product_list ul li.active,
+.search .btn,
+.item-name,
+.copyright_links li a:hover,
+.widget_visiting_list li a:hover,
+.widget_news_text span,
+.fpw:hover,
+.spa-login-form input[type="checkbox"]:checked + span.box:before,
+.spa-login-form sup,
+.check-points li:before,
+.spa-heading2 h3,
+.spa_newsletter_field button:hover,
+.spa_price_date span,
+.spa_price_date h2,
+.section_heading.price h4,
+.them_btn.btn_2,
+.spa_testimonial_wrap .slick-prev:after, 
+.spa_testimonial_wrap .slick-next:before,
+.spa_filter_gallery li.active,
+.spa_select_field .calendar tr:first-child th:hover,
+.spa_select_field .calendar #today,
+.spa_working_text p,
+.spa_working_text span,
+.spa_working_hour h3,
+.spa_service_item:hover .service_icon, 
+.spa_service_text h4 a:hover,
+.video_paly,
+.section_heading span,
+.them_btn:hover,
+.search_icon:hover,
+.navigation ul li a.active,
+.navigation ul li a:hover,
+.kode_icon li a:hover
+{
+	color:#8c3fb2;
+}
+.them_btn.btn_2:hover{
+	color:#8c3fb2 !important;
+}
+/*
+	  ============================================================
+		   Background Color
+	  ============================================================
+*/
+.dl-menuwrapper button:hover, 
+.dl-menuwrapper button.dl-active,
+.dl-menuwrapper li a:hover,
+.dl-menuwrapper button,
+.navigation ul li ul li a:after,
+.spa_range_slider .slider-range .ui-slider-range,
+.spa_range_slider .slider-range span,
+.product_icon li a:hover,
+.spa_contact_info,
+.spa_submit_list > a,
+.spa_highlight_list li a:before,
+.spa_download_file ul li a:hover i,
+.spa_service_thumb:hover:before,
+.spa_service_thumb:hover .overlay:before,
+.spa_side_media_icon ul li a:hover,
+div.pp_default .pp_content,
+.blog_icon,
+.spa_salon_text.text_2:hover:before,
+.spa_important_text,
+.spa_wellness_list li a:before,
+.spa_page_link,
+.spa_sab_banner_wrap.overlay:before,
+.spa_about_fig:after,
+.spa_salon_item:hover .overlay:before,
+[class^="imghvr-strip-shutter"] .hover-theme:after,
+[class^="imghvr-strip-shutter"] .hover-theme:before,
+[class^="imghvr-strip-shutter"]:after, 
+[class^="imghvr-strip-shutter"]:before, 
+[class*=" imghvr-strip-shutter"] .hover-theme:after,
+[class*=" imghvr-strip-shutter"] .hover-theme:before,
+[class*=" imghvr-strip-shutter"]:after,
+[class*=" imghvr-strip-shutter"]:before,
+.search .btn:hover,
+.search.search--open:before,
+.button-cart,
+.badge ,
+.widget_icon li a:hover,
+[class^="imghvr-"], [class*=" imghvr-"],
+#login-register1 .modal-content,
+.spa_newsletter_wrap,
+.spa_product_item:hover .spa_product_text a,
+.spa_award_wrap,
+.them_btn.btn_2:hover,
+.spa_price_table_list.active:before,
+.spa_price_table_list:hover:before,
+.spa_testimonial_wrap .slick-prev:hover, 
+.spa_testimonial_wrap .slick-next:hover,
+.spa_banner_wrap .slick-dots li.slick-active,
+.spa_banner_wrap .slick-prev, 
+.spa_banner_wrap .slick-next,
+.spa_testimonial_wrap.overlay:before,
+.effect ~ .focus-border i:before,
+.effect ~ .focus-border i:after,
+.effect ~ .focus-border:before,
+.effect ~ .focus-border:after,
+.spa_select_field .nice-select .list li.option.selected.focus,
+.spa_select_field .nice-select .list li:hover,
+.spa_reservation_wrap,
+.video_paly:hover,
+.bg-color:before,
+.spa_salon_text span,
+.spa_banner_text:before,
+.cart_icon,
+.navigation ul li a.active:before,
+.navigation ul li a:hover:before,
+.spa_select_dropdwon .nice-select .list,
+.spa_top_wrap
+{
+	background-color:#8c3fb2;
+}
+.spa_select_field .calendar .selected,
+.spa_select_field  .calendar #currDay{
+	background-color:#8c3fb2 !important;
+}
+/*
+	  ============================================================
+		   Border Color
+	  ============================================================
+*/
+.navigation ul li ul,
+.spa_textarea.area_2 textarea:focus,
+.spa_comment_item:hover,
+.spa_author:hover,
+.product_icon li a:hover,
+.spa_textarea.contact textarea:focus,
+.spa_404_text figure:before,
+.spa_select_field.input input:focus,
+.spa_sidebar_item .spa_textarea textarea:focus,
+.spa_sidebar_item .spa_newsletter_field input:focus,
+.spa_download_file ul li a:hover,
+.spa_search_field.field_2 input:focus,
+.sidebar_title:before,
+.pagination ul li a.active,
+.pagination ul li a:hover,
+.spa_blog_thumb:before,
+.filter a.active,
+.spa_product_list ul li.active,
+.spa_filter_gallery .filter a:hover,
+.spa_product_list ul li.active,
+.shopping-cart,
+.spa-heading2 h3:before,
+.input-felid input,
+#login-register1 .modal-content,
+.spa_product_item:hover,
+.section_heading.price span:after,
+.section_heading.price span:before,
+.spa_price_table_list,
+.them_btn.btn_2,
+.spa_testimonial_wrap .slick-prev, 
+.spa_testimonial_wrap .slick-next,
+.spa_filter_gallery li.active,
+.video_paly:hover:before,
+.navigation ul li a.active,
+.navigation ul li a:hover
+{
+	border-color:#8c3fb2;
+}
+
+
+/*
+	  ============================================================
+		   Trandition
+	  ============================================================
+*/
+.spa_working_list li a,
+.spa_product_text p,
+.spa_product_text span,
+.spa_product_text,
+.dl-menuwrapper button,
+.dl-menuwrapper li a,
+.spa_blockquote h6 a,
+.spa_textarea.area_2 textarea,
+.spa_comment_item,
+.spa_comment_text a,
+.spa_author,
+.spa_share_meta span a,
+.spa_product_detail,
+.product_icon li a,
+.product_rating li a,
+.shop_menu_icon li a,
+.spa_contact_follow .widget_icon li a,
+.spa_textarea.contact textarea,
+.spa_submit_list > a,
+.spa_select_field.input input,
+.spa_service_offer_item span,
+.spa_highlight_list li a,
+.spa_sidebar_item .spa_textarea textarea,
+.spa_sidebar_item .spa_newsletter_field input,
+.spa_download_file ul li a h6,
+.spa_download_file ul li a i,
+.spa_download_file ul li a,
+.spa_sidebar_filter ul li a,
+.spa_service_thumb:before,
+.spa_service_thumb p,
+.spa_service_thumb span,
+.spa_service_thumb .overlay:before,
+.spa_service_thumb > a,
+.spa_service_thumb h4 a,
+.spa_gallery_icon a,
+.spa_side_media_icon ul li a,
+.spa_side_categories ul li a,
+.blog_icon,
+.spa_blog_medium figure,
+.spa_blog_tag,
+.pagination ul li a,
+.breadcrumb li a,
+.spa_salon_text.text_2:before,
+.spa_wellness_list li a,
+.spa_salon_text span,
+.spa_salon_item .overlay:before,
+.search .btn,
+.button-cart,
+.copyright_links li a,
+.widget_visiting_list li a,
+.widget_icon li a,
+.fpw,
+.spa_singup_form,
+.spa_newsletter_field button,
+.spa_product_text a,
+.spa_product_item,
+.spa_price_table_list:before,
+.them_btn.btn_2,
+.spa_price_list li a,
+.spa_price_date span,
+.spa_price_date h2,
+.section_heading.price span:after,
+.section_heading.price span:before,
+.section_heading.price span,
+.section_heading.price h4,
+.spa_testimonial_wrap .slick-prev:after, 
+.spa_testimonial_wrap .slick-next:before,
+.spa_testimonial_wrap .slick-prev, 
+.spa_testimonial_wrap .slick-nex,
+.spa_filter_gallery ul li,
+.spa_banner_wrap .slick-prev, 
+.spa_banner_wrap .slick-next,
+.spa_select_field .nice-select .list li,
+.service_icon, 
+.spa_service_text h4 a,
+.video_paly:before,
+.video_paly,
+.them_btn,
+.cart_icon,
+.cart_icon:after,
+.cart_icon:before,
+.search_icon,
+.navigation ul li a:before,
+.navigation ul li a,
+.spa_select_dropdwon .nice-select .list li
+{
+	-webkit-transition:all 0.3s ease-in-out;
+		-moz-transition:all 0.3s ease-in-out;
+			-ms-transition:all 0.3s ease-in-out;
+				-o-transition:all 0.3s ease-in-out;
+					transition:all 0.3s ease-in-out;
+}
+.spa_wellness_fig figure img,
+.widget_news_fig figure img,
+.widget_thumb figure img,
+.navigation ul li ul li a,
+.navigation ul li ul li a:after,
+.navigation ul li ul,
+.spa_gallery_item h6,
+.spa_gallery_icon,
+.spa_salon_item figure,
+.shopping-cart,
+.spa_select_field .datepicker .calendar,
+.spa_select_field .nice-select .list{
+	-webkit-transition:all 0.4s ease-in-out;
+		-moz-transition:all 0.4s ease-in-out;
+			-ms-transition:all 0.4s ease-in-out;
+				-o-transition:all 0.4s ease-in-out;
+					transition:all 0.4s ease-in-out;
+}
+.spa_top_navigation.sticky,
+.spa_gallery_item figure img,
+.spa_product_item figure img,
+.spa_product_item.overlay:before{
+	-webkit-transition:all 0.6s ease-in-out;
+		-moz-transition:all 0.6s ease-in-out;
+			-ms-transition:all 0.6s ease-in-out;
+				-o-transition:all 0.6s ease-in-out;
+					transition:all 0.6s ease-in-out;
+}
+.them-bg{
+	background-color:#8c3fb2;
+}
+.bg_balck{
+	background-color:#000000;
+}
+.color{
+	color:#fff;
+}

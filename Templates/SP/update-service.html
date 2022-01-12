@@ -1,0 +1,243 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from www.urbanui.com/victory/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:15:04 GMT -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{uobj.firm_name}} - Service Provider Panel</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/simple-line-icons/css/simple-line-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'vendors/jquery-bar-rating/fontawesome-stars.css' %}">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src='{% static "js/validateattendant.js" %}'></script>
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'images/top-logo2.png' %}" />
+  <link rel="stylesheet" href="{% static 'css/sweetalert.min.css' %}">
+  <script src="{% static 'js/sweetalert.min.js' %}"></script>
+  
+  <style type="text/css">
+    .but1{
+      background-color:#03a9f3;color:white;width:80px;text-align: center;vertical-align: middle;height:25px;border:none;border-radius: 15px;
+    }   
+</style>
+<script>
+    function cll(){
+        swal({
+        title: "Save Changes",
+        text: "Are you sure you want to update attendant ?",
+        icon: "warning",
+        buttons:['Cancel','Yes'],
+    }).then((willDelete) => {
+        if (willDelete) {
+            var x = document.getElementsByName('myform');
+            x[0].submit(); //form submission
+        }
+        else {
+            return false;
+        }
+    });    
+}
+</script>
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-6 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"><img src="{% static 'images/top-logo2.png' %}" height="100" alt="logo"/></a>
+      </div>
+      <h3 style="font-family:calibri;font-size: 40px;color: aliceblue;position:relative; left:-450px;">SERVICE PROVIDER PANEL</h3>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <!-- partial:partials/_settings-panel.html -->
+        
+        
+        <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <div class="nav-link">
+                <div class="profile-image">
+                  <img src="{{ uobj.image.url }}" alt="image"/>
+                  <span class="online-status online"></span> <!--change class online to offline or busy as needed-->
+                </div>
+                <div class="profile-name">
+                  <h4 class="name">
+                    {{uobj.firm_name}}
+                  </h4>
+                  <h5 class="designation">
+                    Service Provider
+                  </h5>
+                  <br>
+                  <button type="button" onclick="window.location.href='/service-provider/logout'" class="btn btn-info">Log Out</button>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/service-provider/index">
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/service-provider/bookings">
+                <span class="menu-title">Bookings</span>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/service-provider/attendants">
+                <span class="menu-title">My Attendants</span>
+              </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/service-provider/myservices">
+              <span class="menu-title">My Services</span>
+            </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/service-provider/myprofile">
+                <span class="menu-title">My Profile</span>
+              </a>
+              </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="content-wrapper">     
+            <div class="card">
+                {% for o in srobj %}
+                <div class="card-body">
+                  <h3 class="card-title">Update Service</h3>
+                  <form method="POST" class="form-sample" onsubmit="return valService()" action="/service-provider/myservices/updated" id="mform">{% csrf_token %}                          
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Attendant:</label>
+                          <div class="col-sm-9">
+                            <select name='attendant' id=attendant class="form-control">
+                                <option value="0">--Select Attendant--</option>
+                                {% for a in atlist %}
+                                    <option {% if o.attendant_id == a.at_id %} selected="selected" {% endif %} value="{{ a.at_id }}">{{a.at_name}}</option>
+                                {% endfor %}
+                            </select>
+                            <div style="position: relative;top:5px;width:370px;display: none;" id=att class="alert alert-danger">Please Select Attendant</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Service:</label>
+                          <div class="col-sm-9">
+                            <select name='service' id=service class="form-control">
+                                <option value="0">--Select Service--</option>
+                                {% for s in sl %}
+                                    <option {% if o.ser_id_id == s.ser_id %} selected="selected" {% endif %} value="{{ s.ser_id }}">{{s.ser_name}}&nbsp;({% if s.gender == 'M' %}Male{% else %}Female{% endif %})</option>
+                                {% endfor %}
+                            </select>
+                            <div style="position: relative;top:5px;width:370px;display: none;" id=ser class="alert alert-danger">Please Select Service.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Time From</label>
+                          <div class="col-sm-9">
+                            <input type="time" value="{{o.time_from}}" id=timefrom class="form-control" name="timefrom">
+                            <div style="position: relative;top:5px;width:370px;display: none;" id=tf class="alert alert-danger">Please Enter Time.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Time To:</label>
+                          <div class="col-sm-9">
+                            <input type="time" value="{{o.time_from}}" id=timeto class="form-control" name="timeto">
+                            <div style="position: relative;top:5px;width:370px;display: none;" id=tt class="alert alert-danger">Please Enter Time.</div>
+                            <div style="position: relative;top:5px;width:370px;display: none;" id=ts class="alert alert-danger">Provided timeslot is invalid.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Price:</label>
+                            <div class="col-sm-9">
+                              <input type="text" value="{{o.price}}" id=price class="form-control" name="price">
+                              <div style="position: relative;top:5px;width:370px;display: none;" id=pr class="alert alert-danger">Please Enter Price.</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <button type="submit" name='op_ser' value={{o.op_ser}} class="btn btn-outline-success">Update Service</button>
+                          &nbsp;&nbsp;
+                          <button type="button"  class="btn btn-outline-danger">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                {% endfor %}
+              </div>
+                 
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div class="container-fluid clearfix">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2020 <a href="#">scissorstories</a>. All rights reserved.</span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- row-offcanvas ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="{% static 'vendors/jquery-bar-rating/jquery.barrating.min.js' %}"></script>
+  <script src="{% static 'vendors/chart.js/Chart.min.js' %}"></script>
+  <script src="{% static 'vendors/raphael/raphael.min.js' %}"></script>
+  <script src="{% static 'vendors/morris.js/morris.min.js' %}"></script>
+  <script src="{% static 'vendors/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{% static 'js/off-canvas.js' %}"></script>
+  <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'js/misc.js' %}"></script>
+  <script src="{% static 'js/settings.js' %}"></script>
+  <script src="{% static 'js/todolist.js' %}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{% static 'js/dashboard.js' %}"></script>
+  <!-- End custom js for this page-->
+</body>
+
+
+<!-- Mirrored from www.urbanui.com/victory/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:16:16 GMT -->
+</html>

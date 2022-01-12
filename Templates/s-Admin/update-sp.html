@@ -1,0 +1,229 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.urbanui.com/victory/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:15:04 GMT -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title> {{admin}} - Admin Panel</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/simple-line-icons/css/simple-line-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'vendors/jquery-bar-rating/fontawesome-stars.css' %}">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'images/top-logo2.png' %}" />
+  <style type="text/css">
+    .but1{
+      background-color:#03a9f3;color:white;width:80px;text-align: center;vertical-align: middle;height:25px;border:none;border-radius: 15px;
+    }
+    
+</style>
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"><img src="{% static 'images/top-logo2.png' %}" alt="logo"/></a>
+      </div>
+      <h3 style="font-family:calibri;font-size: 40px;color: aliceblue;position:relative; left:-450px;">UPDATE SERVICE PROVIDER</h3>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <div class="content-wrapper">
+          <div class="row user-profile">
+            <div class="col-lg-4 side-left d-flex align-items-stretch">
+              <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body avatar">
+                      <h4 class="card-title">Info</h4>
+                      <img src="{{ sobj.image.url }}" alt="not found">
+                      <div class="form-group mt-5" style="text-align: center;">
+                        <input type='file' name="image"/>
+                      </div>
+                      <p class="name">{{sobj.firm_name}}</p>
+                      <p class="designation">-  Service Provider  -</p>
+                      <a class="d-block text-center text-dark" href="#">{{ uobj.username }}<i class="fa-check-circle-o"></i></a> 
+                      <a class="d-block text-center text-dark" href="#">{{ sobj.contact }}</a>
+                      <div class="form-group mt-5" style="text-align: center;">
+                        <button type="submit" data-toggle="modal" data-target="#exampleModal" class="btn btn-success mr-2">Change Password</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 stretch-card">
+                  <div class="card">
+                    <div class="card-body overview">          
+                      <div class="wrapper about-user">
+                        <h4 class="card-title mt-4 mb-3">Bio</h4>
+                        <p>{{sobj.bio}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 side-right stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="wrapper d-block d-sm-flex align-items-center justify-content-between">
+                    <h4 class="card-title mb-0">Details</h4>            
+                  </div>
+                  <div class="wrapper">
+                    <hr>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info">
+                          <form method="POST" action="{% url 'Home:validate' %}">{% csrf_token %}
+                          <div class="form-group">
+                            <label for="name">Owner Name</label>
+                            <input type="text" class="form-control" name="oname" value="{{ sobj.owner_name }}" placeholder="Change Owner name" required>
+                          </div>
+                        <div class="form-group">
+                        <label for="designation">Firm Name</label>
+                        <input type="text" class="form-control" name="fname" value="{{sobj.firm_name}}" placeholder="Change designation" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="mobile">Contact</label>
+                        <input type="text" class="form-control" maxlength="10" name="contact" value="{{ sobj.contact }}" placeholder="Change mobile number" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" disabled class="form-control" name="email" value="{{ uobj.email }}" placeholder="Change email address" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Bio</label>
+                        <input type="text" class="form-control" name="bio" value="{{ sobj.bio }}" placeholder="Bio">
+                      </div>
+                      <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea name="address" name="address" rows="6" class="form-control" placeholder="Change address" required>{{ sobj.address }}</textarea>
+                      </div>
+                      <div class="form-group">
+                        <label>City</label>
+                        <select name="city" class="js-example-basic-single" style="width:100%;font-size: 12px;">
+                          {% for city in cities %}             
+                          <option {% if city.city_id == sobj.city_id %} selected="selected" {% endif %} value={{city.city_id}}>{{ city.city_name }}</option>            
+                                  {% endfor %}
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label>State</label>
+                        <select name="state" class="js-example-basic-single" style="width:100%;font-size: 12px;">
+                          {% for state in states %}             
+                          <option {% if state.state_id == sobj.state_id %} selected="selected" {% endif %} value={{state.state_id}}>{{ state.state_name }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                      <div class="form-group mt-5">
+                        <button type="submit" value={{uobj.id}} name='but' class="btn btn-success mr-2">Update</button>
+                        <button class="btn btn-danger mr-2">Deactivate Account</button>
+                        <button class="btn btn-outline-danger">Cancel</button>
+                      </div>
+                    </form>
+                  </div><!-- tab content ends -->
+                          
+                          <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+                            <form action="#">
+                              <div class="form-group">
+                                <label for="change-password">Change password</label>
+                                <input type="password" class="form-control" id="change-password" placeholder="Enter you current password">
+                              </div>
+                              <div class="form-group">
+                                <input type="password" class="form-control" id="new-password" placeholder="Enter you new password">
+                              </div>
+                              <div class="form-group mt-5">
+                                <button type="submit" class="btn btn-success mr-2">Save</button>
+
+                                <button class="btn btn-outline-danger">Cancel</button>
+                              </div>
+
+                            </form>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title" id="exampleModalLabel">Change Password</h3>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="#">
+                        <div class="form-group">
+                          <label for="change-password">New password</label>
+                          <input type="password" class="form-control" id="change-password" placeholder="Enter New Password">
+                        </div>
+                        <div class="form-group">
+                          <label for="change-password">Re-enter password</label>
+                          <input type="password" class="form-control" id="new-password" placeholder="Enter you new password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-success mr-2">Change Password</button>
+                      <button class="btn btn-outline-danger">Cancel</button>
+                    </div>
+                  </form>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+      </div>        
+    </div>
+      <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div class="container-fluid clearfix">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2020 <a href="#">scissorstories</a>. All rights reserved.</span>
+            </div>
+          </footer>
+          <!-- partial -->
+        
+        </div>
+        <!-- content-wrapper ends -->
+    
+      <!-- row-offcanvas ends -->
+    <!-- page-body-wrapper ends -->
+
+  <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="{% static 'vendors/jquery-bar-rating/jquery.barrating.min.js' %}"></script>
+  <script src="{% static 'vendors/chart.js/Chart.min.js' %}"></script>
+  <script src="{% static 'vendors/raphael/raphael.min.js' %}"></script>
+  <script src="{% static 'vendors/morris.js/morris.min.js' %}"></script>
+  <script src="{% static 'vendors/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{% static 'js/off-canvas.js' %}"></script>
+  <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'js/misc.js' %}"></script>
+  <script src="{% static 'js/settings.js' %}"></script>
+  <script src="{% static 'js/todolist.js' %}"></script>
+  <script src="{% static 'vendors/datatables.net/jquery.dataTables.js' %}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{% static 'js/dashboard.js' %}"></script>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/dataTable.bootstrap.min.js' %}"></script>
+</body>

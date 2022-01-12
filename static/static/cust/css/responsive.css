@@ -1,0 +1,1298 @@
+/*
+=================================================
+				UP FROM 1366px
+=================================================
+*/ 
+@media (max-width: 1366px){
+	.spa_gallery_item.width_fig .imghvr-strip-shutter-up:before {
+		top: -6px;
+	}
+	.spa_gallery_item.gallery_6 .imghvr-strip-shutter-up:before{
+		top: -2px;
+	}
+}
+
+/*
+=================================================
+				UP FROM 1200PX
+=================================================
+*/ 
+@media (min-width: 1200px) and (max-width: 1366px){
+	
+}
+/*
+=================================================
+			FROM 992PX TO 1199PX
+=================================================
+*/ 
+@media (min-width: 992px) and (max-width: 1199px) {
+	.navigation {
+		display: none;
+	}
+	.dl-menuwrapper {
+		display: block;
+		float: right;
+		position: relative;
+		z-index: 1000;
+		margin: 45px 0px 45px 30px;
+	}
+	.dl-menuwrapper .dl-menu{
+		right:100%;
+		background-color:#000;
+	}
+	.search__form {
+		margin-top: -660px;
+	}
+	.right-text {
+		float: right;
+		margin:-199px 0px 80px -160px !important;
+	}
+	.spa_banner_text{
+		margin: -199px 0px 0px -412px;
+	}
+	.custom_size{
+		font-size: 35px;
+		line-height: 30px;
+	}
+	.spa_video_text h3 {
+		font-size: 30px;
+	}
+	.spa_video_text {
+		padding: 70px 0px 95px 50px;
+	}
+	.spa_service_text h4{
+		font-size:19px;
+	}
+	.spa_service_wrap:before {
+		bottom: -254px;
+		background-size: 62%;
+	}
+	.bg_scale:before {
+		left:60px;
+	}
+	.spa_award_list ul li {
+		padding: 0px 25px;
+	}
+	.spa_product_text p{
+		font-size:14px;
+	}
+	.spa_newsletter_text h2{
+		font-size:35px;
+	}
+	.spa_newsletter_field{
+		margin-top: 10px;
+	}
+	.spa_widget_news.padding {
+		padding-right: 30px;
+	}
+	.spa_gallery_item .imghvr-strip-shutter-down:before,
+	.spa_video_fig .imghvr-strip-shutter-up:before{
+		top: -3px;
+	}
+	.spa_video_fig  .imghvr-strip-shutter-up .hover-theme:after {
+		top: 76.8%;
+	}
+	.spa_gallery_item .imghvr-strip-shutter-up:before, 
+	.spa_gallery_item .imghvr-strip-shutter-up:before {
+		top: -1px;
+	}
+	.spa_product_item .imghvr-strip-shutter-up:before {
+		top: -2px;
+	}
+	.spa_product_wrap .row.filtr-container{
+		margin:0px 0px !important;
+		float:left;
+		width:100%;
+	}
+	.spa_product_wrap .filtr-item {
+		position: relative;
+		margin-top: 30px;
+	}
+	.spa_working_hour{
+		left: 40px;
+	}
+	/* about us page start*/
+	.section_heading.hdg-2 h2{
+		font-size:28px;
+	}
+	.spa_wellness_list li a{
+		font-size:12px;
+	}
+	.spa_wellness_list li {
+		margin-bottom: 10px;
+	}
+	.spa_wellness_text .section_heading.hdg-2 {
+		margin-bottom: 6px;
+	}
+	.spa_caption h2{
+		font-size:20px;
+	}
+	.spa_important_text {
+		padding: 100px 0px 105px;
+	}
+	.spa_wellness_fig .imghvr-strip-shutter-up .hover-theme:before {
+		top: 52%;
+	}
+	.spa_wellness_fig .imghvr-strip-shutter-up:after {
+		top: 26%;
+	}
+	.spa_wellness_fig .imghvr-strip-shutter-up::before {
+		top: 0px;
+	}
+	/*blog 03 page start*/
+	.spa_blog_medium [class^="imghvr-"] a{
+		bottom: -13px;
+		right: -17px;
+	}
+	.spa_blog_medium .imghvr-strip-shutter-up .hover-theme:before {
+		top: 51%;
+	}
+	.spa_blog_medium .imghvr-strip-shutter-up .hover-theme:after {
+		top: 76%;
+	}
+	.spa_blog_medium .imghvr-strip-shutter-up:before{
+		top: -2px;
+	}
+	/* blog detail page*/
+	.spa_blog_detail .spa_blog_text h4{
+		font-size: 22px;
+	}
+	.spa_highlight_list {
+		display: none;
+	}
+	.spa_blockquote h5 {
+		font-size: 16px;
+		line-height: 23px;
+	}
+	.spa_author_text {
+		overflow: hidden;
+		padding: 2px 0px 4px 30px;
+	}
+	.comment_form .spa_select_field.input {
+		width: 47%;
+		margin-right: 37px;
+	}
+	.spa_side_media_icon ul li .full-left{
+		padding-left: 10px;
+	}
+	.spa_side_media_icon ul li .full-right {
+		padding-right: 10px;
+	}
+	.spa_blog_thumb.responsive_issue .imghvr-strip-shutter-up .hover-theme:before {
+		top: 50%;
+	}
+	.spa_blog_detail .spa_blog_medium .imghvr-strip-shutter-up:after {
+		top: 24.1%;
+	}
+	.spa_blog_detail .spa_blog_medium .imghvr-strip-shutter-up::before {
+		top: -7px;
+	}
+	.spa_blog_medium.responsive_issue .imghvr-strip-shutter-up .hover-theme::before {
+		top: 50%;
+	}
+	/* blog lis page start*/
+	.spa_blog_medium.hover_style .imghvr-strip-shutter-up:after {
+		top: 24.6%;
+	}
+	.widget_news_fig.post p {
+		line-height:21px;
+		font-size: 14px;
+	}
+	/* gallery 03 page start */
+	.spa_gallery_item.hover_style .imghvr-strip-shutter-up:before{
+		top: -2px;
+	}
+	.spa_gallery_item.hover_style:hover h6 {
+		bottom: 33px;
+	}
+	.spa_gallery_item.hover_style h6{
+		font-size:15px;
+	}
+	/* gallery 04 page start*/ 
+	.spa_gallery_item.gallery_4 .imghvr-strip-shutter-up:before{
+		top: -2px;
+	}
+	/* gallery 05 page start */
+	.spa_gallery_item.width_fig .imghvr-strip-shutter-up:before {
+		top: -5px;
+	}
+	/* gallery 06 page start */
+	.spa_gallery_item.gallery_6 h6{
+		display:none;
+	}
+	.spa_gallery_item.gallery_6 .imghvr-strip-shutter-up:after {
+		top: 25.2%;
+	}
+	.spa_gallery_item.gallery_6 .imghvr-strip-shutter-up::before {
+		top: -1px;
+	}
+	.spa_gallery_text h4{
+		font-size:18px;
+	}
+	/* service page start */
+	.spa_service_thumb h4{
+		font-size:20px;
+	}
+	.spa_service_detail_text h2{
+		font-size:24px;
+	}
+	/* shop page start */
+	.section_heading > span:after,
+	.section_heading > span:before{
+		width: 63px;
+	}
+	/* shop detail page start */
+	.sidebar_title{
+		font-size:20px;
+	}
+	.spa_range_slider > span{
+		display:none;
+	}
+	.widget_news_text h6{
+		font-size:15px;
+	}
+}
+/*
+=================================================
+			FROM 0PX TO 979PX
+=================================================
+*/ 
+@media (max-width: 991px) {
+	.navigation {
+		display: none;
+	}
+	.spa_working_hour:after{
+		height:0px;
+	}
+	.spa_working_hour h3{
+		font-size:23px;
+	}
+	.dl-menuwrapper {
+		display: block;
+		float: right;
+		position: relative;
+		z-index: 1000;
+		margin: 45px 0px 45px 30px;
+	}
+	.dl-menuwrapper .dl-menu{
+		right:100%;
+		background-color:#000;
+	}
+	.search__form {
+		margin-top: -60px;
+	}
+	#login-register1 .modal-dialog,
+	#login-register1 .modal-content{
+		width:700px;
+	}
+	.title-point{
+		font-size:13px;
+	}
+	.check-points li p{
+		font-size:11px;
+	}
+	.spa-heading2 h3{
+		font-size:20px;
+	}
+	.spa_navi_list {
+		float: right;
+		width: auto;
+	}
+	.cart_icon{
+		margin-top:-1px;
+	}
+	.search_icon{
+		border-left:none;
+	}
+	.large_text{
+		display:none;
+	}
+	.spa_banner_text{
+		padding:40px 0px 40px;
+		margin:-139px 0px -9px -312px;
+	}
+	.center-text {
+		margin:-139px 0px -9px -312px;
+	}
+	.custom_size{
+		display:none;
+	}
+	.spa_video_text {
+		padding: 40px 0px 65px 0px;
+	}
+	.spa_video_text h3 {
+		font-size: 25px;
+	}
+	.spa_service_wrap:before{
+		background-image:none;
+	}
+	.spa_salon_list ul li{
+		padding:0px 10px;
+	}
+	.spa_video_text p {
+		margin-bottom: 22px;
+	}
+	.spa_reservation_form {
+		padding-left: 100px;
+	}
+	.section_heading h2{
+		font-size:30px;
+	}
+	.spa_working_hour{
+		margin: 160px auto;
+		width:100%;
+		left:20px;
+	}
+	.spa_price_table_list{
+		margin-bottom:30px;
+	}
+	.spa_price_table {
+		padding: 80px 0px 70px;
+	}
+	.spa_award_wrap:before {
+		background-image:none;
+	}
+	.spa_award_wrap:after {
+		background:none;
+	}
+	.spa_product_wrap {
+		padding: 80px 0px 90px;
+	}
+	.spa_newsletter_text{
+		text-align:center;
+		padding-left:0px;
+	}
+	.spa_newsletter_wrap{
+		text-align:center;
+	}
+	.spa_newsletter_field {
+		float: none;
+		display: inline-block;
+	}
+	.copyright_links li {
+		margin-right: 10px;
+	}
+	.spa_select_field .datepicker{
+		width:100%;
+	}
+	.spa_video_fig .imghvr-strip-shutter-up:before{
+		top: -3px;
+	}
+	.spa_gallery_item .imghvr-strip-shutter-down:before {
+		top: -2px;
+	}
+	.spa_gallery_row.gallery .spa_gallery_item .imghvr-strip-shutter-up:before {
+		top:-1px;
+	}
+	#login-register1 .modal-dialog,
+	#login-register1 .modal-content{
+		width:400px;
+	}
+	.spa_width_off50{
+		width:100%;
+	}
+	.spa-login-form sup{
+		margin: -26px auto;
+	}
+	.row.filtr-container {
+		margin: 0px 0px;
+	}
+	.spa_product_wrap .filtr-item {
+		padding: 20px 20px;
+	}
+	/* home page 02 start */
+	.spa_about_fig:before{
+		width: 284px;
+	}
+	.spa_about_fig:after {
+		width: 247px;
+	}
+	.spa_about_fig figure{
+		left: 5px;
+	}
+	.spa_about_row ul li {
+		margin-bottom: 20px;
+	}
+	.spa_about_detail {
+		padding: 60px 0px 0px;
+	}
+	/* about us page start*/
+
+	.spa_caption h2{
+		font-size:25px;
+	}
+	.spa_important_text {
+		padding: 88px 0px 95px;
+	}
+	.spa_salon_item {
+		margin-bottom: 30px;
+	}
+	.spa_wellness_text{
+		margin-bottom:40px;
+		float:left;
+		width:100%;
+	}
+	.spa_salon_wrap.salon {
+		padding: 80px 0px 50px;
+	}
+	/*blog 02 page start */
+	.spa_blog_text h4 {
+		line-height: 24px;
+		font-size: 17px;
+	}
+	.spa_blog_medium.hover_list .imghvr-strip-shutter-up:before{
+		top: -1px;
+	}
+	/*blog 03 page start*/
+	.spa_blog_medium [class^="imghvr-"] a{
+		bottom: -15px;
+		right: -16px;
+	}
+	.spa_blog_medium .imghvr-strip-shutter-up:before{
+		top: -2px;
+	}
+	/*blog detail page start*/
+	.spa_blog_medium.responsive_issue .imghvr-strip-shutter-up .hover-theme:before {
+		top: 51.2%;
+	}
+	.spa_blog_medium.responsive_issue .imghvr-strip-shutter-up:after {
+		top: 25.4%;
+	}
+	.spa_blog_medium.responsive_issue .imghvr-strip-shutter-up:before {
+		top: -2px;
+	}
+	.comment_form .spa_select_field.input {
+		width: 47%;
+		margin-right: 41px;
+	}
+	.spa_sidebar {
+		padding-top: 50px;
+	}
+	.spa_sidebar_item:last-child {
+		margin-bottom: 0px;
+	}
+	/* gallery 05 page start */
+	.spa_gallery_item.width_fig .imghvr-strip-shutter-up .hover-theme:before {
+		top: 50.9%;
+	}
+	.spa_gallery_item.width_fig .imghvr-strip-shutter-up:before {
+		top: -3px;
+	}
+	/* gallery 06 page start */
+	.spa_gallery_item.gallery_6{
+		width:50%;
+	}
+	.spa_gallery_item.gallery_6 .imghvr-strip-shutter-up:after {
+		top: 25.2%;
+	}
+	.spa_gallery_item.gallery_6 .imghvr-strip-shutter-up::before {
+		top: -1px;
+	}
+	.spa_gallery_text h4{
+		font-size:18px;
+	}
+	/* service 02 page start */
+	.spa_service_02 .spa_service_thumb {
+		width: 488px;
+		top: 30px;
+	} 
+	/*service detail page start */
+	.spa_service_detail_row.kode-elc-tab-services .imghvr-strip-shutter-up .hover-theme:before {
+		top: 50.9%;
+	}
+	.spa_sidebar_item .spa_textarea{
+		margin-bottom:30px;
+	}
+	/* shop detail page start */
+	.spa_range_slider > span{
+		display:none;
+	}
+	.spa_sidebar.padding{
+		margin-bottom: 30px;
+		position: relative;
+		z-index: 5;
+	}
+	.spa_select_field.drop {
+		width: 200px;
+	}
+	.spa_shop_mune_list > span{
+		font-size:12px;
+	}
+	.widget_news_list {
+		margin-bottom: 40px;
+	}
+}
+/*
+=================================================
+			FROM 768PX TO 979PX
+=================================================
+*/
+
+@media (min-width: 768px) and (max-width: 979px) {
+	
+  
+}
+/*
+=================================================
+			FROM 0PX TO 767PX
+=================================================
+*/
+@media (max-width: 767px){
+	.spa_top_row p{
+		display:none;
+	}
+	.spa_product_item:hover .spa_product_text span,
+	.spa_product_item:hover .spa_product_text p {
+		opacity: 1;
+	}
+	.spa_login {
+		float:left;
+		width: 100%;
+		text-align: center;
+	}
+	.spa_top_row {
+		text-align: center;
+	}
+	.spa_login ul li{
+		display:inline-block;
+		float:none;
+	}
+	.dl-menuwrapper{
+		margin: 45px 0px 45px 20px;
+	}
+	.search__form {
+		width: 410px;
+	}
+	.shopping-cart{
+		width: 300px;
+		right: 10px;
+	}
+	.spa_banner_btn {
+		display: none;
+	}
+	.right-text,
+	.spa_banner_text {
+		padding: 20px 0px 20px;
+		margin: -59px 0px -9px -184px;
+		width: 340px;
+		z-index:4;
+	}
+	.medium_text {
+		font-size: 20px;
+	}
+	.medium_text.margin {
+		margin-bottom: 0PX;
+	}
+	.spa_banner_wrap .slick-dots {
+		bottom: 10px;
+	}
+	.spa_salon_list ul li {
+		float: left;
+		width: 33%;
+		margin-bottom: 30px;
+	}
+	.spa_salon_wrap {
+		padding: 80px 0px 45px;	
+	}
+	.spa_service_list ul li {
+		margin-bottom: 48px;
+		width: 50%;
+	}
+	.spa_video_text,
+	.spa_service_item{
+		text-align:center;
+	}
+	.spa_video_text{
+		padding:17px 0px 65px 0px;
+	}
+	.service_icon{
+		float:none;
+	}
+	.spa_service_list.responsive_none{
+		display:none;
+	}
+	.spa_service_text {
+		padding: 0px 10px 0px 10px;
+	}
+	.spa_service_text h4{
+		font-size:18px;
+	}
+	.spa_award_list ul li:last-child,
+	.spa_service_list ul li:last-child{
+		width: 100%;
+	}
+	.spa_service_text h4:before {
+		margin:auto;
+	}
+	.spa_service_wrap {
+		padding: 80px 0px 60px;
+	}
+	.bg_scale:before,
+	.bg-color:before{
+		height:0px;
+	}
+	.spa_working_hour {
+		margin: 60px auto;
+		left: 0px;
+	}
+	.spa_working_hour:after{
+		height:45px;
+	}
+	.spa_reservation_form {
+		padding: 0px 0px 60px 0px;
+	}
+	.spa_field_btn{
+		text-align:center;
+	}
+	.spa_gallery_wrap {
+		padding: 70px 0px 40px;
+	}
+	.spa_price_table_list {
+		float: left;
+		width: 47.7%;
+		margin: 0px 5px 30px;
+	}
+	.spa_filter_gallery .filter a{
+		margin:0px 0px;
+		padding:10px 5px;
+	}
+	.section_heading.hdg {
+		margin-bottom: 40px;
+	}
+	.spa_testimonial_list{
+		padding:60px 40px 56px;
+	}
+	.them_btn{
+		padding:10px 25px;
+	}
+	.spa_award_list ul li {
+		float: left;
+		width: 50%;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.spa_award_wrap {
+		padding: 70px 0px 60px;
+	}
+	.row.filtr-container{
+		margin: 0px 0px;
+	}
+	.spa_newsletter_field {
+		width: 380px;
+	}
+	.simplefilter li {
+		font-size: 12px;
+		padding: 5px 8px;
+	}
+	.spa_product_list ul {
+		margin-bottom: 20px;
+	}
+	.widget_news_list{
+		margin-bottom:30px;
+	}
+	.copyright_links,
+	.copyright{
+		text-align:center;
+	}
+	.copyright_links li,
+	.copyright p{
+		float:none;
+		display:inline-block;
+	}
+	.copyright_links li:last-child{
+		display:none;
+	}
+	.copyright p{
+		margin-bottom:20px;
+	}
+	.spa_gallery_row.gallery .spa_gallery_item .imghvr-strip-shutter-down:after {
+		top: 25.1%;
+	}
+	.spa_gallery_item .imghvr-strip-shutter-down::before {
+		top: -1px;
+	}
+	.spa_product_item .imghvr-strip-shutter-up::before {
+		top: -2px;
+	}
+	/* HOME PAGE 02 START */
+	.spa_about_fig:before {
+		width: 95%;
+	}
+	.spa_about_fig:after {
+		width: 88%;
+	}
+	.spa_about_fig figure {
+		margin: auto;
+		display: table;
+		margin: auto;
+		text-align: center;
+		overflow: hidden;
+		left:auto;
+		float:none;
+	}
+	.spa_about_detail {
+		padding: 60px 20px 0px;
+	}
+	/*404 page start*/
+	.spa_404_text h2{
+		font-size:30px;
+	}
+	/* about us page start*/
+	.spa_sab_banner_text {
+		padding: 100px 0px 108px;
+	}
+	.spa_wellness_list li a{
+		font-size:13px;
+	}
+	/* blog detail page start*/
+	.spa_blog_medium.responsive_issue .spa_blog_text h4{
+		font-size:16px;
+	}
+	.spa_blockquote h5{
+		font-size:19px;
+	}
+	.spa_share_meta span a:last-child {
+		display: none;
+	}
+	.spa_author_text h5{
+		font-size:18px;
+	}
+	.comment_form .spa_select_field.input {
+		width: 47%;
+		margin-right: 24px;
+	}
+	.spa_highlight_fig.full-width .imghvr-strip-shutter-up .hover-theme:before {
+		top: 51.1%;
+	}
+	.spa_highlight_fig.full-width .imghvr-strip-shutter-up:after {
+		top: 25.2%;
+	}
+	.spa_highlight_fig.full-width .imghvr-strip-shutter-up:before {
+		top: -4px;
+	}
+	.spa_side_flicker .imghvr-strip-shutter-up:after {
+		top: 25.2%;
+	}
+	.spa_blog_medium.responsive_issue .imghvr-strip-shutter-up:before {
+		top: -1px;
+	}
+	.spa_blog_detail .spa_blog_text {
+		text-align: center;
+	}
+	.comment > li ul {
+		padding-left: 54px;
+	}
+	/* blog list page start*/
+	.spa_blog_medium.hover_style .imghvr-strip-shutter-up:before{
+		top: -1px;
+	}
+	.spa_blog_text span,
+	.spa_blog_tag {
+		font-size: 13px;
+	}
+	/* gallery 05 page start */
+	.spa_gallery_item.width_fig{
+		width:100%;
+	}
+	/* gallery 06 page start */
+	.spa_gallery_item.gallery_6 h6{
+		display:none;
+	}
+	.spa_gallery_item.gallery_6{
+		width:50%;
+	}
+	.spa_gallery_item.gallery_6 .imghvr-strip-shutter-up:after {
+		top: 25.2%;
+	}
+	.spa_gallery_item.gallery_6 .imghvr-strip-shutter-up::before {
+		top: -1px;
+	}
+	.spa_gallery_text h4{
+		font-size:18px;
+	}
+	/* services 02 page start */
+	.spa_service_02 .spa_service_thumb{
+		position:relative;
+		width: 100%;
+	}
+	.spa_service_02 .imghvr-strip-shutter-up:after {
+		top: 25.4%;
+	}
+	.spa_service_02 .imghvr-strip-shutter-up:before{
+		top: -2px;
+	}
+	.spa_service_02_fig.fig_2,
+	.spa_service_02_fig,
+	.spa_service_02_fig figure{
+		width:100%;
+	}
+	/* service detail page start */
+	.spa_service_detail_text h2{
+		font-size:24px;
+	}
+	.spa_highlight_detail .spa_highlight_fig{
+		width:100%;
+		margin-bottom:20px;
+	}
+	.spa_highlight_text{
+		width:100%;
+		padding-left:0px;
+	}
+	.spa_service_detail_row .imghvr-strip-shutter-up:after {
+		top: 24.9%;
+	}
+	.spa_service_detail_row .imghvr-strip-shutter-up:before{
+		top: -3px;
+	}
+	.spa_download_file ul li a h6{
+		font-size:16px;
+	}
+	.spa_service_detail_row .imghvr-strip-shutter-up::after {
+		top: 25.5%;
+	}
+	.spa_service_detail_row .imghvr-strip-shutter-up::before {
+		top: -1px;
+	}
+	.spa_service_offer_item{
+		text-align:center;
+	}
+	.spa_service_offer_item .sidebar_title:before{
+		margin:auto;
+	}
+	/* shop page start */
+	.spa_select_field.drop{
+		width: 210px;
+	}
+	.top_logo {
+		width: 44%;
+	}
+}
+/*
+=================================================
+			FROM 0PX TO 0PX
+=================================================
+*/
+@media (min-width: 360px) and (max-width: 640px) {
+	
+  
+}
+
+/*
+=================================================
+			FROM 0PX TO 0PX
+=================================================
+*/
+@media (max-width: 480px) {
+	#login-register1 .modal-dialog,
+	#login-register1 .modal-content {
+		width: 280px;
+	}
+	.spa_width_off50{
+		padding:51px 25px 60px;
+	}
+	.input-felid input{
+		font-size:12px;
+	}
+	.spa-login-form sup {
+		margin: -46px auto;
+	}
+	.title-point {
+		font-size: 11px;
+	}
+	.fpw{
+		font-size: 11px;
+		position: relative;
+		top: -2px;
+	}
+	.top_logo {
+		float: left;
+		width: 60%;
+		padding: 30px 0px;
+	}
+	.dl-menuwrapper {
+		margin: 44px 0px 43px 20px;
+	}
+	.cart_icon{
+		display:none;
+	}
+	.search__form {
+		width: 290px;
+	}
+	.right-text, 
+	.spa_banner_text {
+		padding: 20px 0px 20px;
+		margin: -59px 0px -9px -144px;
+		width: 290px;
+	}
+	.medium_text {
+		font-size: 15px;
+	}
+	.spa_salon_list ul li{
+		width:100%;
+	}
+	.spa_video_fig {
+		padding: 18px 14px 0px 20px;
+	}
+	.spa_video_text {
+		padding: 20px 0px 55px 0px;
+	}
+	.section_heading h2 {
+		font-size: 24px;
+	}
+	.spa_service_list ul li {
+		margin-bottom: 35px;
+		width: 100%;
+	}
+	.spa_service_text h4 {
+		margin-bottom: 15PX;
+	}
+	.spa_service_list.responsive_none{
+		display:block;
+		margin-top: 40px;
+	}
+	.spa_service_item.right{
+		text-align:center;
+		float:none;
+	}
+	.spa_service_item.right .service_icon {
+		float:none;
+		display:inline-block;
+	}
+	.filtr-container .filtr-item,
+	.spa_award_list ul li,
+	.gallery a.width,
+	.gallery a{
+		width:100%;
+	}
+	.spa_product_item {
+		position: relative;
+		margin-top: 30px;
+	}
+	.spa_award_list ul li{
+		padding:0px 0px;
+	}
+	.spa_testimonial_list {
+		padding: 60px 20px 56px;
+	}
+	.spa_price_table_list {
+		float: left;
+		width: 100%;
+		margin: 0px 0px 30px;
+	}
+	.simplefilter li {
+		font-size: 14px;
+		padding: 5px 12px;
+		margin-bottom: 6px;
+	}
+	.spa_product_list ul {
+		margin-bottom: 0px;
+	}
+	.spa_newsletter_text h2{
+		font-size:24px;
+	}
+	.spa_newsletter_field {
+		width: 290px;
+	}
+	.widget_news_text {
+		overflow: hidden;
+		padding: 0px 0px 0px 25px;
+	}
+	.widget_news_text p {
+		margin-bottom: 3px;
+		line-height: 22px;
+	}
+	.widget_title{
+		font-size:25px;
+	}
+	.spa_widget_news.padding {
+		padding-right: 36px;
+	}
+	.copyright_links li {
+		margin: 4px 10px;
+	}
+	.spa_search_info {
+		padding: 59px 0px 50px;
+	}
+	.spa_service_item.right .spa_service_text h4:before{
+		margin:auto;
+		left:0px;
+	}
+	.spa_video_fig .imghvr-strip-shutter-up:after {
+		top: 25.1%;
+	}
+	.spa_gallery_row.gallery .spa_gallery_item .imghvr-strip-shutter-up:before {
+		top: -2px;
+	}
+	.spa_product_item .imghvr-strip-shutter-up:before {
+		top:0px;
+	}
+	.spa_product_item .imghvr-strip-shutter-up .hover-theme:before {
+		top: 51.4%;
+	}
+	.spa_product_item .imghvr-strip-shutter-up:after {
+		top: 26%;
+	}
+	/* home page 02 start */
+	.spa_about_fig::after {
+		width: 84%;
+	}
+	.section_heading.hdg-2{
+		text-align:center;
+	}
+	.section_heading.hdg-2 h2{
+		font-size:22px;
+	}
+	.spa_about_list{
+		text-align:center;
+	}
+	.spa_about_list span{
+		float:none;
+		display:inline-block;
+	}
+	.spa_about_text{
+		padding-left:0px;
+	}
+	/*404 page start*/
+	.spa_sab_banner_text p span{
+		font-size: 13px;
+	}
+	.spa_sab_banner_text{
+		padding:95px 0px 90px;
+	}
+	.spa_404_text h2 {
+		font-size: 22px;
+	}
+	.spa_404_text h3{
+		font-size:60px;
+	}
+	/*about us page start*/
+	.spa_caption h2 {
+		font-size: 20px;
+	}
+	.spa_wellness_list {
+		text-align: center;
+	}
+	.spa_wellness_list li a {
+		font-size: 14px;
+		padding-left:0px;
+	}
+	.spa_wellness_list li a:before{
+		height:0px;
+	}
+	 .spa_wellness_fig .imghvr-strip-shutter-up .hover-theme:before {
+		top: 52%;
+	}
+	.spa_wellness_fig .imghvr-strip-shutter-up:after {
+		top: 26.9%;
+	}
+	.spa_wellness_fig .imghvr-strip-shutter-up:before {
+		top: 3px;
+	}
+	/*blog 02 page start */
+	.sab_banner_title{
+		font-size:38px;
+	}
+	/*blog 03 page start*/
+	.spa_blog_medium .imghvr-strip-shutter-up:after {
+		top: 25.3%;
+	}
+	.spa_highlight_fig.full-width .imghvr-strip-shutter-up:before {
+		top: -2px;
+	}
+	.spa_highlight_text.full-width {
+		text-align: center;
+	}
+	.spa_highlight_text.full-width .spa_highlight_list li a{
+		padding-left:0px;
+	}
+	.spa_highlight_text.full-width .spa_highlight_list li a:before{
+		height:0px;
+	}
+	.spa_blockquote{
+		padding:35px 40px 35px 26px;
+	}
+	.spa_blockquote:before {
+		content:"";
+	}
+	.spa_blockquote h5 {
+		font-size: 16px;
+	}
+	.spa_share_meta span {
+		display: block;
+		padding: 10px 0px 15px;
+		text-align: center;
+		float: none;
+	}
+	.spa_share_meta span a:last-child{
+		display:inline-block;
+	}
+	.spa_author figure,
+	.spa_social_share .widget_icon,
+	.spa_social_share{
+		float:left;
+		width:100%;
+	}
+	/*blog detail page start*/
+	.spa_social_share{
+		text-align:center;
+	}
+	.spa_social_share .widget_icon li{
+		float:none;
+		display:inline-block;
+	}
+	.spa_social_share p{
+		display:none;
+	}
+	.spa_author_text {
+		overflow: hidden;
+		padding: 15px 0px 15px 1px;
+		text-align: center;
+	}
+	.comment > li ul {
+		padding-left: 0px;
+	}
+	.spa_side_media_icon ul li .full-right,
+	.spa_side_media_icon ul li .full-left {
+		padding-left: 10px;
+	}
+	.spa_side_media_icon ul li .full-right{
+		padding-right: 10px;
+	}
+	.spa_blog_grid {
+		padding: 80px 0px 40px;
+	}
+	.spa_comment_item figure {
+		width: 100%;
+		border-radius: 100%;
+		margin-bottom: 30px;
+	}
+	.spa_comment_item.padding-top .imghvr-strip-shutter-up:before{
+		top: -3px;
+	}
+	.comment_form .spa_select_field.input {
+		width: 100%;
+		margin-right: 0px;
+	}
+	/*blog list page start*/
+	.spa_blog_text h4{
+		padding-right:0px;
+	}
+	.spa_blog_text span{
+		float:left;
+		width:100%;
+	}
+	.spa_blog_tag{
+		float:left;
+		margin-top:10px;
+	}
+	.search__form {
+		margin-top: 50px;
+	}
+	/* contact us page start */
+	.spa_contact_field{
+		padding:73px 20px 80px;
+	}
+	.spa_contact_field .sidebar_title{
+		font-size:26px;
+	}
+	/*gallery page start */
+	.spa_gallery_item:hover h6{
+		bottom:10px;
+	}
+	.spa_gallery_item.hover_style h6,
+	.spa_gallery_item h6{
+		font-size:15px;
+	}
+	.spa_gallery_item .imghvr-strip-shutter-up .hover-theme:after{
+		top: 76.2%;
+	}
+	.spa_gallery_item.hover_style:hover h6 {
+		bottom: 33px;
+	}
+	.spa_gallery_item.hover_style .imghvr-strip-shutter-up:before{
+		top: -2px;
+	}
+	/* gallery 04 page start*/ 
+	.spa_gallery_item.gallery_4 .imghvr-strip-shutter-up:before{
+		top: -2px;
+	}
+	/* gallery 06 page start */
+	
+	.spa_gallery_item.gallery_6{
+		width:100%;
+	}
+	.spa_gallery_item.gallery_6 .imghvr-strip-shutter-up:after {
+		top: 25.2%;
+	}
+	.spa_gallery_item.gallery_6 .imghvr-strip-shutter-up::before {
+		top: -1px;
+	}
+	.spa_gallery_text h4{
+		font-size:18px;
+	}
+	/* service page start */
+	.spa_service_thumb h4{
+		font-size:20px;
+	}
+	.spa_service_02 .spa_service_thumb {
+		padding: 10px;
+		text-align: center;
+	}
+	.spa_service_02 .imghvr-strip-shutter-up::before {
+		top: -1px;
+	}
+	.spa_newsletter_field label{
+		font-size:12px;
+	}
+	.spa_service_offer.border .col-xs-6{
+		width:100%;
+	}
+	.spa_salon_item {
+		padding: 0px 10px;
+	}
+	/* shop page start */
+	.spa_shop_mune_list{
+		text-align:center;
+		width:100%;
+		margin-bottom: 10px;
+	}
+	.spa_shop_menu_row {
+		margin-bottom: 18px;
+	}
+	.shop_menu_icon, 
+	.shop_menu_icon li{
+		float:none;
+		display:inline-block;
+	}
+	.spa_select_field.drop {
+		width: 100%;
+	}
+	.spa_select_field.drop .nice-select {
+		padding: 11px 15px;
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+}
+@media (max-width: 320px){
+	.dl-menuwrapper {
+		margin: 35px 0px 35px 20px;
+	}
+	.spa_search_info {
+		padding: 49px 0px 41px;
+	}
+	.spa_product_item .imghvr-strip-shutter-up:before,
+	.spa_video_fig .imghvr-strip-shutter-up:before {
+		top: -1px;
+	}
+	.spa_product_item .imghvr-strip-shutter-up:after {
+		top: 25.5%;
+	}
+	.spa_wellness_fig .imghvr-strip-shutter-up:after {
+		top: 27%;
+	}
+	.spa_wellness_fig .imghvr-strip-shutter-up::before {
+		top: 2px;
+	}
+}
+

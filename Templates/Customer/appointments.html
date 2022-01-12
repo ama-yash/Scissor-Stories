@@ -1,0 +1,133 @@
+{% load static %}
+{% include 'Common/header.html' %}
+<title>scissorstories - Appointments</title>
+<div class="spa_sab_banner_wrap shop_img overlay" width=100%>
+    <div class="container">
+        <div class="spa_sab_banner_text">
+            <h2 class="sab_banner_title">Your Appointments</h2>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <!--SPA SALON WRAP START -->
+    <div class="spa_salon_wrap">
+        <div class="container">
+            <!--SECTION HEADING START -->
+            <div class="section_heading">
+                <h2>Upcoming Appointments</h2>
+                <span class="boder-top"></span>
+                <span><i class="fa icon-three"></i></span>
+                <span class="boder-bottom"></span>
+            </div>
+            <table class='table table-sm'>
+                <thead>
+                    <th scope="col"><p>Appointment No</p></td>
+                    <th scope="col"><p>Service</p></th>
+                    <th scope="col"><p>Service Provider</p></th>
+                    <th scope="col"><p>Date</p></th>
+                    <th scope="col"><p>From</p></th>
+                    <th scope="col"><p>To</p></th> 
+                    <th scope="col"></th>                              
+                </thead>
+                <tbody>
+                {% for a in ap_list %}
+                {% if a.status == 1 %}
+                <tr>
+                    <th scope="row">{{ a.ap_id }}</th>
+                    <td>{{ a.ser_name }}</td>
+                    <td>{{a.firm_name}}</td>
+                    <td>{{a.adate}}</td>
+                    <td>{{a.time_from}}</td>
+                    <td>{{a.time_to}}</td>
+                    <td><a href='/appointment/view?id={{a.ap_id}}'>View Details</a>&nbsp;&nbsp;&nbsp;<a href='#'>Cancel</a></td>                           
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+            </table>
+
+    </div>
+    <div class="spa_salon_wrap">
+        <div class="container">
+            <!--SECTION HEADING START -->
+            <div class="section_heading">
+                <h2>Recent Appointments</h2>
+                <span class="boder-top"></span>
+                <span><i class="fa icon-three"></i></span>
+                <span class="boder-bottom"></span>
+            </div>
+            <table class='table table-sm'>
+                <thead>
+                    <th scope="col"><p>Appointment No</p></td>
+                    <th scope="col"><p>Service</p></th>
+                    <th scope="col"><p>Service Provider</p></th>
+                    <th scope="col"><p>Date</p></th>
+                    <th scope="col"><p>From</p></th>
+                    <th scope="col"><p>To</p></th> 
+                    <th scope="col"></th>                              
+                </thead>
+                <tbody>
+                {% for a in ap_list %}
+                {% if a.status == 0 %}
+                <tr>
+                    <th scope="row">{{ a.ap_id }}</th>
+                    <td>{{ a.ser_name }}</td>
+                    <td>{{a.firm_name}}</td>
+                    <td>{{a.adate}}</td>
+                    <td>{{a.time_from}}</td>
+                    <td>{{a.time_to}}</td>
+                    <td><a href='/appointment/view?id={{a.ap_id}}'>View Details</a></td>                           
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+            </table>
+
+    </div>
+    <div class="spa_salon_wrap">
+        <div class="container">
+            <!--SECTION HEADING START -->
+            <div class="section_heading">
+                <h2>Cancelled Appointments</h2>
+                <span class="boder-top"></span>
+                <span><i class="fa icon-three"></i></span>
+                <span class="boder-bottom"></span>
+            </div>
+            <table class='table table-sm'>
+                <thead>
+                    <th scope="col"><p>Appointment No</p></td>
+                    <th scope="col"><p>Service</p></th>
+                    <th scope="col"><p>Service Provider</p></th>
+                    <th scope="col"><p>Date</p></th>
+                    <th scope="col"><p>From</p></th>
+                    <th scope="col"><p>To</p></th> 
+                    <th scope="col"></th>                              
+                </thead>
+                <tbody>
+                {% for a in ap_list %}
+                {% if a.status == 3 %}
+                <tr>
+                    <th scope="row">{{ a.ap_id }}</th>
+                    <td>{{ a.ser_name }}</td>
+                    <td>{{a.firm_name}}</td>
+                    <td>{{a.adate}}</td>
+                    <td>{{a.time_from}}</td>
+                    <td>{{a.time_to}}</td>
+                    <td><a href='/appointment/view?id={{a.ap_id}}'>View Details</a></td>                           
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+            </table>
+
+    </div>
+    <!--SPA SALON WRAP END -->
+    
+    <!--SPA VIDEO FEATURE START -->
+    				<!--SPA SERVICE WRAP END -->					
+    <!--SPA GALLERY WRAP START -->
+    <!--SPA GALLERY WRAP END -->
+    <!--SPA TESTIMONIAL WRAP START -->
+    <!--SPA NEWSLETTER WRAP END-->
+</div>
+{% include 'Common/footer.html' %}

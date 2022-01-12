@@ -1,0 +1,292 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.urbanui.com/victory/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:15:04 GMT -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{name}} - Admin Panel</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/simple-line-icons/css/simple-line-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'vendors/jquery-bar-rating/fontawesome-stars.css' %}">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'images/top-logo2.png' %}" />
+  <style type="text/css">
+    .but1{
+      background-color:#03a9f3;color:white;width:80px;text-align: center;vertical-align: middle;height:25px;border:none;border-radius: 15px;
+    }
+    
+</style>
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"><img src="{% static 'images/top-logo2.png' %}" alt="logo"/></a>
+      </div>
+      <h3 style="font-family:calibri;font-size: 40px;color: aliceblue;position:relative; left:-500px;">ADMIN PANEL</h3>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <!-- partial:partials/_settings-panel.html -->
+        
+        <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <div class="nav-link">
+                <div class="profile-image">
+                  <img src="{% static 'images/faces/face9.jpg' %}" alt="image"/>
+                  <span class="online-status online"></span> <!--change class online to offline or busy as needed-->
+                </div>
+                <div class="profile-name">
+                  <h4 class="name">
+                   {{name}}
+                  </h4>
+                  <h5 class="designation">
+                    Admin
+                  </h5>
+                  <br>
+                  <button type="button" class="btn btn-info">Log Out</button>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Home:index2' %}">
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Home:serviceop' %}">
+                <span class="menu-title">Service Providers</span>
+              </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'Home:customer' %}">
+                  <span class="menu-title">Customers</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'Home:bookings' %}">
+                <span class="menu-title">Bookings</span>
+              </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Home:others' %}">
+              <span class="menu-title">Others</span>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/report-builder/">
+            <span class="menu-title">Reports</span>
+          </a>
+      </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="content-wrapper">
+             <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Appointment Details</h3>
+                      <br>                          
+                      <table border="0">
+                          <td>
+                            <td>
+
+                                <tr>
+                                    <td style="width:250px;">Appointment No:</td>
+                                    <td>{% for a in ap %}{{a.ap_id}}{% endfor %}</td>
+                                    <td><br><br></td>
+                                    <td style="width:250px;position: relative;left:200px;">From:</td>
+                                    <td style="position: relative;left:150px;">{% for a in ap %}{{a.time_from}}{% endfor %}</td>
+                                    <td><br><br></td>
+                                </tr>
+                                <tr>
+                                    <td style="width:250px;">Service:</td>
+                                    <td>{% for a in ap %}{{a.ser_name}}{% endfor %}</td>
+                                    <td><br><br></td>
+                                    <td style="width:250px;position: relative;left:200px;">To:</td>
+                                    <td style="position: relative;left:150px;">{% for a in ap %}{{a.time_to}}{% endfor %}</td>
+                                    <td><br><br></td>
+                                </tr>
+                                <tr>
+                                    <td style="width:250px;">Booking Date and Time:</td>
+                                    <td>{% for a in ap %}{{a.bdate}}{% endfor %}</td>
+                                    <td><br><br></td>
+                                    <td style="width:250px;position: relative;left:200px;">Total Amount Paid:</td>
+                                    <td style="position: relative;left:150px;">{% for a in ap %}Rs.&nbsp;{{a.price}}{% endfor %}</td>
+                                    <td><br><br></td>
+                                </tr>
+                                <tr>
+                                    <td style="width:250px;">Appointment Date:</td>
+                                    <td>{% for a in ap %}{{a.adate}}{% endfor %}</td>
+                                    <td><br><br></td>
+                                    <td style="width:250px;position: relative;left:200px;">Appointment Status:</td>
+                                    <td style="position: relative;left:150px;">{% for a in ap %}
+                                      {% if a.status == 1 %}
+                                        Pending
+                                      {% elif a.status == 0 %}
+                                        Completed
+                                      {% else %}
+                                        Cancelled
+                                      {% endif %}
+                                      {% endfor %}</td>
+                                    <td><br><br></td>
+                                </tr>
+                            </td>
+                            </tr>
+                            
+                    </table>
+                            </div>
+                            
+                          </div>
+                         
+
+
+                        <div class="card">
+                            <div class="card-body">
+                              <h3 class="card-title">Customer Details</h3>
+                              <br>
+                              
+                              <table border="0">
+                             
+                                        <tr>
+                                            <td style="width:250px;">Customer username:</td>
+                                            <td>{% for c in cp %}{{c.usname}}{% endfor %}</td>
+                                            <td><br><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:250px;">Customer Name:</td>
+                                            <td>{% for c in cp %}{{c.first_name}}&nbsp;{{c.last_name}}{% endfor %}</td>
+                                            <td><br><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:250px;">Contact:</td>
+                                            <td>{% for c in cp %}{{c.contact}}{% endfor %}</td>
+                                            <td><br><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:250px;">E-mail:</td>
+                                            <td>{% for c in cp %}{{c.email}}{% endfor %}</td>
+                                            <td><br><br></td>
+                                        </tr>
+                                                    
+                              </table>
+                            </div>
+                          </div>                        
+                          <div class="card">
+                            <div class="card-body">
+                              <h3 class="card-title">Service Provider Details</h3>
+                              <br>
+                              
+                              <table border="0">
+                             
+                                        <tr>
+                                            <td style="width:250px;">Service Provider username:</td>
+                                            <td>{% for s in sp %}{{s.uname}}{% endfor %}</td>
+                                            <td><br><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:250px;">Owner Name:</td>
+                                            <td>{% for s in sp %}{{s.owner_name}}{% endfor %}</td>
+                                            <td><br><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:250px;">Contact:</td>
+                                            <td>{% for s in sp %}{{s.contact}}{% endfor %}</td>
+                                            <td><br><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:250px;">City:</td>
+                                            <td>{% for s in sp %}{{s.city_name}}{% endfor %}</td>
+                                            <td><br><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:250px;">State:</td>
+                                            <td>{% for s in sp %}{{s.state_name}}{% endfor %}</td>
+                                            <td><br><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:250px;">Address:</td>
+                                            <td>{% for s in sp %}{{s.address}}{% endfor %}</td>
+                                            <td><br><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:250px;">E-mail:</td>
+                                            <td>{% for s in sp %}{{s.email}}{% endfor %}</td>
+                                            <td><br><br></td>
+                                        </tr>
+                                        <tr>
+                                          
+                                        </tr>
+                                                    
+                              </table>
+                              {% for a in ap %}
+                              {% if a.status == 0 %}
+                              <br>
+                              <button class="btn btn-danger mr-2">Cancel Appointment</button>
+                              {% endif %}
+                              {% endfor %}
+                            </div>
+                          </div>        
+             
+            </div>
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div class="container-fluid clearfix">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2020 <a href="#">scissorstories</a>. All rights reserved.</span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- row-offcanvas ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="{% static 'vendors/jquery-bar-rating/jquery.barrating.min.js' %}"></script>
+  <script src="{% static 'vendors/chart.js/Chart.min.js' %}"></script>
+  <script src="{% static 'vendors/raphael/raphael.min.js' %}"></script>
+  <script src="{% static 'vendors/morris.js/morris.min.js' %}"></script>
+  <script src="{% static 'vendors/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{% static 'js/off-canvas.js' %}"></script>
+  <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'js/misc.js' %}"></script>
+  <script src="{% static 'js/settings.js' %}"></script>
+  <script src="{% static 'js/todolist.js' %}"></script>
+  <script src="{% static 'vendors/datatables.net/jquery.dataTables.js' %}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{% static 'js/dashboard.js' %}"></script>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/dataTable.bootstrap.min.js' %}"></script>
+  <!-- End custom js for this page-->
+</body>
+
+
+<!-- Mirrored from www.urbanui.com/victory/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:16:16 GMT -->
+</html>

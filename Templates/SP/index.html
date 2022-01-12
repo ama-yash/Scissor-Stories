@@ -1,0 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from www.urbanui.com/victory/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:15:04 GMT -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{uobj.firm_name}} - Service Provider Panel</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/simple-line-icons/css/simple-line-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'vendors/jquery-bar-rating/fontawesome-stars.css' %}">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'images/top-logo2.png' %}" />
+  
+  <script>
+    
+    function greet(){
+      
+      if (window.localStorage.getItem('flag') === null ){
+        swal({
+  position:"top-end",
+  text: "Successfully Logged In",
+  buttons:false,
+  timer:1500,
+  icon: "success",
+});
+        window.localStorage.setItem('flag',1);
+      }
+      
+}
+      
+    
+  </script>
+  <style type="text/css">
+    .but1{
+      background-color:#03a9f3;color:white;width:80px;text-align: center;vertical-align: middle;height:25px;border:none;border-radius: 15px;
+    }   
+</style>
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-6 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"><img src="{% static 'images/top-logo2.png' %}" height="100" alt="logo"/></a>
+      </div>
+      <h3 style="font-family:calibri;font-size: 40px;color: aliceblue;position:relative; left:-450px;">SERVICE PROVIDER PANEL</h3>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <!-- partial:partials/_settings-panel.html -->
+        
+        
+        <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <div class="nav-link">
+                <div class="profile-image">
+                  <img src="{{ uobj.image.url }}" alt="image"/>
+                  <span class="online-status online"></span> <!--change class online to offline or busy as needed-->
+                </div>
+                <div class="profile-name">
+                  <h4 class="name">
+                    {{uobj.firm_name}}
+                  </h4>
+                  <h5 class="designation">
+                    Service Provider
+                  </h5>
+                  <br>
+                  <button type="button" onclick="window.location.href='/service-provider/logout'" class="btn btn-info">Log Out</button>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/service-provider/">
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/service-provider/bookings">
+                <span class="menu-title">Bookings</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/service-provider/attendants">
+                <span class="menu-title">My Attendants</span>
+              </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/service-provider/myservices">
+              <span class="menu-title">My Services</span>
+            </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/service-provider/myprofile">
+                <span class="menu-title">My Profile</span>
+              </a>
+              </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center justify-content-md-center">
+    
+                        <div class="ml-3">
+                          <p class="mb-0">Total Appointments</p>
+                          <h6>{% for a in apcount %}{{a.acount}}{% endfor %}</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center justify-content-md-center">
+                        <div class="ml-3">
+                          <p class="mb-0">Attendants</p>
+                          <h6>{% for a in atcount %}{{a.atcount}}{% endfor %}</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center justify-content-md-center">
+                        <div class="ml-3">
+                          <p class="mb-0">Total Earnings</p>
+                          <h6>Rs. 250</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Your Today's Appointments</h3>
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>
+                            Appointment ID
+                          </th>
+                          <th>
+                            Customer Name
+                          </th>
+                          <th>
+                            Customer Contact
+                          </th>
+                          <th>
+                            Report Time
+                          </th>
+                          <th>
+                            Operations
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for t in todapp %}
+                        <tr>
+                          <td class="py-1">
+                            {{t.ap_id}}
+                          </td>
+                          <td>
+                            {{t.first_name}}&nbsp;{{t.last_name}}
+                          </td>
+                          <td>
+                            {{t.contact}}
+                          </td>
+                          <td>
+                            {{t.time_from}}
+                          </td>
+                          <td>
+                            <form method="GET" action="{% url 'SP:viewApp' %}"><button class="btn btn-outline-primary" name=ap value={{ t.ap_id }}>View Details</button></form>
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div> 
+              <div class ="card">
+              <div class="card-body">
+                <h3 class="card-title">Your Upcoming Appointments</h3>
+                <div class="table-responsive">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>
+                          Appointment ID
+                        </th>
+                        <th>
+                          Customer Name
+                        </th>
+                        <th>
+                          Customer Contact
+                        </th>
+                        <th>
+                          Report DateTime
+                        </th>
+                        <th>
+                          Operations
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for u in upapp %}
+                      <tr>
+                        <td class="py-1">
+                          {{u.ap_id}}
+                        </td>
+                        <td>
+                          {{u.first_name}}&nbsp;{{u.last_name}}
+                        </td>
+                        <td>
+                          {{u.contact}}
+                        </td>
+                        <td>
+                          {{u.adate}}&nbsp;{{u.time_from}}
+                        </td>
+                        <td>
+                          <form method="GET" action="{% url 'SP:viewApp' %}"><button class="btn btn-outline-primary" name=ap value={{ u.ap_id }}>View Details</button></form>
+                        </td>
+                      </tr>  
+                      {% endfor %}               
+                    </tbody>
+                  </table>
+                </div>
+                </div>
+              </div>
+              
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div class="container-fluid clearfix">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2020 <a href="#">scissorstories</a>. All rights reserved.</span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- row-offcanvas ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="{% static 'vendors/jquery-bar-rating/jquery.barrating.min.js' %}"></script>
+  <script src="{% static 'vendors/chart.js/Chart.min.js' %}"></script>
+  <script src="{% static 'vendors/raphael/raphael.min.js' %}"></script>
+  <script src="{% static 'vendors/morris.js/morris.min.js' %}"></script>
+  <script src="{% static 'vendors/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{% static 'js/off-canvas.js' %}"></script>
+  <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'js/misc.js' %}"></script>
+  <script src="{% static 'js/settings.js' %}"></script>
+  <script src="{% static 'js/todolist.js' %}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{% static 'js/dashboard.js' %}"></script>
+  <!-- End custom js for this page-->
+</body>
+
+
+<!-- Mirrored from www.urbanui.com/victory/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:16:16 GMT -->
+</html>

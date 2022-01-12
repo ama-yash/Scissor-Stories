@@ -1,0 +1,33 @@
+from django.urls import path,include
+from .views import *
+app_name = 'Customer'
+urlpatterns=[
+    path('',getIndex,name='index'),
+    path('test',getTest,name='test'),
+    path('activation',activation,name='active'),
+    path('auth',getLogin,name='login'),
+    path('auth/validate',validateLogin,name='valLog'),
+    path('auth/forgot-password',getForgotPassword,name='forpass'),
+    path('auth/validate-for-pass',sendForgotPasswordLink,name='valpass'),
+    path('auth/res-pass',resetPassword,name='resss'),
+    path('auth/reset-password',getResetPass,name='respass'),
+    path('auth/reset-password-link-sent',getLinkSent,name='linksent'),
+    path('auth/logout',userLogout,name='logout'),
+    path('auth/add',addUser,name='add'),
+    path('auth/ver-fail',getNover,name='nover'),
+    path('auth/ver',getVerPage,name='verpage'),
+    path('about-us',getAbout,name='about'),
+    path('service-providers',getSP,name='sp'),
+    path('service-providers/view',getSPView,name='spview'),
+    path('myaccount/',getUserIndex,name='user-index'),
+    path('myaccount/profile',getUserProfile,name='proffile'),
+    path('myaccount/profile/update',updateProfile,name='upProfile'),
+    path('myaccount/change-password',getChangePass,name='chpass'),
+    path('myaccount/deactivate',getDec,name='dec'),
+    path('service-providers/send',sendServices,name='sendser'),
+    path('appointment/',getAppointment,name='getapp'),
+    path('appointment/book',getConfirmAppointment,name='conapp'),
+    path('appointment/view',viewAppointment,name='viewapp'),
+    path('appointment/payment',getPayment,name='pay'),
+    path('appointment/confirmation',getAck,name='conapp'),
+]

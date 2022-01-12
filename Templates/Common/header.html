@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bootstrap core CSS -->
+      <link href="{% static 'cust/css/bootstrap.css' %}" rel="stylesheet">
+      <!-- Slick Slider CSS -->
+      <link href="{% static 'cust/css/slick-theme.css' %}" rel="stylesheet"/>
+      <!-- ICONS CSS -->
+      <link href="{% static 'cust/css/font-awesome.css' %}" rel="stylesheet">
+      <!-- ICONS CSS -->
+      <link href="{% static 'cust/css/animation.css' %}" rel="stylesheet">
+      <!-- Pretty Photo CSS -->
+      <link href="{% static 'cust/css/prettyPhoto.css' %}" rel="stylesheet">
+      <!-- Pretty Photo CSS -->
+      <link href="{% static 'cust/css/style5.css' %}" rel="stylesheet">
+      <!-- Pretty Photo CSS -->
+      <link href="{% static 'cust/css/jquery.pwstabs.css' %}" rel="stylesheet">
+      <!-- Pretty Photo CSS -->
+      <link href="{% static 'cust/css/index.css' %}" rel="stylesheet">
+      <!-- Pretty Photo CSS -->
+      <link href="{% static 'cust/css/fontawesome.min.css' %}" rel="stylesheet">
+      <link href="{% static 'cust/css/demo.css' %}" rel="stylesheet">
+      <!-- Pretty Photo CSS -->
+      <link href="{% static 'cust/css/selectric.css' %}" rel="stylesheet">
+      <!-- Pretty Photo CSS -->
+      <link href="{% static 'cust/css/fig-hover.css' %}" rel="stylesheet">
+      <!-- Pretty Photo CSS -->
+      <link href="{% static 'cust/css/dcalendar.picker.css' %}" rel="stylesheet">
+      <!-- Typography CSS -->
+      <link href="{% static 'cust/css/typography.css' %}" rel="stylesheet">
+      <!-- Shortcodes CSS -->
+      <link href="{% static 'cust/css/shotcode.css' %}" rel="stylesheet">
+      <!-- Custom Main StyleSheet CSS -->
+      <link href="{% static 'cust/style.css' %}" rel="stylesheet">
+      <!-- Custom Main StyleSheet CSS -->
+      <link href="{% static 'cust/css/component.css' %}" rel="stylesheet">
+      <!-- Custom Main StyleSheet CSS -->
+      <link href="{% static 'cust/svg-icon.css' %}" rel="stylesheet">
+      <link href="{% static 'cust/css/sidebar-widget.css' %}" rel="stylesheet">
+      <!-- Color CSS -->
+      <link href="{% static 'cust/css/color.css' %}" rel="stylesheet">
+      <!-- Responsive CSS -->
+      <link href="{% static 'cust/css/responsive.css' %}" rel="stylesheet">
+      <link rel="shortcut icon" href="{% static 'images/top-logo2.png' %}" />
+      <link rel="stylesheet" href="{% static 'cust/css/bootstrap.min.css' %}">
+      <script src="{% static '/js/validateuser.js' %}"></script>
+      <script src="{% static 'cust/js/jquery.min.js' %}"></script>
+      <script src="{% static 'cust/js/bootstrap.min.js' %}"></script>
+   
+</head>
+<body class="demo-5">
+   
+   <div class="wrapper">
+      <header>
+         <div class="spa_top_navigation">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-3">
+                     <div class="top_logo">
+                        <h1><a href="#"><img src="{% static 'cust/images/top-logo2.png' %}" alt="image"></a></h1>
+                     </div>
+                  </div>
+                  {% if user.is_authenticated %}
+                  <div class="col-md-9">
+                     <div class="spa_navi_list">
+                        <nav class="navigation">
+                           <ul>
+                              <li><a href="/myaccount/">Home</a>
+                              </li>
+                              <li><a href="/appointment">Appointments</a></li>
+                              
+                              <li><a href="/service-providers">Service Providers</a>
+                                 
+                              </li>												
+                              
+                              <li><a href="/myaccount/profile">My Profile</a>                             
+                              </li>
+                             
+                              <li><a class="child" href="/auth/logout">Sign Out</a></li>
+                           </ul>
+                        </nav>								
+                     </div>
+                  </div>
+                  {% else %}
+                  <div class="col-md-9">
+                     <div class="spa_navi_list">
+                        <nav class="navigation">
+                           <ul>
+                              <li><a href="/">Home</a>
+                              </li>
+                              <li><a href="/about-us">about</a></li>
+                              <li><a href="#gall">Gallery</a>
+                              </li>
+                              <li><a href="/service-providers">Service Providers</a>
+                              </li>
+                              
+                              <li><a class="child" href="/auth"> <i class="fa fa-user-plus"></i> Login / Sign up</a></li>
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+                  {% endif %}
+               </div>
+            </div>
+         </div>
+         <!--SPA TOP NAVIGATION END -->
+      </header>

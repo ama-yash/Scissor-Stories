@@ -1,0 +1,434 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.urbanui.com/victory/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:15:04 GMT -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{name}} - Admin Panel</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/simple-line-icons/css/simple-line-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'vendors/jquery-bar-rating/fontawesome-stars.css' %}">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="{% static 'js/validateoffer.js' %}"></script>
+  <!-- endinject -->
+  <link rel="stylesheet" href="{% static 'css/sweetalert.min.css' %}">
+  <script src="{% static 'js/sweetalert.min.js' %}"></script>
+  <link rel="shortcut icon" href="{% static 'images/top-logo2.png' %}" />
+  <style type="text/css">
+    .but1{
+      background-color:#03a9f3;color:white;width:80px;text-align: center;vertical-align: middle;height:25px;border:none;border-radius: 15px;
+    }
+    
+</style>
+</head>
+<body onload="greet1()">
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"><img src="{% static 'images/top-logo2.png' %}" alt="logo"/></a>
+      </div>
+      <h3 style="font-family:calibri;font-size: 40px;color: aliceblue;position:relative; left:-500px;">ADMIN PANEL</h3>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <!-- partial:partials/_settings-panel.html -->
+        
+        <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <div class="nav-link">
+                <div class="profile-image">
+                  <img src="{% static 'images/faces/face9.jpg' %}" alt="image"/>
+                  <span class="online-status online"></span> <!--change class online to offline or busy as needed-->
+                </div>
+                <div class="profile-name">
+                  <h4 class="name">
+                   {{name}}
+                  </h4>
+                  <h5 class="designation">
+                    Admin
+                  </h5>
+                  <br>
+                  <button type="button" class="btn btn-info">Log Out</button>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Home:index2' %}">
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'Home:serviceop' %}">
+                <span class="menu-title">Service Providers</span>
+              </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'Home:customer' %}">
+                  <span class="menu-title">Customers</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'Home:bookings' %}">
+                <span class="menu-title">Bookings</span>
+              </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Home:others' %}">
+              <span class="menu-title">Others</span>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/report-builder/">
+            <span class="menu-title">Reports</span>
+          </a>
+      </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="content-wrapper">
+            <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Pending Appointments</h4>
+                  
+                  <div class="table-responsive">
+                    <table class="table mt-3 border-top">
+                        <thead>
+                          <tr>
+                            <th>Appointment ID</th>
+                            <th>Customer Username</th>
+                            <th>Service Provider</th>
+                            <th>Booking DateTime</th>
+                            <th>Appointment DateTime</th>
+                            <th>Operations</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for appointment in appointments %}
+                          {% if appointment.status == 1 %}
+                          <tr>
+                            <td>{{ appointment.ap_id }}</td>
+                            <td>{{appointment.usname}}</td>
+                            <td>{{appointment.uname}}</td>
+                            <td>{{appointment.bdate}}</td>
+                            <td>{{appointment.adate}},&nbsp;{{appointment.time_from}}</td>
+                            <td><form method="GET" action="{% url 'Home:up-app' %}"><button type="submit" name='ap' style="width:110px;" value={{appointment.ap_id}} class="btn btn-outline-primary">View Details</button></form></td>
+                          </tr>
+                          {% endif %}
+                          {% endfor %}
+                                                         
+                        </tbody>
+                      </table>  
+                  </div>
+                  
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Recent Appointments</h4>
+                    
+                    <div class="table-responsive">
+                      <table class="table mt-3 border-top">
+                          <thead>
+                            <tr>
+                              <th>Appointment ID</th>
+                              <th>Customer Username</th>
+                              <th>Service Provider</th>
+                              <th>Booking DateTime</th>
+                              <th>Appointment DateTime</th>
+                              <th>Operations</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for appointment in appointments %}
+                            {% if appointment.status == 0 %}
+                            <tr>
+                              <td>{{ appointment.ap_id }}</td>
+                              <td>{{appointment.usname}}</td>
+                              <td>{{appointment.uname}}</td>
+                              <td>{{appointment.bdate}}</td>
+                              <td>{{appointment.adate}},&nbsp;{{appointment.time_from}}</td>
+                              <td><form method="GET" action="{% url 'Home:up-app' %}"><button type="submit" name='ap' style="width:110px;" value={{appointment.ap_id}} class="btn btn-outline-primary">View Details</button></form></td>
+                            </tr>
+                            {% endif %}
+                            {% endfor %}
+                                                           
+                          </tbody>
+                        </table>  
+                    </div>
+                    
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Current Offers</h4>
+                      <div class="d-flex table-responsive">
+
+                      </div>
+                      <div class="table-responsive">
+                        <table class="table mt-3 border-top">
+                            <thead>
+                              <tr>
+                                <th>Offer ID</th>
+                                <th>Offer Name</th>
+                                <th>Offer From</th>
+                                <th>Offer To</th>
+                                <th>Discount Ratio</th>
+                                <th>Maximum Discount (Rs)</th>
+                                <th>Operations</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {% for offer in offers %}
+                              <tr>
+                                <td>{{offer.offer_id}}</td>
+                                <td>{{offer.offer_name}}</td>
+                                <td>{{offer.offer_from}}</td>
+                                <td>{{offer.offer_to}}</td>
+                                <td>{{offer.disc_ratio}}</td>
+                                <td>{{offer.maxamount}}</td>
+                                <td><button type="button" class="btn btn-outline-primary"  data-toggle="modal" data-target="#{{offer.offer_id}}">Update</button>&nbsp;<button type="button" onclick="confirm('Are you sure you want to delete ?');" class="btn btn-outline-primary">Delete</button></td>
+                              </tr>
+                              {% endfor %}
+                            </tbody>
+                          </table>  
+                      </div>
+                      <div class="card">
+                        <div class="card-body">
+                          <h4 class="card-title">Add Offers</h4>
+                          <form id="myform" onsubmit="return valOffer()" name="myform" class="form-sample">{% csrf_token %}
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group row">
+                                  <label class="col-sm-3 col-form-label">Offer ID</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" id=offer_id name="offer_id" class="form-control"/>
+                                  </div>
+                                  <div style="position: relative;top:5px;width:370px;display: none;" id=offernull class="alert alert-danger">Please enter Offer ID</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group row">
+                                  <label class="col-sm-3 col-form-label">Offer Name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" name="offer_name" class="form-control"/>
+                                  </div>
+                                  <div style="position: relative;top:5px;width:370px;display: none;" id=offername class="alert alert-danger">Please enter Offer Name.</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group row">
+                                  <label class="col-sm-3 col-form-label">Offer From</label>
+                                  <div class="col-md-6">
+                                        <input type="date" name="offer_from" class="form-control"/>
+                                  </div>
+                                  <div style="position: relative;top:5px;width:370px;display: none;" id=fromnull class="alert alert-danger">Please mention date.</div>
+                                  <div style="position: relative;top:5px;width:370px;display: none;" id=futerr class="alert alert-danger">Dates must not be of past.</div>
+                                </div>
+                              </div>                             
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group row">
+                                  <label class="col-sm-3 col-form-label">Offer To</label>
+                                  <div class="col-sm-9">
+                                    <input type="date" name="offer_to" class="form-control"/>
+                                  </div>
+                                  <div style="position: relative;top:5px;width:370px;display: none;" id=tonull class="alert alert-danger">Please mention date.</div>
+                                  <div style="position: relative;top:5px;width:370px;display: none;" id=dateerr class="alert alert-danger">Expiry date must be greater than start date.</div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group row">
+                                  <label class="col-sm-3 col-form-label">Discount Ratio</label>
+                        
+                                  <div class="col-sm-9">
+                                    <input type="text" name="disc_ratio" class="form-control" pattern="[0-9][0-9]" />
+                                  </div>
+                                  <div style="position: relative;top:5px;width:370px;display: none;" id=discnull class="alert alert-danger">Please enter discount ratio.</div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group row">
+                                  <label class="col-sm-3 col-form-label">Maximum Discount (Rs)</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" name="maxamount" class="form-control" pattern="[0-9][0-9]" />
+                                  </div>
+                                  <div style="position: relative;top:5px;width:370px;display: none;" id=maxnull class="alert alert-danger">Please enter maximum amount.</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group row">
+                                  <div class="input-group-append">
+                                    <button class="btn btn-info" type="submit">Add Offer</button>                          
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                      {% for offer in offers %}
+                      <div class="modal fade" id="{{offer.offer_id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" style="width:800px;" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel-2">Update Offer</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Offer ID</label>
+                                    <div class="col-sm-9">
+                                      <input type="text" id=offer_id readonly value='HOLI' name="offer_id" class="form-control"/>
+                                    </div>
+                                    <div style="position: relative;top:5px;width:370px;display: none;" id=offernull class="alert alert-danger">Please enter Offer ID</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Offer Name</label>
+                                    <div class="col-sm-9">
+                                      <input type="text" name="offer_name" value="Holi Bash" class="form-control"/>
+                                    </div>
+                                    <div style="position: relative;top:5px;width:370px;display: none;" id=offername class="alert alert-danger">Please enter Offer Name.</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Offer From</label>
+                                    <div class="col-md-6">
+                                          <input type="date" name="offer_from" class="form-control"/>
+                                    </div>
+                                    <div style="position: relative;top:5px;width:370px;display: none;" id=fromnull class="alert alert-danger">Please mention date.</div>
+                                    <div style="position: relative;top:5px;width:370px;display: none;" id=futerr class="alert alert-danger">Dates must not be of past.</div>
+                                  </div>
+                                </div>                             
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Offer To</label>
+                                    <div class="col-sm-9">
+                                      <input type="date" name="offer_to" class="form-control"/>
+                                    </div>
+                                    <div style="position: relative;top:5px;width:370px;display: none;" id=tonull class="alert alert-danger">Please mention date.</div>
+                                    <div style="position: relative;top:5px;width:370px;display: none;" id=dateerr class="alert alert-danger">Expiry date must be greater than start date.</div>
+                                  </div>
+                                </div>
+                                
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Discount Ratio</label>
+                          
+                                    <div class="col-sm-9">
+                                      <input type="text" name="disc_ratio" value=50 class="form-control" pattern="[0-9][0-9]" />
+                                    </div>
+                                    <div style="position: relative;top:5px;width:370px;display: none;" id=discnull class="alert alert-danger">Please enter discount ratio.</div>
+                                  </div>
+                                </div>
+                                
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Maximum Discount (Rs)</label>
+                                    <div class="col-sm-9">
+                                      <input type="text" name="maxamount" value=99 class="form-control" pattern="[0-9][0-9]" />
+                                    </div>
+                                    <div style="position: relative;top:5px;width:370px;display: none;" id=maxnull class="alert alert-danger">Please enter maximum amount.</div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-success">Update</button>
+                              <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {% endfor %}
+                      
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div class="container-fluid clearfix">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2020 <a href="#">scissorstories</a>. All rights reserved.</span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- row-offcanvas ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="{% static 'vendors/jquery-bar-rating/jquery.barrating.min.js' %}"></script>
+  <script src="{% static 'vendors/chart.js/Chart.min.js' %}"></script>
+  <script src="{% static 'vendors/raphael/raphael.min.js' %}"></script>
+  <script src="{% static 'vendors/morris.js/morris.min.js' %}"></script>
+  <script src="{% static 'vendors/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{% static 'js/off-canvas.js' %}"></script>
+  <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'js/misc.js' %}"></script>
+  <script src="{% static 'js/settings.js' %}"></script>
+  <script src="{% static 'js/todolist.js' %}"></script>
+  <script src="{% static 'vendors/datatables.net/jquery.dataTables.js' %}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{% static 'js/dashboard.js' %}"></script>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/dataTable.bootstrap.min.js' %}"></script>
+  <!-- End custom js for this page-->
+</body>
+
+
+<!-- Mirrored from www.urbanui.com/victory/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2020 13:16:16 GMT -->
+</html>
